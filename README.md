@@ -1,61 +1,65 @@
-Simulador de Temporada Europea de Fútbol
+Simulador de Temporada Europea de Fútbol con Sistema de Jugadores
 
-Un simulador completo escrito en Python que recrea una temporada completa de fútbol europeo, incluyendo las principales ligas domésticas y todas las competiciones continentales (Champions League, Europa League y Conference League), con un sistema de evolución dinámica de niveles basado en el rendimiento.
+Un simulador completo escrito en Python que recrea una temporada completa de fútbol europeo con un sistema detallado de jugadores, estadísticas individuales y competiciones continentales.
 🎯 Características Principales
+👥 Sistema Completo de Jugadores
+
+    Base de datos con 1000+ jugadores realistas con nombres, posiciones y niveles
+
+    11 jugadores por equipo con atributos individuales
+
+    Estadísticas detalladas: goles, asistencias, partidos jugados, tarjetas
+
+    Posiciones específicas: POR (portero), DEF (defensa), MED (mediocampista), DEL (delantero)
+
 🏆 Competiciones Simuladas
 
     7 Ligas Domésticas: Premier League, La Liga, Serie A, Bundesliga, Ligue 1, Primeira Liga, Eredivisie
 
     3 Competiciones Europeas: UEFA Champions League, UEFA Europa League, UEFA Conference League
 
-    Sistema de Clasificación: Automático basado en posiciones reales de cada liga
+    Sistema de Clasificación Automático basado en posiciones reales de cada liga
 
-⚙️ Mecánicas de Simulación
+⚽ Estadísticas Individuales Realistas
 
-    Sistema de Niveles: Cada equipo tiene un nivel (0-100) que determina su rendimiento
+    Top goleadores y top asistentes de la temporada
 
-    Simulación Realista: Probabilidades basadas en diferencia de niveles entre equipos
+    Candidatos al Balón de Oro con sistema de puntuación basado en:
 
-    Fases de Grupos y Eliminatorias: Formato oficial UEFA con ida y vuelta
+        Goles y asistencias
 
-    Goles de Visitante y Penaltis: Desempates realistas en eliminatorias
+        Nivel del jugador
 
-🔄 Sistema de Evolución Dinámica
+        Partidos jugados
 
-    Actualización Automática: Los niveles de los equipos cambian basándose en su rendimiento
+        Títulos colectivos ganados
 
-    Factores de Cambio:
+    Mínimos y máximos realistas: 15-35 goles para los máximos goleadores
 
-        Posición en liga doméstica
+🔄 Sistema de Simulación Mejorado
 
-        Rendimiento en competiciones europeas
+    Probabilidades realistas de gol basadas en posición y nivel del jugador
 
-        Campeonatos ganados
+    Asistencias registradas con distribuciones realistas por posición
 
-        Diferencia de goles y puntuación
+    Tarjetas amarillas y rojas simuladas
 
-    Herramienta de Actualización: Script dedicado que genera nuevo código listo para copiar y pegar
+    Minutos jugados contabilizados para cada jugador
 
 🛠️ Estructura del Proyecto
 text
 
 📁 simulador-futbol-europeo/
 ├── 📄 simuladorcompleto.py      # Simulador principal de temporada completa
-├── 📄 modificadordeniveles.py   # Herramienta de actualización de niveles
+├── 📄 base_datos.py             # Base de datos de equipos y jugadores
 ├── 📄 champions.py              # Simulador individual de partidos
 └── 📄 temporada_completa_*.txt  # Resultados generados (se crean automáticamente)
 
 🚀 Cómo Usar
-
-    Simular Temporada Completa:
-    bash
-
-python simuladorcompleto.py
-
-Actualizar Niveles (después de una temporada):
+Simular Temporada Completa:
 bash
 
-python modificadordeniveles.py
+python simuladorcompleto.py
 
 Simular Partido Individual:
 bash
@@ -66,40 +70,50 @@ python champions.py
 
 El simulador genera reportes detallados en formato texto que incluyen:
 
-    Tablas de posiciones de todas las ligas
+    Tablas de posiciones de todas las ligas con estadísticas de equipo
 
     Resultados de fases de grupos europeas
 
     Detalles de eliminatorias y finales
 
-    Resumen final de campeones
+    Estadísticas individuales:
 
-    Archivo con los nuevos niveles actualizados
+        Top 10 goleadores con promedio de gol por partido
+
+        Top 10 asistentes con promedio de asistencia por partido
+
+        Top 20 candidatos al Balón de Oro con puntuación detallada
+
+    Resumen final de campeones de liga y competiciones europeas
 
 🎮 Personalización
 
-    Modificar Niveles: Edita el diccionario equipos_originales en el código
+    Modificar jugadores: Edita la base de datos en base_datos.py
 
-    Ajustar Probabilidades: Modifica los umbrales en la función simular_partido()
+    Ajustar probabilidades: Modifica los umbrales en las funciones de simulación
 
-    Añadir Equipos: Extiende los diccionarios de ligas con nuevos equipos y niveles
+    Cambiar fórmulas de cálculo: Ajusta los algoritmos de Balón de Oro y estadísticas
 
 💡 Tecnologías
 
     Python 3.7+
 
-    Módulos: random, collections, datetime, re, os
+    Módulos: random, collections, datetime, dataclasses
+
+    Sistema orientado a objetos con clases Jugador, Equipo y BaseDatos
 
     Compatible con cualquier sistema operativo
 
 📈 Próximas Características
 
-    Interfaz gráfica (GUI)
+    Interfaz gráfica (GUI) para visualización de resultados
 
-    Base de datos para múltiples temporadas
+    Sistema de jóvenes promesas con crecimiento de nivel
 
-    Sistema de jóvenes promesas y transferencias
+    Mercado de transferencias entre temporadas
 
-    Modo carrera multi-temporada
+    Lesiones y suspensiones por tarjetas
 
-    Exportación a JSON/CSV para análisis
+    Modo carrera multi-temporada con evolución de jugadores
+
+    Exportación a JSON/CSV para análisis avanzado de datos
