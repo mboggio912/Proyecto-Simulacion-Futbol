@@ -1,4 +1,4 @@
-#Simulador de Temporada Europea de Fútbol
+Simulador de Temporada Europea de Fútbol
 
 Un simulador completo escrito en Python que recrea una temporada completa de fútbol europeo, incluyendo las principales ligas domésticas y todas las competiciones continentales (Champions League, Europa League y Conference League), con un sistema de evolución dinámica de niveles basado en el rendimiento.
 🎯 Características Principales
