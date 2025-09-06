@@ -685,47 +685,64 @@ def simular_conference_league(equipos: List[str], archivo) -> str:
     return campeon
 
 def escribir_estadisticas_individuales(archivo):
-    """Escribe las estadísticas individuales de jugadores"""
+    """Escribe las estadísticas individuales de jugadores con info de liga"""
     archivo.write(f"\n{'='*80}\n")
     archivo.write("ESTADÍSTICAS INDIVIDUALES DE LA TEMPORADA\n")
     archivo.write(f"{'='*80}\n")
     
-    # Top 10 Goleadores
+    # Top 10 Goleadores con información de liga
     top_goleadores = base_datos.obtener_top_goleadores(10)
     archivo.write("\n🥇 TOP 10 GOLEADORES\n")
-    archivo.write("-" * 50 + "\n")
-    archivo.write(f"{'Pos':<3} {'Jugador':<15} {'Equipo':<8} {'Goles':<6} {'Partidos':<8}\n")
-    archivo.write("-" * 50 + "\n")
+    archivo.write("-" * 60 + "\n")
+    archivo.write(f"{'Pos':<3} {'Jugador':<15} {'Equipo':<10} {'Liga':<15} {'Goles':<6} {'Partidos':<8}\n")
+    archivo.write("-" * 60 + "\n")
     
     for i, jugador in enumerate(top_goleadores, 1):
+        equipo_obj = base_datos.obtener_equipo(jugador.equipo)
+        liga = equipo_obj.liga if equipo_obj else "Desconocida"
         promedio = jugador.goles / max(1, jugador.partidos_jugados)
-        archivo.write(f"{i:<3} {jugador.nombre:<15} {jugador.equipo.upper():<8} "
+        archivo.write(f"{i:<3} {jugador.nombre:<15} {jugador.equipo.upper():<10} {liga:<15} "
                      f"{jugador.goles:<6} {jugador.partidos_jugados:<8} ({promedio:.2f} por partido)\n")
     
-    # Top 10 Asistentes
+    # Top 10 Asistentes con información de liga
     top_asistentes = base_datos.obtener_top_asistentes(10)
     archivo.write(f"\n🎯 TOP 10 ASISTENTES\n")
-    archivo.write("-" * 50 + "\n")
-    archivo.write(f"{'Pos':<3} {'Jugador':<15} {'Equipo':<8} {'Asist':<6} {'Partidos':<8}\n")
-    archivo.write("-" * 50 + "\n")
+    archivo.write("-" * 60 + "\n")
+    archivo.write(f"{'Pos':<3} {'Jugador':<15} {'Equipo':<10} {'Liga':<15} {'Asist':<6} {'Partidos':<8}\n")
+    archivo.write("-" * 60 + "\n")
     
     for i, jugador in enumerate(top_asistentes, 1):
+        equipo_obj = base_datos.obtener_equipo(jugador.equipo)
+        liga = equipo_obj.liga if equipo_obj else "Desconocida"
         promedio = jugador.asistencias / max(1, jugador.partidos_jugados)
-        archivo.write(f"{i:<3} {jugador.nombre:<15} {jugador.equipo.upper():<8} "
+        archivo.write(f"{i:<3} {jugador.nombre:<15} {jugador.equipo.upper():<10} {liga:<15} "
                      f"{jugador.asistencias:<6} {jugador.partidos_jugados:<8} ({promedio:.2f} por partido)\n")
     
-    # Top 20 Balón de Oro
+    # Top 20 Balón de Oro con puntuación detallada
     candidatos_balon = base_datos.obtener_candidatos_balon_oro(20)
     archivo.write(f"\n🏆 TOP 20 CANDIDATOS BALÓN DE ORO\n")
-    archivo.write("-" * 60 + "\n")
-    archivo.write(f"{'Pos':<3} {'Jugador':<15} {'Equipo':<8} {'Goles':<6} {'Asist':<6} {'Puntos':<8}\n")
-    archivo.write("-" * 60 + "\n")
+    archivo.write("-" * 80 + "\n")
+    archivo.write(f"{'Pos':<3} {'Jugador':<15} {'Equipo':<10} {'Liga':<12} {'Goles':<6} {'Asist':<6} {'Puntos':<8}\n")
+    archivo.write("-" * 80 + "\n")
     
     for i, (jugador, puntos) in enumerate(candidatos_balon, 1):
+        equipo_obj = base_datos.obtener_equipo(jugador.equipo)
+        liga = equipo_obj.liga if equipo_obj else "Desconocida"
         medalla = "🥇" if i == 1 else "🥈" if i == 2 else "🥉" if i == 3 else f"{i:<3}"
-        archivo.write(f"{medalla} {jugador.nombre:<15} {jugador.equipo.upper():<8} "
+        archivo.write(f"{medalla} {jugador.nombre:<15} {jugador.equipo.upper():<10} {liga:<12} "
                      f"{jugador.goles:<6} {jugador.asistencias:<6} {puntos:<8.2f}\n")
-
+    
+    # Explicación del sistema de puntuación
+    archivo.write(f"\n📊 SISTEMA DE PUNTUACIÓN BALÓN DE ORO:\n")
+    archivo.write("-" * 50 + "\n")
+    archivo.write("• Goles: 2.0 puntos (con ajuste por liga)\n")
+    archivo.write("• Asistencias: 1.5 puntos (con ajuste por liga)\n")
+    archivo.write("• Ligas fuertes: 100% de valor (Premier, La Liga, Serie A, Bundesliga)\n")
+    archivo.write("• Ligas medias: 80% de valor (Ligue 1, Primeira Liga)\n")
+    archivo.write("• Ligas débiles: 60% de valor (Eredivisie y otras)\n")
+    archivo.write("• Bonus por títulos: hasta 50% extra\n")
+    archivo.write("• Bonus Champions League: 30% extra por ganarla\n")
+    
 def escribir_tabla_liga_mejorada(archivo, nombre_liga: str, tabla: List[Tuple]):
     """Escribe la tabla de una liga con más detalles"""
     archivo.write(f"\n{'='*70}\n")

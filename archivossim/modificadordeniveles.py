@@ -2,53 +2,13 @@ import re
 import os
 from datetime import datetime
 from collections import defaultdict
-
-# Niveles originales de equipos (base de datos)
-equipos_originales = {
-    # Premier League
-    "mc": 85, "liv": 75, "ars": 60, "che": 74, "mu": 50, "tot": 65,
-    "new": 55, "avl": 50, "wes": 45, "bha": 40, "wol": 45, "cry": 40,
-    "ful": 40, "eve": 35, "bur": 30, "not": 25, "bou": 35, "shf": 25,
-    "lut": 20, "lei": 45,
-    
-    # La Liga
-    "rmd": 82, "bar": 75, "atl": 75, "sev": 50, "bet": 40, "rsoc": 70,
-    "vil": 45, "val": 55, "ath": 50, "osa": 45, "get": 40, "ray": 35,
-    "cel": 25, "cad": 30, "gra": 25, "las": 35, "alm": 30, "mal": 40,
-    "alv": 20, "gir": 30,
-    
-    # Serie A
-    "juv": 79, "int": 75, "mil": 65, "nap": 45, "rom": 50, "laz": 60,
-    "ata": 80, "fio": 55, "tor": 45, "udi": 35, "gen": 35, "emp": 30,
-    "lec": 25, "ver": 40, "cal": 30, "fro": 25, "sas": 35, "sam": 30,
-    "mon": 40, "bol": 20,
-    
-    # Bundesliga
-    "bay": 84, "bvb": 65, "rbz": 70, "lev": 45, "fra": 35, "fre": 35,
-    "wol_de": 40, "bmg": 55, "uni": 50, "stu": 20, "may": 35, "hof": 30,
-    "aug": 25, "her": 30, "boc": 25, "col": 30, "bre": 30, "dar": 20,
-    
-    # Ligue 1
-    "psg": 70, "mar": 30, "oly": 60, "asm": 40, "ren": 35, "lil": 40,
-    "nic": 45, "len": 35, "str": 30, "nan": 25, "rei": 30, "mtp": 25,
-    "tou": 30, "lor": 20, "brest": 25, "cle": 20, "metz": 25, "hav": 15,
-    
-    # Primeira Liga
-    "ben": 70, "por": 65, "spo": 45, "bra": 40, "vit": 35, "gui": 30,
-    "avo": 25, "mor": 25, "ton": 20, "rio": 25, "csmf": 30, "bel": 20,
-    "port": 25, "san": 20, "far": 15, "aro": 20, "viz": 15, "est": 25,
-    
-    # Eredivisie
-    "aja": 25, "psv": 45, "fey": 30, "az": 35, "twn": 30, "vit_nl": 25,
-    "uti": 20, "gro": 20, "her_nl": 25, "wil": 15, "hee": 20, "pec": 15,
-    "for": 20, "spa_nl": 15, "goe": 10, "cam": 15, "nec": 20, "almc": 25,
-}
+from base_datos import base_datos
 
 def buscar_archivos_temporada():
     """Busca archivos de temporada en el directorio actual"""
     archivos = []
     for archivo in os.listdir('.'):
-        if archivo.startswith('temporada_completa_') and archivo.endswith('.txt'):
+        if (archivo.startswith('temporada_completa_') or archivo.startswith('temporada_jugadores_')) and archivo.endswith('.txt'):
             archivos.append(archivo)
     
     if not archivos:
@@ -59,25 +19,25 @@ def buscar_archivos_temporada():
     return archivos
 
 def extraer_datos_temporada(archivo):
-    """Extrae todos los datos relevantes del archivo de temporada"""
+    """Extrae datos de rendimiento de equipos y jugadores del archivo"""
     datos = {
         'ligas': {},
         'champions': {},
         'europa': {},
         'conference': {},
-        'campeones': {}
+        'campeones': {},
+        'jugadores': {}
     }
     
     with open(archivo, 'r', encoding='utf-8') as f:
         contenido = f.read()
     
-    # Extraer campeones de liga
+    # Extraer tablas de liga
     ligas_nombres = ["Premier League", "La Liga", "Serie A", "Bundesliga", 
                      "Ligue 1", "Primeira Liga", "Eredivisie"]
     
     for liga in ligas_nombres:
-        # Buscar tabla de cada liga
-        patron_tabla = rf"TABLA FINAL - {liga.upper()}\n=+\nPos.*?\n-+\n(.*?)(?=\n\nCLASIFICACIONES:)"
+        patron_tabla = rf"TABLA FINAL - {liga.upper()}\n=+\n.*?\n-+\n(.*?)(?=\n\nCLASIFICACIONES:|\n\n[A-Z]|\Z)"
         match = re.search(patron_tabla, contenido, re.DOTALL)
         
         if match:
@@ -85,26 +45,48 @@ def extraer_datos_temporada(archivo):
             equipos_liga = []
             
             for linea in tabla_texto.strip().split('\n'):
-                if linea.strip():
+                if linea.strip() and not linea.startswith('=') and not linea.startswith('-'):
                     partes = linea.split()
                     if len(partes) >= 7:
-                        pos = int(partes[0])
-                        equipo = partes[1].lower()
-                        puntos = int(partes[2])
-                        gf = int(partes[4])
-                        gc = int(partes[5])
-                        gd = int(partes[6])
-                        
-                        equipos_liga.append({
-                            'equipo': equipo,
-                            'posicion': pos,
-                            'puntos': puntos,
-                            'gf': gf,
-                            'gc': gc,
-                            'gd': gd
-                        })
+                        try:
+                            pos = int(partes[0])
+                            equipo = partes[1].lower()
+                            puntos = int(partes[2])
+                            gf = int(partes[4])
+                            gc = int(partes[5])
+                            gd = int(partes[6])
+                            
+                            equipos_liga.append({
+                                'equipo': equipo,
+                                'posicion': pos,
+                                'puntos': puntos,
+                                'gf': gf,
+                                'gc': gc,
+                                'gd': gd
+                            })
+                        except (ValueError, IndexError):
+                            continue
             
             datos['ligas'][liga] = equipos_liga
+    
+    # Extraer estadísticas de jugadores si existen
+    patron_goleadores = r"TOP 10 GOLEADORES\n-+\n.*?\n-+\n(.*?)(?=\n\n🎯|\n\n[A-Z])"
+    match_goleadores = re.search(patron_goleadores, contenido, re.DOTALL)
+    
+    if match_goleadores:
+        goleadores_texto = match_goleadores.group(1)
+        for linea in goleadores_texto.strip().split('\n'):
+            if linea.strip():
+                # Formato esperado: "1   Haaland        MC       23     38"
+                partes = linea.split()
+                if len(partes) >= 5:
+                    try:
+                        nombre = partes[1]
+                        equipo = partes[2].lower()
+                        goles = int(partes[3])
+                        datos['jugadores'][f"{equipo}_{nombre}"] = {'goles': goles, 'asistencias': 0}
+                    except (ValueError, IndexError):
+                        continue
     
     # Extraer campeones europeos
     patron_campeon = r"🏆 CAMPEÓN (\w+(?:\s+\w+)*): (\w+)"
@@ -113,56 +95,80 @@ def extraer_datos_temporada(archivo):
     for competicion, campeon in campeones_europeos:
         datos['campeones'][competicion.lower().replace(' ', '_')] = campeon.lower()
     
-    # Extraer rendimiento en competiciones europeas
-    # Buscar menciones de equipos en fases europeas
-    for competicion in ['CHAMPIONS LEAGUE', 'EUROPA LEAGUE', 'CONFERENCE LEAGUE']:
-        patron_comp = rf"{competicion}.*?(?=\n={'='*80}|\Z)"
-        match = re.search(patron_comp, contenido, re.DOTALL)
-        
-        if match:
-            comp_texto = match.group(0)
-            # Buscar equipos que llegaron a diferentes fases
-            datos[competicion.lower().replace(' ', '_')] = analizar_rendimiento_europeo(comp_texto)
-    
     return datos
 
-def analizar_rendimiento_europeo(texto_competicion):
-    """Analiza qué tan lejos llegó cada equipo en competiciones europeas"""
-    rendimiento = {}
+def calcular_cambios_jugadores(datos):
+    """Calcula cambios en los niveles de jugadores basado en rendimiento"""
+    cambios_jugadores = {}
     
-    # Buscar menciones de equipos en diferentes fases
-    fases = {
-        'FINAL': 10,
-        'SEMIFINAL': 8,
-        'CUARTOS DE FINAL': 6,
-        'OCTAVOS DE FINAL': 4,
-        'GRUPOS': 2
-    }
-    
-    # Extraer todos los equipos mencionados
-    equipos_mencionados = re.findall(r'\b([a-z]{2,6})\b', texto_competicion.lower())
-    
-    for equipo in set(equipos_mencionados):
-        if equipo in equipos_originales:
-            # Determinar la fase más alta alcanzada
-            mejor_fase = 0
-            for fase, puntos in fases.items():
-                if fase in texto_competicion and equipo.upper() in texto_competicion:
-                    # Verificar contexto más específico
-                    if re.search(rf'{equipo.upper()}.*?{fase}|{fase}.*?{equipo.upper()}', texto_competicion, re.IGNORECASE):
-                        mejor_fase = max(mejor_fase, puntos)
+    # Cambios por rendimiento individual
+    for jugador_key, stats in datos.get('jugadores', {}).items():
+        if '_' in jugador_key:
+            equipo, nombre = jugador_key.split('_', 1)
+            jugador_obj = None
             
-            if mejor_fase > 0:
-                rendimiento[equipo] = mejor_fase
+            # Buscar el jugador en la base de datos
+            equipo_obj = base_datos.obtener_equipo(equipo)
+            if equipo_obj:
+                for j in equipo_obj.jugadores:
+                    if j.nombre.lower() == nombre.lower():
+                        jugador_obj = j
+                        break
+            
+            if jugador_obj:
+                cambio = 0
+                razones = []
+                
+                # Cambios por goles
+                goles = stats.get('goles', 0)
+                if goles >= 30:  # Temporada excepcional
+                    cambio += 3
+                    razones.append(f"Temporada excepcional: {goles} goles (+3)")
+                elif goles >= 20:  # Muy buena temporada
+                    cambio += 2
+                    razones.append(f"Muy buena temporada: {goles} goles (+2)")
+                elif goles >= 10:  # Buena temporada
+                    cambio += 1
+                    razones.append(f"Buena temporada: {goles} goles (+1)")
+                
+                # Cambios por asistencias
+                asistencias = stats.get('asistencias', 0)
+                if asistencias >= 20:
+                    cambio += 2
+                    razones.append(f"Excelente en asistencias: {asistencias} (+2)")
+                elif asistencias >= 10:
+                    cambio += 1
+                    razones.append(f"Buenas asistencias: {asistencias} (+1)")
+                
+                # Bonus por combinación goles+asistencias
+                total_contribucion = goles + asistencias
+                if total_contribucion >= 40:
+                    cambio += 2
+                    razones.append(f"Contribución total excepcional: {total_contribucion} G+A (+2)")
+                elif total_contribucion >= 25:
+                    cambio += 1
+                    razones.append(f"Excelente contribución: {total_contribucion} G+A (+1)")
+                
+                if cambio > 0:
+                    cambios_jugadores[jugador_key] = {
+                        'jugador': jugador_obj,
+                        'nivel_actual': jugador_obj.nivel,
+                        'cambio': min(cambio, 5),  # Máximo +5
+                        'nuevo_nivel': min(99, jugador_obj.nivel + min(cambio, 5)),
+                        'razones': razones
+                    }
     
-    return rendimiento
+    return cambios_jugadores
 
-def calcular_cambios_nivel(datos):
-    """Calcula los cambios de nivel basados en el rendimiento"""
-    cambios = {}
+def calcular_cambios_equipos(datos):
+    """Calcula cambios de nivel para equipos basado en rendimiento de liga y competiciones"""
+    cambios_equipos = {}
     
-    for equipo in equipos_originales:
-        nivel_original = equipos_originales[equipo]
+    # Obtener todos los equipos de la base de datos
+    todos_equipos = base_datos.obtener_todos_los_equipos()
+    
+    for codigo, equipo in todos_equipos.items():
+        nivel_actual = equipo.calcular_nivel_equipo()
         cambio_total = 0
         razones = []
         
@@ -170,7 +176,7 @@ def calcular_cambios_nivel(datos):
         for liga, equipos_liga in datos['ligas'].items():
             equipo_encontrado = None
             for eq_datos in equipos_liga:
-                if eq_datos['equipo'] == equipo:
+                if eq_datos['equipo'] == codigo:
                     equipo_encontrado = eq_datos
                     break
             
@@ -202,41 +208,22 @@ def calcular_cambios_nivel(datos):
                 
                 # Bonus por rendimiento excepcional
                 total_equipos = len(equipos_liga)
-                if puntos > (total_equipos * 2):  # Muy buenos puntos
+                if puntos > (total_equipos * 2.2):  # Muy buenos puntos
                     cambio_total += 1
                     razones.append("Excelente puntuaje (+1)")
                 
-                if gd > 20:  # Muy buena diferencia de goles
+                if gd > 25:  # Muy buena diferencia de goles
                     cambio_total += 1
                     razones.append("Excelente diferencia de goles (+1)")
-                elif gd < -15:  # Muy mala diferencia
+                elif gd < -20:  # Muy mala diferencia
                     cambio_total -= 1
-                    razones.append("Diferencia de goles negativa (-1)")
+                    razones.append("Diferencia de goles muy negativa (-1)")
                 
                 break
         
-        # 2. Rendimiento en competiciones europeas
-        comp_europeas = ['champions_league', 'europa_league', 'conference_league']
-        for comp in comp_europeas:
-            if comp in datos and equipo in datos[comp]:
-                puntos_comp = datos[comp][equipo]
-                
-                if puntos_comp >= 10:  # Final
-                    cambio_total += 3
-                    razones.append(f"Finalista en {comp.replace('_', ' ').title()} (+3)")
-                elif puntos_comp >= 8:  # Semifinales
-                    cambio_total += 2
-                    razones.append(f"Semifinales en {comp.replace('_', ' ').title()} (+2)")
-                elif puntos_comp >= 6:  # Cuartos
-                    cambio_total += 1
-                    razones.append(f"Cuartos en {comp.replace('_', ' ').title()} (+1)")
-                elif puntos_comp >= 4:  # Octavos
-                    cambio_total += 1
-                    razones.append(f"Octavos en {comp.replace('_', ' ').title()} (+1)")
-        
-        # 3. Bonus por campeonatos europeos
+        # 2. Campeonatos europeos
         for comp, campeon in datos['campeones'].items():
-            if campeon == equipo:
+            if campeon == codigo:
                 if 'champions' in comp:
                     cambio_total += 5
                     razones.append("CAMPEÓN CHAMPIONS LEAGUE (+5)")
@@ -250,71 +237,204 @@ def calcular_cambios_nivel(datos):
         # Aplicar límites realistas
         cambio_total = max(-5, min(8, cambio_total))
         
-        # Calcular nuevo nivel con límites
-        nuevo_nivel = max(10, min(95, nivel_original + cambio_total))
-        
+        # Solo registrar cambios significativos
         if cambio_total != 0 or razones:
-            cambios[equipo] = {
-                'nivel_original': nivel_original,
+            cambios_equipos[codigo] = {
+                'equipo': equipo,
+                'nivel_actual': nivel_actual,
                 'cambio': cambio_total,
-                'nuevo_nivel': nuevo_nivel,
+                'nuevo_nivel': max(40, min(95, nivel_actual + cambio_total)),
                 'razones': razones
             }
     
-    return cambios
+    return cambios_equipos
 
-def generar_archivo_cambios(cambios, archivo_original):
-    """Genera el archivo solo con el diccionario actualizado para copiar y pegar"""
+def aplicar_cambios_jugadores(cambios_jugadores):
+    """Aplica los cambios calculados a los jugadores"""
+    for jugador_key, datos_cambio in cambios_jugadores.items():
+        jugador = datos_cambio['jugador']
+        jugador.nivel = datos_cambio['nuevo_nivel']
+
+def aplicar_cambios_equipos_a_jugadores(cambios_equipos):
+    """Aplica cambios generales a todos los jugadores de equipos que cambiaron"""
+    for codigo_equipo, datos_cambio in cambios_equipos.items():
+        if datos_cambio['cambio'] != 0:
+            equipo = datos_cambio['equipo']
+            cambio_general = max(-2, min(2, datos_cambio['cambio'] // 2))  # Cambio más moderado para jugadores
+            
+            for jugador in equipo.jugadores:
+                # Aplicar cambio general pero con variación aleatoria
+                import random
+                variacion = random.randint(-1, 1)
+                cambio_individual = cambio_general + variacion
+                nuevo_nivel = max(45, min(95, jugador.nivel + cambio_individual))
+                jugador.nivel = nuevo_nivel
+
+def generar_reporte_cambios(cambios_jugadores, cambios_equipos, archivo_original):
+    """Genera un reporte completo de los cambios realizados"""
     fecha_actual = datetime.now().strftime("%Y%m%d_%H%M%S")
-    nombre_archivo = f"niveles_actualizados_{fecha_actual}.txt"
-    
-    # Crear diccionario de nuevos niveles
-    nuevos_niveles = equipos_originales.copy()
-    for equipo, datos in cambios.items():
-        nuevos_niveles[equipo] = datos['nuevo_nivel']
+    nombre_archivo = f"reporte_cambios_{fecha_actual}.txt"
     
     with open(nombre_archivo, 'w', encoding='utf-8') as f:
-        # Solo generar el código Python actualizado para copiar y pegar
-        f.write("equipos_originales = {\n")
+        f.write("📊 REPORTE DE CAMBIOS DE NIVELES\n")
+        f.write(f"{'='*60}\n")
+        f.write(f"Archivo analizado: {archivo_original}\n")
+        f.write(f"Fecha de análisis: {datetime.now().strftime('%d/%m/%Y %H:%M:%S')}\n")
+        f.write(f"{'='*60}\n\n")
         
-        # Agrupar por liga para mejor organización
-        ligas_grupos = {
-            "Premier League": ["mc", "liv", "ars", "che", "mu", "tot", "new", "avl", "wes", "bha", 
-                              "wol", "cry", "ful", "eve", "bur", "not", "bou", "shf", "lut", "lei"],
-            "La Liga": ["rmd", "bar", "atl", "sev", "bet", "rsoc", "vil", "val", "ath", "osa",
-                       "get", "ray", "cel", "cad", "gra", "las", "alm", "mal", "alv", "gir"],
-            "Serie A": ["juv", "int", "mil", "nap", "rom", "laz", "ata", "fio", "tor", "udi",
-                       "gen", "emp", "lec", "ver", "cal", "fro", "sas", "sam", "mon", "bol"],
-            "Bundesliga": ["bay", "bvb", "rbz", "lev", "fra", "fre", "wol_de", "bmg", "uni", "stu",
-                          "may", "hof", "aug", "her", "boc", "col", "bre", "dar"],
-            "Ligue 1": ["psg", "mar", "oly", "asm", "ren", "lil", "nic", "len", "str", "nan",
-                       "rei", "mtp", "tou", "lor", "brest", "cle", "metz", "hav"],
-            "Primeira Liga": ["ben", "por", "spo", "bra", "vit", "gui", "avo", "mor", "ton", "rio",
-                             "csmf", "bel", "port", "san", "far", "aro", "viz", "est"],
-            "Eredivisie": ["aja", "psv", "fey", "az", "twn", "vit_nl", "uti", "gro", "her_nl", "wil",
-                          "hee", "pec", "for", "spa_nl", "goe", "cam", "nec", "almc"]
-        }
-        
-        for liga, equipos_liga in ligas_grupos.items():
-            f.write(f"    # {liga}\n")
-            equipos_linea = []
-            for equipo in equipos_liga:
-                if equipo in nuevos_niveles:
-                    nivel = nuevos_niveles[equipo]
-                    equipos_linea.append(f'"{equipo}": {nivel}')
+        # Cambios de jugadores
+        if cambios_jugadores:
+            f.write("🌟 CAMBIOS INDIVIDUALES DE JUGADORES\n")
+            f.write("-" * 50 + "\n")
             
-            # Escribir en líneas de máximo 4 equipos
-            for i in range(0, len(equipos_linea), 4):
-                linea = equipos_linea[i:i+4]
-                f.write(f"    {', '.join(linea)},\n")
-            f.write("\n")
+            # Agrupar por equipo
+            jugadores_por_equipo = {}
+            for jugador_key, datos in cambios_jugadores.items():
+                equipo_codigo = datos['jugador'].equipo
+                if equipo_codigo not in jugadores_por_equipo:
+                    jugadores_por_equipo[equipo_codigo] = []
+                jugadores_por_equipo[equipo_codigo].append((jugador_key, datos))
+            
+            for equipo_codigo in sorted(jugadores_por_equipo.keys()):
+                equipo_obj = base_datos.obtener_equipo(equipo_codigo)
+                f.write(f"\n🏟️ {equipo_obj.nombre.upper()} ({equipo_codigo.upper()}):\n")
+                
+                for jugador_key, datos in jugadores_por_equipo[equipo_codigo]:
+                    jugador = datos['jugador']
+                    f.write(f"  • {jugador.nombre} ({jugador.posicion}): {datos['nivel_actual']} → {datos['nuevo_nivel']} ({datos['cambio']:+d})\n")
+                    for razon in datos['razones']:
+                        f.write(f"    - {razon}\n")
+                    f.write("\n")
         
-        f.write("}")
+        # Cambios de equipos
+        if cambios_equipos:
+            f.write("\n🏆 CAMBIOS DE NIVELES DE EQUIPOS\n")
+            f.write("-" * 50 + "\n")
+            
+            # Separar por tipo de cambio
+            mejoras = [(k, v) for k, v in cambios_equipos.items() if v['cambio'] > 0]
+            descensos = [(k, v) for k, v in cambios_equipos.items() if v['cambio'] < 0]
+            
+            if mejoras:
+                f.write("\n⬆️ EQUIPOS QUE MEJORAN:\n")
+                for codigo, datos in sorted(mejoras, key=lambda x: x[1]['cambio'], reverse=True):
+                    f.write(f"  🔥 {datos['equipo'].nombre.upper()} ({codigo.upper()}): "
+                           f"{datos['nivel_actual']} → {datos['nuevo_nivel']} ({datos['cambio']:+d})\n")
+                    for razon in datos['razones']:
+                        f.write(f"     - {razon}\n")
+                    f.write("\n")
+            
+            if descensos:
+                f.write("\n⬇️ EQUIPOS QUE DECLINAN:\n")
+                for codigo, datos in sorted(descensos, key=lambda x: x[1]['cambio']):
+                    f.write(f"  📉 {datos['equipo'].nombre.upper()} ({codigo.upper()}): "
+                           f"{datos['nivel_actual']} → {datos['nuevo_nivel']} ({datos['cambio']:+d})\n")
+                    for razon in datos['razones']:
+                        f.write(f"     - {razon}\n")
+                    f.write("\n")
+        
+        # Estadísticas generales
+        f.write(f"\n📈 RESUMEN ESTADÍSTICO\n")
+        f.write("-" * 30 + "\n")
+        f.write(f"Jugadores modificados: {len(cambios_jugadores)}\n")
+        f.write(f"Equipos modificados: {len(cambios_equipos)}\n")
+        
+        if cambios_equipos:
+            mejoras_count = len([v for v in cambios_equipos.values() if v['cambio'] > 0])
+            descensos_count = len([v for v in cambios_equipos.values() if v['cambio'] < 0])
+            f.write(f"Equipos que mejoran: {mejoras_count}\n")
+            f.write(f"Equipos que declinan: {descensos_count}\n")
     
     return nombre_archivo
 
+def generar_base_datos_actualizada():
+    """Genera un nuevo archivo de base de datos con los niveles actualizados"""
+    fecha_actual = datetime.now().strftime("%Y%m%d_%H%M%S")
+    nombre_archivo = f"base_datos_actualizada_{fecha_actual}.py"
+    
+    with open(nombre_archivo, 'w', encoding='utf-8') as f:
+        f.write("# Base de datos actualizada con cambios de temporada\n")
+        f.write(f"# Generado automáticamente el {datetime.now().strftime('%d/%m/%Y %H:%M:%S')}\n\n")
+        
+        f.write("from dataclasses import dataclass\n")
+        f.write("from typing import Dict, List\n")
+        f.write("import random\n\n")
+        
+        # Copiar las clases de la base de datos original
+        f.write("@dataclass\n")
+        f.write("class Jugador:\n")
+        f.write('    """Clase que representa a un jugador"""\n')
+        f.write("    nombre: str\n")
+        f.write("    posicion: str  # POR, DEF, MED, DEL\n")
+        f.write("    nivel: int     # 1-99\n")
+        f.write("    equipo: str\n")
+        f.write("    goles: int = 0\n")
+        f.write("    asistencias: int = 0\n")
+        f.write("    partidos_jugados: int = 0\n")
+        f.write("    minutos_jugados: int = 0\n")
+        f.write("    tarjetas_amarillas: int = 0\n")
+        f.write("    tarjetas_rojas: int = 0\n\n")
+        
+        f.write("    def calcular_puntos_balon_oro(self) -> float:\n")
+        f.write('        """Calcula los puntos para el Balón de Oro"""\n')
+        f.write("        puntos_base = (self.goles * 2.0) + (self.asistencias * 1.5)\n")
+        f.write("        multiplicador_nivel = self.nivel / 85.0\n")
+        f.write("        multiplicador_partidos = min(1.0, self.partidos_jugados / 30.0)\n")
+        f.write("        return puntos_base * multiplicador_nivel * multiplicador_partidos\n\n")
+        
+        # Exportar todos los jugadores con sus niveles actualizados
+        f.write("# Jugadores actualizados por equipo\n")
+        f.write("JUGADORES_ACTUALIZADOS = {\n")
+        
+        for codigo_equipo, equipo in base_datos.equipos.items():
+            f.write(f'    "{codigo_equipo}": [\n')
+            for jugador in equipo.jugadores:
+                f.write(f'        ("{jugador.nombre}", "{jugador.posicion}", {jugador.nivel}),\n')
+            f.write("    ],\n")
+        
+        f.write("}\n\n")
+        
+        # Generar función para recrear la base de datos
+        f.write("def crear_base_datos_actualizada():\n")
+        f.write('    """Crea la base de datos con los niveles actualizados"""\n')
+        f.write("    # Esta función debería recrear toda la estructura de BaseDatos\n")
+        f.write("    # usando los niveles actualizados en JUGADORES_ACTUALIZADOS\n")
+        f.write("    pass\n")
+    
+    return nombre_archivo
+
+def mostrar_preview_cambios(cambios_jugadores, cambios_equipos):
+    """Muestra un preview de los cambios que se van a aplicar"""
+    print(f"\n📊 PREVIEW DE CAMBIOS")
+    print("=" * 50)
+    
+    if cambios_jugadores:
+        print(f"\n🌟 JUGADORES A MODIFICAR ({len(cambios_jugadores)}):")
+        
+        # Mostrar solo los 10 cambios más significativos
+        cambios_ordenados = sorted(cambios_jugadores.items(), 
+                                 key=lambda x: abs(x[1]['cambio']), reverse=True)[:10]
+        
+        for jugador_key, datos in cambios_ordenados:
+            jugador = datos['jugador']
+            cambio_str = f"{datos['cambio']:+d}"
+            print(f"  • {jugador.nombre} ({jugador.equipo.upper()}): {datos['nivel_actual']} → {datos['nuevo_nivel']} ({cambio_str})")
+        
+        if len(cambios_jugadores) > 10:
+            print(f"  ... y {len(cambios_jugadores) - 10} cambios más")
+    
+    if cambios_equipos:
+        print(f"\n🏆 EQUIPOS A MODIFICAR ({len(cambios_equipos)}):")
+        
+        cambios_ordenados = sorted(cambios_equipos.items(), 
+                                 key=lambda x: abs(x[1]['cambio']), reverse=True)
+        
+        for codigo, datos in cambios_ordenados[:10]:
+            cambio_str = f"{datos['cambio']:+d}"
+            print(f"  • {datos['equipo'].nombre} ({codigo.upper()}): {datos['nivel_actual']} → {datos['nuevo_nivel']} ({cambio_str})")
+
 def main():
-    print("🔄 ACTUALIZADOR DE NIVELES DE EQUIPOS 🔄")
+    print("🔄 ACTUALIZADOR DE NIVELES CON JUGADORES 🔄")
     print("=" * 60)
     
     # Buscar archivos de temporada
@@ -322,13 +442,13 @@ def main():
     
     if not archivos:
         print("❌ No se encontraron archivos de temporada.")
-        print("   Asegúrate de que existan archivos que empiecen con 'temporada_completa_'")
+        print("   Busque archivos que empiecen con 'temporada_completa_' o 'temporada_jugadores_'")
         return
     
     # Mostrar archivos disponibles
     print("📁 Archivos de temporada encontrados:")
     for i, archivo in enumerate(archivos, 1):
-        fecha_archivo = archivo.replace('temporada_completa_', '').replace('.txt', '')
+        fecha_archivo = archivo.replace('temporada_completa_', '').replace('temporada_jugadores_', '').replace('.txt', '')
         print(f"   {i}. {archivo} ({fecha_archivo})")
     
     # Seleccionar archivo
@@ -355,29 +475,57 @@ def main():
     
     # Calcular cambios
     print("🧮 Calculando cambios de nivel...")
-    cambios = calcular_cambios_nivel(datos)
+    cambios_jugadores = calcular_cambios_jugadores(datos)
+    cambios_equipos = calcular_cambios_equipos(datos)
     
-    if not cambios:
-        print("ℹ️  No se detectaron cambios significativos en los niveles")
+    if not cambios_jugadores and not cambios_equipos:
+        print("ℹ️  No se detectaron cambios significativos")
         return
     
-    # Generar archivo
-    print("📝 Generando archivo de cambios...")
-    archivo_cambios = generar_archivo_cambios(cambios, archivo_seleccionado)
+    # Mostrar preview
+    mostrar_preview_cambios(cambios_jugadores, cambios_equipos)
     
-    print(f"\n✅ Análisis completado!")
-    print(f"📁 Archivo generado: {archivo_cambios}")
-    print(f"📊 Equipos modificados: {len(cambios)}")
+    # Confirmar aplicación de cambios
+    respuesta = input("\n❓ ¿Aplicar estos cambios? (s/N): ").strip().lower()
+    if respuesta != 's':
+        print("❌ Cambios cancelados")
+        return
     
-    # Mostrar resumen rápido
-    subidas = len([eq for eq, datos in cambios.items() if datos['cambio'] > 0])
-    bajadas = len([eq for eq, datos in cambios.items() if datos['cambio'] < 0])
+    # Aplicar cambios
+    print("⚡ Aplicando cambios...")
+    if cambios_jugadores:
+        aplicar_cambios_jugadores(cambios_jugadores)
+        print(f"✅ Actualizados {len(cambios_jugadores)} jugadores")
     
-    print(f"⬆️  Equipos que suben: {subidas}")
-    print(f"⬇️  Equipos que bajan: {bajadas}")
+    if cambios_equipos:
+        aplicar_cambios_equipos_a_jugadores(cambios_equipos)
+        print(f"✅ Actualizados jugadores de {len(cambios_equipos)} equipos")
     
-    print(f"\n💡 El archivo '{archivo_cambios}' contiene solo el diccionario actualizado")
-    print("   Cópialo y pégalo directamente en tu código para actualizar los niveles.")
+    # Generar reportes
+    print("📝 Generando reportes...")
+    archivo_reporte = generar_reporte_cambios(cambios_jugadores, cambios_equipos, archivo_seleccionado)
+    archivo_bd_actualizada = generar_base_datos_actualizada()
+    
+    print(f"\n✅ Actualización completada!")
+    print(f"📁 Reporte generado: {archivo_reporte}")
+    print(f"📁 Base de datos actualizada: {archivo_bd_actualizada}")
+    
+    # Mostrar estadísticas finales
+    total_jugadores_modificados = len(cambios_jugadores)
+    total_equipos_modificados = len(cambios_equipos)
+    
+    if cambios_equipos:
+        mejoras = len([v for v in cambios_equipos.values() if v['cambio'] > 0])
+        descensos = len([v for v in cambios_equipos.values() if v['cambio'] < 0])
+        
+        print(f"📊 Resumen:")
+        print(f"   🌟 Jugadores modificados: {total_jugadores_modificados}")
+        print(f"   🏆 Equipos modificados: {total_equipos_modificados}")
+        print(f"   ⬆️  Equipos que mejoran: {mejoras}")
+        print(f"   ⬇️  Equipos que declinan: {descensos}")
+    
+    print(f"\n💡 Los cambios se han aplicado a la base de datos en memoria.")
+    print(f"   Ejecute el simulador para usar los niveles actualizados.")
 
 if __name__ == "__main__":
     main()
