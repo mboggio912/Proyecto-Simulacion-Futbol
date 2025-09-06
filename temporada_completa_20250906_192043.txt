@@ -1,0 +1,777 @@
+🏆 SIMULACIÓN TEMPORADA EUROPEA COMPLETA CON JUGADORES 🏆
+Fecha de simulación: 06/09/2025 19:20:43
+Jugadores simulados: 1438
+Equipos participantes: 132
+================================================================================
+
+======================================================================
+TABLA FINAL - PREMIER LEAGUE
+======================================================================
+Pos Equipo       Pts  PJ  GF  GC  DG   Nivel
+----------------------------------------------------------------------
+1   MC           67   38  25  6    +19 87   
+2   LIV          65   38  20  5    +15 85   
+3   CHE          60   38  17  5    +12 82   
+4   NEW          55   38  21  9    +12 78   
+5   BHA          54   38  12  9     +3 77   
+6   MU           53   38  14  10    +4 82   
+7   TOT          52   38  14  12    +2 80   
+8   WES          47   38  12  13    -1 78   
+9   FUL          47   38  10  11    -1 76   
+10  ARS          45   38  13  11    +2 84   
+11  EVE          45   38  12  13    -1 74   
+12  LEI          44   38  11  13    -2 73   
+13  AVL          43   38  11  11    +0 79   
+14  CRY          42   38  11  16    -5 75   
+15  SHF          40   38  8   11    -3 69   
+16  NOT          38   38  7   12    -5 73   
+17  BOU          38   38  6   13    -7 73   
+18  WOL          38   38  8   16    -8 76   
+19  LUT          28   38  4   19   -15 69   
+20  BUR          25   38  1   22   -21 71   
+
+CLASIFICACIONES:
+🏆 Champions League: MC, LIV, CHE, NEW
+🏅 Europa League: BHA, MU
+🎯 Conference League: TOT
+📉 Descenso: WOL, LUT, BUR
+
+======================================================================
+TABLA FINAL - LA LIGA
+======================================================================
+Pos Equipo       Pts  PJ  GF  GC  DG   Nivel
+----------------------------------------------------------------------
+1   RMD          66   38  23  6    +17 86   
+2   ATL          65   38  25  10   +15 84   
+3   CEL          65   38  20  6    +14 75   
+4   BAR          59   38  13  8     +5 84   
+5   RSOC         57   38  16  6    +10 80   
+6   VAL          54   38  13  6     +7 76   
+7   SEV          46   38  13  11    +2 77   
+8   OSA          46   38  11  11    +0 73   
+9   ALV          45   38  9   11    -2 70   
+10  MAL          44   38  13  14    -1 72   
+11  GET          43   38  9   11    -2 72   
+12  VIL          43   38  10  13    -3 78   
+13  ATH          43   38  12  17    -5 77   
+14  BET          42   38  9   17    -8 75   
+15  CAD          39   38  6   12    -6 71   
+16  RAY          36   38  4   10    -6 73   
+17  GIR          34   38  5   13    -8 72   
+18  LAS          34   38  4   13    -9 70   
+19  GRA          33   38  3   11    -8 70   
+20  ALM          29   38  3   15   -12 70   
+
+CLASIFICACIONES:
+🏆 Champions League: RMD, ATL, CEL, BAR
+🏅 Europa League: RSOC, VAL
+🎯 Conference League: SEV
+📉 Descenso: LAS, GRA, ALM
+
+======================================================================
+TABLA FINAL - SERIE A
+======================================================================
+Pos Equipo       Pts  PJ  GF  GC  DG   Nivel
+----------------------------------------------------------------------
+1   LAZ          65   38  21  7    +14 80   
+2   INT          56   38  14  6     +8 82   
+3   NAP          54   38  20  9    +11 82   
+4   UDI          54   38  11  7     +4 75   
+5   BOL          50   38  11  8     +3 74   
+6   JUV          50   38  10  8     +2 82   
+7   ROM          49   38  10  4     +6 81   
+8   TOR          48   38  11  8     +3 74   
+9   FIO          46   38  7   6     +1 77   
+10  GEN          46   38  8   9     -1 72   
+11  MIL          45   38  12  12    +0 82   
+12  ATA          44   38  10  10    +0 78   
+13  SAS          43   38  6   11    -5 74   
+14  LEC          42   38  10  11    -1 69   
+15  MON          40   38  8   10    -2 72   
+16  CAL          38   38  6   11    -5 69   
+17  VER          35   38  4   11    -7 70   
+18  EMP          35   38  6   15    -9 71   
+19  SAM          31   38  2   12   -10 71   
+20  FRO          29   38  3   15   -12 67   
+
+CLASIFICACIONES:
+🏆 Champions League: LAZ, INT, NAP, UDI
+🏅 Europa League: BOL, JUV
+🎯 Conference League: ROM
+📉 Descenso: EMP, SAM, FRO
+
+======================================================================
+TABLA FINAL - BUNDESLIGA
+======================================================================
+Pos Equipo       Pts  PJ  GF  GC  DG   Nivel
+----------------------------------------------------------------------
+1   RBZ          50   34  14  4    +10 81   
+2   BAY          50   34  14  6     +8 85   
+3   FRA          50   34  10  3     +7 78   
+4   FRE          49   34  11  5     +6 76   
+5   WOL_DE       47   34  12  9     +3 76   
+6   BMG          46   34  11  7     +4 77   
+7   COL          42   34  9   8     +1 72   
+8   MAY          42   34  8   9     -1 73   
+9   BVB          41   34  10  9     +1 81   
+10  HOF          41   34  9   9     +0 74   
+11  BRE          40   34  14  15    -1 72   
+12  UNI          37   34  7   10    -3 74   
+13  LEV          35   34  8   8     +0 79   
+14  HER          35   34  8   11    -3 72   
+15  STU          33   34  5   8     -3 73   
+16  DAR          32   34  2   6     -4 67   
+17  BOC          27   34  5   17   -12 69   
+18  AUG          27   34  4   17   -13 71   
+
+CLASIFICACIONES:
+🏆 Champions League: RBZ, BAY, FRA, FRE
+🏅 Europa League: WOL_DE, BMG
+🎯 Conference League: COL
+📉 Descenso: DAR, BOC, AUG
+
+======================================================================
+TABLA FINAL - LIGUE 1
+======================================================================
+Pos Equipo       Pts  PJ  GF  GC  DG   Nivel
+----------------------------------------------------------------------
+1   OLY          52   34  15  8     +7 77   
+2   PSG          50   34  22  10   +12 85   
+3   MAR          50   34  16  8     +8 78   
+4   ASM          45   34  11  7     +4 78   
+5   BREST        43   34  8   5     +3 71   
+6   REN          43   34  10  9     +1 76   
+7   LOR          42   34  13  11    +2 72   
+8   LEN          42   34  6   4     +2 75   
+9   NAN          41   34  7   5     +2 73   
+10  LIL          40   34  8   8     +0 75   
+11  METZ         40   34  8   11    -3 70   
+12  NIC          38   34  7   6     +1 76   
+13  STR          35   34  6   8     -2 73   
+14  MTP          35   34  10  13    -3 72   
+15  REI          33   34  8   15    -7 73   
+16  CLE          31   34  3   10    -7 70   
+17  HAV          30   34  6   15    -9 68   
+18  TOU          26   34  7   18   -11 72   
+
+CLASIFICACIONES:
+🏆 Champions League: OLY, PSG, MAR
+🏅 Europa League: ASM
+🎯 Conference League: BREST
+
+======================================================================
+TABLA FINAL - PRIMEIRA LIGA
+======================================================================
+Pos Equipo       Pts  PJ  GF  GC  DG   Nivel
+----------------------------------------------------------------------
+1   SPO          64   34  20  4    +16 78   
+2   POR          62   34  19  4    +15 79   
+3   BRA          49   34  12  5     +7 76   
+4   BEN          44   34  10  6     +4 79   
+5   SAN          39   34  7   6     +1 67   
+6   RIO          39   34  5   5     +0 66   
+7   TON          39   34  7   8     -1 67   
+8   VIT          39   34  7   9     -2 72   
+9   GUI          38   34  7   8     -1 70   
+10  CSMF         37   34  5   8     -3 67   
+11  ARO          37   34  5   8     -3 65   
+12  AVO          36   34  2   2     +0 69   
+13  MOR          36   34  4   5     -1 68   
+14  PORT         34   34  4   7     -3 68   
+15  FAR          34   34  3   6     -3 66   
+16  VIZ          34   34  2   5     -3 64   
+17  BEL          29   34  7   21   -14 66   
+18  EST          27   34  1   10    -9 66   
+
+CLASIFICACIONES:
+🏆 Champions League: SPO, POR
+🏅 Europa League: BRA, BEN
+🎯 Conference League: SAN
+
+======================================================================
+TABLA FINAL - EREDIVISIE
+======================================================================
+Pos Equipo       Pts  PJ  GF  GC  DG   Nivel
+----------------------------------------------------------------------
+1   AJA          61   34  15  4    +11 78   
+2   FEY          50   34  11  4     +7 76   
+3   AZ           46   34  8   4     +4 74   
+4   PSV          44   34  9   4     +5 77   
+5   SPA_NL       43   34  7   3     +4 69   
+6   VIT_NL       43   34  7   4     +3 72   
+7   GRO          43   34  7   4     +3 70   
+8   CAM          41   34  7   6     +1 66   
+9   PEC          38   34  4   5     -1 68   
+10  HEE          37   34  5   6     -1 69   
+11  WIL          37   34  4   5     -1 68   
+12  NEC          36   34  6   9     -3 71   
+13  UTI          34   34  3   5     -2 72   
+14  HER_NL       33   34  2   5     -3 69   
+15  TWN          32   34  3   9     -6 73   
+16  GOE          30   34  4   10    -6 67   
+17  FOR          30   34  2   8     -6 68   
+18  ALMC         27   34  2   11    -9 65   
+
+CLASIFICACIONES:
+🏆 Champions League: AJA
+🏅 Europa League: FEY, AZ
+🎯 Conference League: PSV
+
+================================================================================
+🏆 CHAMPIONS LEAGUE 2024/25 (32 equipos)
+================================================================================
+
+📊 EQUIPOS PARTICIPANTES (32):
+----------------------------------------
+ 1. REN (Nivel: 76)
+ 2. LAZ (Nivel: 80)
+ 3. NEW (Nivel: 78)
+ 4. RMD (Nivel: 86)
+ 5. BVB (Nivel: 81)
+ 6. FRE (Nivel: 76)
+ 7. FIO (Nivel: 77)
+ 8. ATL (Nivel: 84)
+ 9. PSG (Nivel: 85)
+10. OLY (Nivel: 77)
+11. FUL (Nivel: 76)
+12. SPO (Nivel: 78)
+13. UDI (Nivel: 75)
+14. BAY (Nivel: 85)
+15. CHE (Nivel: 82)
+16. OSA (Nivel: 73)
+17. LIV (Nivel: 85)
+18. FRA (Nivel: 78)
+19. ALV (Nivel: 70)
+20. TOR (Nivel: 74)
+21. MC (Nivel: 87)
+22. NAP (Nivel: 82)
+23. CEL (Nivel: 75)
+24. INT (Nivel: 82)
+25. RBZ (Nivel: 81)
+26. BAR (Nivel: 84)
+27. WES (Nivel: 78)
+28. MAR (Nivel: 78)
+29. MAY (Nivel: 73)
+30. AJA (Nivel: 78)
+31. POR (Nivel: 79)
+32. LOR (Nivel: 72)
+
+🎯 FASE DE GRUPOS:
+----------------------------------------
+
+Grupo A:
+Pos Equipo       Pts  GF   GC   GD  
+1   RMD          12   6    0    +6  
+2   NEW          7    1    1    +0  
+3   LAZ          6    0    0    +0  
+4   REN          3    0    6    -6  
+
+Grupo B:
+Pos Equipo       Pts  GF   GC   GD  
+1   BVB          8    2    0    +2  
+2   FIO          8    1    0    +1  
+3   FRE          6    1    2    -1  
+4   ATL          6    1    3    -2  
+
+Grupo C:
+Pos Equipo       Pts  GF   GC   GD  
+1   OLY          10   4    0    +4  
+2   PSG          7    4    5    -1  
+3   SPO          6    1    1    +0  
+4   FUL          4    3    6    -3  
+
+Grupo D:
+Pos Equipo       Pts  GF   GC   GD  
+1   BAY          9    2    1    +1  
+2   CHE          9    3    3    +0  
+3   UDI          7    1    1    +0  
+4   OSA          6    1    2    -1  
+
+Grupo E:
+Pos Equipo       Pts  GF   GC   GD  
+1   LIV          9    3    1    +2  
+2   FRA          9    2    2    +0  
+3   TOR          7    1    1    +0  
+4   ALV          5    1    3    -2  
+
+Grupo F:
+Pos Equipo       Pts  GF   GC   GD  
+1   MC           11   6    2    +4  
+2   INT          8    2    3    -1  
+3   NAP          6    1    2    -1  
+4   CEL          6    2    4    -2  
+
+Grupo G:
+Pos Equipo       Pts  GF   GC   GD  
+1   BAR          10   2    0    +2  
+2   RBZ          8    3    2    +1  
+3   WES          6    1    2    -1  
+4   MAR          5    0    2    -2  
+
+Grupo H:
+Pos Equipo       Pts  GF   GC   GD  
+1   AJA          9    3    1    +2  
+2   MAY          7    2    2    +0  
+3   POR          7    2    2    +0  
+4   LOR          5    0    2    -2  
+
+🎯 OCTAVOS DE FINAL
+----------------------------------------
+REN 2-0 LAZ | LAZ 0-1 REN | AGG: 3-0
+✅ Pasa: REN
+
+NEW 1-0 RMD | RMD 0-1 NEW | AGG: 2-0
+✅ Pasa: NEW
+
+BVB 1-0 FRE | FRE 0-0 BVB | AGG: 1-0
+✅ Pasa: BVB
+
+FIO 1-1 ATL | ATL 1-1 FIO | AGG: 2-2 - ATL por penales
+✅ Pasa: ATL
+
+PSG 0-0 OLY | OLY 0-0 PSG | AGG: 0-0 - PSG por penales
+✅ Pasa: PSG
+
+FUL 0-1 SPO | SPO 1-0 FUL | AGG: 0-2
+✅ Pasa: SPO
+
+UDI 0-0 BAY | BAY 1-0 UDI | AGG: 0-1
+✅ Pasa: BAY
+
+CHE 1-0 OSA | OSA 0-1 CHE | AGG: 2-0
+✅ Pasa: CHE
+
+🔥 CUARTOS DE FINAL
+----------------------------------------
+REN 0-1 NEW | NEW 0-1 REN | AGG: 1-1 - NEW por penales
+✅ Pasa: NEW
+
+BVB 1-0 ATL | ATL 1-0 BVB | AGG: 1-1 - BVB por penales
+✅ Pasa: BVB
+
+PSG 2-0 SPO | SPO 1-2 PSG | AGG: 4-1
+✅ Pasa: PSG
+
+BAY 1-0 CHE | CHE 1-0 BAY | AGG: 1-1 - BAY por penales
+✅ Pasa: BAY
+
+⚡ SEMIFINALES
+----------------------------------------
+NEW 0-1 BVB | BVB 0-0 NEW | AGG: 0-1
+✅ FINALISTA: BVB
+
+PSG 1-0 BAY | BAY 0-1 PSG | AGG: 2-0
+✅ FINALISTA: PSG
+
+👑 FINAL CHAMPIONS LEAGUE
+========================================
+BVB 0-0 PSG - PSG por penales
+🏆 CAMPEÓN CHAMPIONS LEAGUE: PSG
+
+================================================================================
+🏅 EUROPA LEAGUE 2024/25 (32 equipos)
+================================================================================
+
+📊 EQUIPOS PARTICIPANTES (32):
+----------------------------------------
+ 1. GRO (Nivel: 70)
+ 2. FEY (Nivel: 76)
+ 3. RSOC (Nivel: 80)
+ 4. GEN (Nivel: 72)
+ 5. EVE (Nivel: 74)
+ 6. TON (Nivel: 67)
+ 7. MU (Nivel: 82)
+ 8. SPA_NL (Nivel: 69)
+ 9. BMG (Nivel: 77)
+10. WOL_DE (Nivel: 76)
+11. BOL (Nivel: 74)
+12. VAL (Nivel: 76)
+13. LEI (Nivel: 73)
+14. ATA (Nivel: 78)
+15. BEN (Nivel: 79)
+16. VIT_NL (Nivel: 72)
+17. AZ (Nivel: 74)
+18. BHA (Nivel: 77)
+19. NAN (Nivel: 73)
+20. ASM (Nivel: 78)
+21. BRA (Nivel: 76)
+22. MAL (Nivel: 72)
+23. GET (Nivel: 72)
+24. LIL (Nivel: 75)
+25. LEN (Nivel: 75)
+26. BRE (Nivel: 72)
+27. JUV (Nivel: 82)
+28. MIL (Nivel: 82)
+29. VIL (Nivel: 78)
+30. ARS (Nivel: 84)
+31. HOF (Nivel: 74)
+32. RIO (Nivel: 66)
+
+🎯 FASE DE GRUPOS:
+----------------------------------------
+
+Grupo A:
+Pos Equipo       Pts  GF   GC   GD  
+1   GEN          8    2    1    +1  
+2   GRO          6    1    1    +0  
+3   FEY          6    1    1    +0  
+4   RSOC         5    1    2    -1  
+
+Grupo B:
+Pos Equipo       Pts  GF   GC   GD  
+1   MU           10   4    0    +4  
+2   TON          9    3    1    +2  
+3   EVE          5    0    2    -2  
+4   SPA_NL       4    0    4    -4  
+
+Grupo C:
+Pos Equipo       Pts  GF   GC   GD  
+1   VAL          14   4    0    +4  
+2   BOL          8    3    3    +0  
+3   BMG          5    1    3    -2  
+4   WOL_DE       4    1    3    -2  
+
+Grupo D:
+Pos Equipo       Pts  GF   GC   GD  
+1   BEN          10   3    1    +2  
+2   VIT_NL       10   2    0    +2  
+3   ATA          5    0    1    -1  
+4   LEI          3    1    4    -3  
+
+Grupo E:
+Pos Equipo       Pts  GF   GC   GD  
+1   BHA          11   4    1    +3  
+2   AZ           9    2    1    +1  
+3   NAN          6    1    3    -2  
+4   ASM          4    0    2    -2  
+
+Grupo F:
+Pos Equipo       Pts  GF   GC   GD  
+1   BRA          12   3    0    +3  
+2   GET          7    1    1    +0  
+3   LIL          5    0    1    -1  
+4   MAL          4    0    2    -2  
+
+Grupo G:
+Pos Equipo       Pts  GF   GC   GD  
+1   JUV          10   2    0    +2  
+2   BRE          7    1    1    +0  
+3   MIL          6    2    2    +0  
+4   LEN          6    1    3    -2  
+
+Grupo H:
+Pos Equipo       Pts  GF   GC   GD  
+1   ARS          11   4    2    +2  
+2   HOF          9    2    1    +1  
+3   VIL          5    3    4    -1  
+4   RIO          4    2    4    -2  
+
+🎯 DIECISEISAVOS DE FINAL (16 equipos)
+----------------------------------------
+GEN 0-0 GRO | GRO 0-0 GEN | AGG: 0-0 - GRO por penales
+✅ Pasa: GRO
+
+MU 0-0 TON | TON 0-1 MU | AGG: 1-0
+✅ Pasa: MU
+
+VAL 2-0 BOL | BOL 0-0 VAL | AGG: 2-0
+✅ Pasa: VAL
+
+BEN 0-0 VIT_NL | VIT_NL 0-0 BEN | AGG: 0-0 - VIT_NL por penales
+✅ Pasa: VIT_NL
+
+BHA 2-0 AZ | AZ 0-0 BHA | AGG: 2-0
+✅ Pasa: BHA
+
+BRA 1-0 GET | GET 0-2 BRA | AGG: 3-0
+✅ Pasa: BRA
+
+JUV 1-0 BRE | BRE 0-1 JUV | AGG: 2-0
+✅ Pasa: JUV
+
+ARS 1-0 HOF | HOF 0-0 ARS | AGG: 1-0
+✅ Pasa: ARS
+
+
+🔥 OCTAVOS DE FINAL (8 equipos)
+----------------------------------------
+GRO 0-0 MU | MU 1-0 GRO | AGG: 0-1
+✅ Pasa: MU
+
+VAL 1-0 VIT_NL | VIT_NL 2-0 VAL | AGG: 1-2
+✅ Pasa: VIT_NL
+
+BHA 0-0 BRA | BRA 1-0 BHA | AGG: 0-1
+✅ Pasa: BRA
+
+JUV 0-0 ARS | ARS 0-0 JUV | AGG: 0-0 - ARS por penales
+✅ Pasa: ARS
+
+⚡ CUARTOS DE FINAL (4 equipos)
+----------------------------------------
+MU 2-0 VIT_NL | VIT_NL 0-0 MU | AGG: 2-0
+✅ Pasa: MU
+
+BRA 0-0 ARS | ARS 1-0 BRA | AGG: 0-1
+✅ Pasa: ARS
+
+💫 SEMIFINALES (2 equipos)
+----------------------------------------
+MU 0-0 ARS | ARS 1-2 MU | AGG: 2-1
+✅ FINALISTA: MU
+
+👑 FINAL EUROPA LEAGUE
+========================================
+🏅 CAMPEÓN EUROPA LEAGUE: MU (ganador por walkover)
+
+================================================================================
+🎯 CONFERENCE LEAGUE 2024/25 (32 equipos)
+================================================================================
+
+📊 EQUIPOS PARTICIPANTES (32):
+----------------------------------------
+ 1. BET (Nivel: 75)
+ 2. LEV (Nivel: 79)
+ 3. SEV (Nivel: 77)
+ 4. CRY (Nivel: 75)
+ 5. CSMF (Nivel: 67)
+ 6. AVL (Nivel: 79)
+ 7. STR (Nivel: 73)
+ 8. LEC (Nivel: 69)
+ 9. SHF (Nivel: 69)
+10. CAD (Nivel: 71)
+11. STU (Nivel: 73)
+12. MON (Nivel: 72)
+13. TOT (Nivel: 80)
+14. AVO (Nivel: 69)
+15. PSV (Nivel: 77)
+16. SAS (Nivel: 74)
+17. VIT (Nivel: 72)
+18. ARO (Nivel: 65)
+19. BREST (Nivel: 71)
+20. GUI (Nivel: 70)
+21. HEE (Nivel: 69)
+22. UNI (Nivel: 74)
+23. SAN (Nivel: 67)
+24. CAM (Nivel: 66)
+25. PEC (Nivel: 68)
+26. ATH (Nivel: 77)
+27. NIC (Nivel: 76)
+28. HER (Nivel: 72)
+29. COL (Nivel: 72)
+30. WIL (Nivel: 68)
+31. ROM (Nivel: 81)
+32. METZ (Nivel: 70)
+
+🎯 FASE DE GRUPOS:
+----------------------------------------
+
+Grupo A:
+Pos Equipo       Pts  GF   GC   GD  
+1   SEV          10   2    0    +2  
+2   LEV          6    2    2    +0  
+3   CRY          6    0    0    +0  
+4   BET          6    1    3    -2  
+
+Grupo B:
+Pos Equipo       Pts  GF   GC   GD  
+1   STR          8    2    1    +1  
+2   CSMF         7    3    2    +1  
+3   LEC          7    1    2    -1  
+4   AVL          5    0    1    -1  
+
+Grupo C:
+Pos Equipo       Pts  GF   GC   GD  
+1   MON          10   2    0    +2  
+2   SHF          6    1    1    +0  
+3   CAD          6    0    0    +0  
+4   STU          4    1    3    -2  
+
+Grupo D:
+Pos Equipo       Pts  GF   GC   GD  
+1   TOT          10   6    2    +4  
+2   PSV          9    3    3    +0  
+3   AVO          8    3    2    +1  
+4   SAS          3    1    6    -5  
+
+Grupo E:
+Pos Equipo       Pts  GF   GC   GD  
+1   ARO          10   2    0    +2  
+2   VIT          6    0    0    +0  
+3   GUI          6    0    0    +0  
+4   BREST        4    0    2    -2  
+
+Grupo F:
+Pos Equipo       Pts  GF   GC   GD  
+1   UNI          8    2    1    +1  
+2   SAN          8    1    0    +1  
+3   CAM          7    1    1    +0  
+4   HEE          4    1    3    -2  
+
+Grupo G:
+Pos Equipo       Pts  GF   GC   GD  
+1   PEC          8    2    1    +1  
+2   HER          8    1    0    +1  
+3   ATH          7    1    1    +0  
+4   NIC          4    1    3    -2  
+
+Grupo H:
+Pos Equipo       Pts  GF   GC   GD  
+1   ROM          10   4    1    +3  
+2   COL          6    0    0    +0  
+3   METZ         6    1    3    -2  
+4   WIL          5    1    2    -1  
+
+🎯 DIECISEISAVOS DE FINAL (16 equipos)
+----------------------------------------
+SEV 0-0 LEV | LEV 0-0 SEV | AGG: 0-0 - LEV por penales
+✅ Pasa: LEV
+
+STR 0-0 CSMF | CSMF 0-0 STR | AGG: 0-0 - CSMF por penales
+✅ Pasa: CSMF
+
+MON 0-0 SHF | SHF 0-0 MON | AGG: 0-0 - SHF por penales
+✅ Pasa: SHF
+
+TOT 0-1 PSV | PSV 0-0 TOT | AGG: 0-1
+✅ Pasa: PSV
+
+ARO 0-0 VIT | VIT 0-1 ARO | AGG: 1-0
+✅ Pasa: ARO
+
+UNI 0-0 SAN | SAN 0-0 UNI | AGG: 0-0 - SAN por penales
+✅ Pasa: SAN
+
+PEC 0-0 HER | HER 0-0 PEC | AGG: 0-0 - HER por penales
+✅ Pasa: HER
+
+ROM 0-1 COL | COL 0-2 ROM | AGG: 2-1
+✅ Pasa: ROM
+
+
+🔥 OCTAVOS DE FINAL (8 equipos)
+----------------------------------------
+LEV 0-0 CSMF | CSMF 1-2 LEV | AGG: 2-1
+✅ Pasa: LEV
+
+SHF 0-0 PSV | PSV 0-1 SHF | AGG: 1-0
+✅ Pasa: SHF
+
+ARO 1-0 SAN | SAN 1-1 ARO | AGG: 2-1
+✅ Pasa: ARO
+
+HER 0-2 ROM | ROM 0-0 HER | AGG: 0-2
+✅ Pasa: ROM
+
+⚡ CUARTOS DE FINAL (4 equipos)
+----------------------------------------
+LEV 1-0 SHF | SHF 0-0 LEV | AGG: 1-0
+✅ Pasa: LEV
+
+ARO 0-1 ROM | ROM 0-0 ARO | AGG: 0-1
+✅ Pasa: ROM
+
+💫 SEMIFINALES (2 equipos)
+----------------------------------------
+LEV 0-1 ROM | ROM 1-1 LEV | AGG: 1-2
+✅ FINALISTA: ROM
+
+👑 FINAL CONFERENCE LEAGUE
+========================================
+🎯 CAMPEÓN CONFERENCE LEAGUE: ROM (ganador por walkover)
+
+================================================================================
+ESTADÍSTICAS INDIVIDUALES DE LA TEMPORADA
+================================================================================
+
+🥇 TOP 10 GOLEADORES
+--------------------------------------------------
+Pos Jugador         Equipo   Goles  Partidos
+--------------------------------------------------
+1   Mbappé          PSG      32     47       (0.68 por partido)
+2   Haaland         MC       31     44       (0.70 por partido)
+3   Vinicius        RMD      29     46       (0.63 por partido)
+4   Griezmann       ATL      29     48       (0.60 por partido)
+5   Salah           LIV      22     44       (0.50 por partido)
+6   Aspas           CEL      22     44       (0.50 por partido)
+7   Edwards         SPO      22     44       (0.50 por partido)
+8   Osimhen         NAP      21     44       (0.48 por partido)
+9   Dybala          ROM      21     52       (0.40 por partido)
+10  Taremi          POR      21     40       (0.53 por partido)
+
+🎯 TOP 10 ASISTENTES
+--------------------------------------------------
+Pos Jugador         Equipo   Asist  Partidos
+--------------------------------------------------
+1   De_Bruyne       MC       16     44       (0.36 por partido)
+2   Pellegrini      ROM      15     52       (0.29 por partido)
+3   Guimaraes       NEW      13     50       (0.26 por partido)
+4   Thiago          LIV      12     44       (0.27 por partido)
+5   Odegaard        ARS      12     52       (0.23 por partido)
+6   Modric          RMD      12     46       (0.26 por partido)
+7   Bruno           MU       11     52       (0.21 por partido)
+8   Maddison        TOT      11     46       (0.24 por partido)
+9   Felix           ATL      11     48       (0.23 por partido)
+10  Rongier         MAR      11     40       (0.28 por partido)
+
+🏆 TOP 20 CANDIDATOS BALÓN DE ORO
+------------------------------------------------------------
+Pos Jugador         Equipo   Goles  Asist  Puntos  
+------------------------------------------------------------
+🥇 Mbappé          PSG      32     0      133.61  
+🥈 Haaland         MC       31     0      102.85  
+🥉 Vinicius        RMD      29     0      93.14   
+4   Dybala          ROM      21     0      69.30   
+5   Edwards         SPO      22     2      66.35   
+6   Bruno           MU       8      11     60.56   
+7   Griezmann       ATL      29     0      59.36   
+8   Lacazette       OLY      19     0      54.99   
+9   Tadic           AJA      18     0      52.09   
+10  Nkunku          RBZ      17     0      51.60   
+11  Immobile        LAZ      14     3      48.18   
+12  Salah           LIV      22     0      46.59   
+13  Osimhen         NAP      21     0      42.99   
+14  Aspas           CEL      22     0      42.45   
+15  Saka            ARS      20     0      41.41   
+16  Taremi          POR      21     0      40.52   
+17  Son             TOT      20     0      40.47   
+18  De_Bruyne       MC       0      16     38.96   
+19  Rashford        MU       9      2      37.80   
+20  Cavani          VAL      20     0      37.18   
+
+================================================================================
+🏆 RESUMEN FINAL DE LA TEMPORADA 2024/25 🏆
+================================================================================
+
+📊 CAMPEONES DE LIGA:
+--------------------------------------------------
+🏆 Premier League      : MC              (Nivel: 87)
+🏆 La Liga             : RMD             (Nivel: 86)
+🏆 Serie A             : LAZ             (Nivel: 80)
+🏆 Bundesliga          : RBZ             (Nivel: 81)
+🏆 Ligue 1             : OLY             (Nivel: 77)
+🏆 Primeira Liga       : SPO             (Nivel: 78)
+🏆 Eredivisie          : AJA             (Nivel: 78)
+
+🌍 CAMPEONES EUROPEOS:
+--------------------------------------------------
+🏆 CAMPEÓN CHAMPIONS LEAGUE: PSG
+🏅 CAMPEÓN EUROPA LEAGUE: MU
+🎯 CAMPEÓN CONFERENCE LEAGUE: ROM
+
+⚽ TOP 5 GOLEADORES DE LA TEMPORADA:
+--------------------------------------------------
+🥇 Mbappé (PSG) - 32 goles
+🥈 Haaland (MC) - 31 goles
+🥉 Vinicius (RMD) - 29 goles
+4. Griezmann (ATL) - 29 goles
+5. Salah (LIV) - 22 goles
+
+🥇 BALÓN DE ORO 2025: MBAPPÉ (PSG)
+   Estadísticas: 32 goles, 0 asistencias - 133.61 puntos
+
+📈 ESTADÍSTICAS GENERALES:
+--------------------------------------------------
+⚽ Total de goles marcados: 1446
+🏟️  Total de partidos jugados: 2716 (aprox.)
+📊 Promedio de goles por partido: 0.53

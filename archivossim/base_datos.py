@@ -6,8 +6,8 @@ import random
 class Jugador:
     """Clase que representa a un jugador"""
     nombre: str
-    posicion: str  # POR, DEF, MED, DEL
-    nivel: int     # 1-99
+    posicion: str
+    nivel: int
     equipo: str
     goles: int = 0
     asistencias: int = 0
@@ -15,15 +15,29 @@ class Jugador:
     minutos_jugados: int = 0
     tarjetas_amarillas: int = 0
     tarjetas_rojas: int = 0
+    titulos_colectivos: int = 0  # Nuevo campo para títulos
     
-    def calcular_puntos_balon_oro(self) -> float:
-        """Calcula los puntos para el Balón de Oro"""
-        # Fórmula que considera goles, asistencias, nivel del jugador y rendimiento del equipo
+    def calcular_puntos_balon_oro(self, equipo_campeon: bool = False) -> float:
+        """Calcula los puntos para el Balón de Oro considerando títulos colectivos"""
+        # Fórmula base: goles y asistencias
         puntos_base = (self.goles * 2.0) + (self.asistencias * 1.5)
-        multiplicador_nivel = self.nivel / 85.0  # Normalizar por nivel alto
-        multiplicador_partidos = min(1.0, self.partidos_jugados / 30.0)  # Penalizar poca participación
         
-        return puntos_base * multiplicador_nivel * multiplicador_partidos
+        # Multiplicadores
+        multiplicador_nivel = self.nivel / 85.0
+        multiplicador_partidos = min(1.0, self.partidos_jugados / 30.0)
+        
+        # BONUS POR TÍTULOS COLECTIVOS (muy importante)
+        bonus_titulos = 1.0
+        if equipo_campeon:
+            bonus_titulos = 1.5  # 50% más puntos si su equipo es campeón
+        elif self.titulos_colectivos > 0:
+            bonus_titulos = 1.2  # 20% más puntos si ganó algún título
+        
+        # BONUS POR RENDIMIENTO EN COMPETICIONES (Champions > Europa > Conference > Liga)
+        bonus_competicion = 1.0
+        # (Esto se calculará externamente basado en en qué competición destacó)
+        
+        return puntos_base * multiplicador_nivel * multiplicador_partidos * bonus_titulos * bonus_competicion
 
 @dataclass
 class Equipo:
@@ -59,13 +73,13 @@ class BaseDatos:
     def __init__(self):
         self.equipos: Dict[str, Equipo] = {}
         self.jugadores: Dict[str, Jugador] = {}
+        self.campeones = {
+            'champions': None,
+            'europa': None,
+            'conference': None,
+            'ligas': {}
+        }
         self._crear_base_datos()
-    
-    def _crear_jugador(self, nombre: str, posicion: str, nivel: int, equipo_codigo: str) -> Jugador:
-        """Crea un jugador y lo registra en la base de datos"""
-        jugador = Jugador(nombre, posicion, nivel, equipo_codigo)
-        self.jugadores[f"{equipo_codigo}_{nombre}"] = jugador
-        return jugador
     
     def _crear_equipo(self, codigo: str, nombre_completo: str, liga: str, plantilla: List[tuple]) -> Equipo:
         """Crea un equipo con su plantilla completa"""
@@ -77,6 +91,29 @@ class BaseDatos:
         equipo = Equipo(nombre_completo, liga, jugadores)
         self.equipos[codigo] = equipo
         return equipo
+    
+    def _crear_jugador(self, nombre: str, posicion: str, nivel: int, equipo: str) -> Jugador:
+        """
+        Crea un jugador y lo agrega a la base de datos con ID único
+        """
+        jugador = Jugador(
+            nombre=nombre,
+            posicion=posicion,
+            nivel=nivel,
+            equipo=equipo,
+            goles=0,
+            asistencias=0,
+            partidos_jugados=0,
+            minutos_jugados=0,
+            tarjetas_amarillas=0,
+            tarjetas_rojas=0,
+            titulos_colectivos=0
+        )
+        
+        # Crear ID único (nombre + equipo)
+        jugador_id = f"{nombre}_{equipo}"
+        self.jugadores[jugador_id] = jugador
+        return jugador
     
     def _crear_base_datos(self):
         """Crea toda la base de datos de equipos y jugadores"""
@@ -1200,15 +1237,48 @@ class BaseDatos:
         jugadores_con_asistencias = [j for j in self.jugadores.values() if j.asistencias > 0]
         return sorted(jugadores_con_asistencias, key=lambda x: x.asistencias, reverse=True)[:limite]
     
+    
+    
+    def registrar_campeon(self, competicion: str, equipo: str):
+        """Registra un equipo como campeón de una competición"""
+        if competicion in ['champions', 'europa', 'conference']:
+            self.campeones[competicion] = equipo
+        else:
+            self.campeones['ligas'][competicion] = equipo
+        
+        # Dar bonus de títulos a todos los jugadores del equipo campeón
+        equipo_obj = self.obtener_equipo(equipo)
+        if equipo_obj:
+            for jugador in equipo_obj.jugadores:
+                jugador.titulos_colectivos += 1
+    
     def obtener_candidatos_balon_oro(self, limite: int = 20) -> List[tuple]:
-        """Obtiene los candidatos al Balón de Oro"""
+        """Obtiene los candidatos al Balón de Oro considerando títulos colectivos"""
         jugadores_con_puntos = []
+        
         for jugador in self.jugadores.values():
-            puntos = jugador.calcular_puntos_balon_oro()
+            # Verificar si el jugador es de un equipo campeón
+            equipo_campeon = (
+                jugador.equipo == self.campeones['champions'] or
+                jugador.equipo == self.campeones['europa'] or
+                jugador.equipo == self.campeones['conference'] or
+                jugador.equipo in self.campeones['ligas'].values()
+            )
+            
+            puntos = jugador.calcular_puntos_balon_oro(equipo_campeon)
+            
+            # BONUS ADICIONAL POR COMPETICIONES IMPORTANTES
+            if jugador.equipo == self.campeones['champions']:
+                puntos *= 1.3  # 30% extra por ganar Champions
+            elif jugador.equipo == self.campeones['europa']:
+                puntos *= 1.2  # 20% extra por ganar Europa League
+            elif jugador.equipo == self.campeones['conference']:
+                puntos *= 1.1  # 10% extra por ganar Conference
+            
             if puntos > 0:
                 jugadores_con_puntos.append((jugador, puntos))
         
         return sorted(jugadores_con_puntos, key=lambda x: x[1], reverse=True)[:limite]
-
+    
 # Instancia global de la base de datos
 base_datos = BaseDatos()

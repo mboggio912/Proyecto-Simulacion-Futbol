@@ -6,8 +6,7 @@ from base_datos import base_datos, Jugador, Equipo
 
 def simular_partido_con_jugadores(equipo1: str, equipo2: str) -> Tuple[int, int, List[Dict]]:
     """
-    Simula un partido entre dos equipos registrando estadísticas individuales
-    Retorna: (goles_equipo1, goles_equipo2, eventos_del_partido)
+    Simula un partido entre dos equipos con estadísticas REALISTAS
     """
     team1 = base_datos.obtener_equipo(equipo1)
     team2 = base_datos.obtener_equipo(equipo2)
@@ -18,11 +17,22 @@ def simular_partido_con_jugadores(equipo1: str, equipo2: str) -> Tuple[int, int,
     nivel1 = team1.calcular_nivel_equipo()
     nivel2 = team2.calcular_nivel_equipo()
     
+    # Factor de ventaja por diferencia de nivel
+    diferencia_nivel = abs(nivel1 - nivel2)
+    factor_ventaja = 1 + (diferencia_nivel / 40)
+    
+    if nivel1 > nivel2:
+        nivel1_ajustado = nivel1 * factor_ventaja
+        nivel2_ajustado = nivel2 / factor_ventaja
+    else:
+        nivel1_ajustado = nivel1 / factor_ventaja
+        nivel2_ajustado = nivel2 * factor_ventaja
+    
     gol1, gol2 = 0, 0
     eventos = []
-    sumalevel = nivel1 + nivel2
+    sumalevel = nivel1_ajustado + nivel2_ajustado
     
-    # Actualizar partidos jugados
+    # Actualizar partidos jugados y minutos
     for jugador in team1.jugadores:
         jugador.partidos_jugados += 1
         jugador.minutos_jugados += 90
@@ -31,37 +41,44 @@ def simular_partido_con_jugadores(equipo1: str, equipo2: str) -> Tuple[int, int,
         jugador.partidos_jugados += 1
         jugador.minutos_jugados += 90
     
-    # Simulación de 90 minutos
+    # SIMULACIÓN CON ESTADÍSTICAS REALISTAS
+    oportunidades_equipo1 = 0
+    oportunidades_equipo2 = 0
+    
     for minuto in range(1, 91):
         prob = rm.randint(1, 200)
-        if prob > 195:  # Oportunidad de gol
-            prob2 = rm.randint(0, sumalevel)
+        
+        # OPORTUNIDADES DE GOL REALISTAS (2.5% por minuto = ~2.25 por partido)
+        if prob > 195:  # 2.5% de probabilidad
+            prob2 = rm.randint(0, int(sumalevel))
             
-            if prob2 <= nivel1:  # Gol del equipo 1
-                goleador, asistente = seleccionar_goleador_y_asistente(team1)
-                if goleador:
+            equipo_atacante = team1 if prob2 <= nivel1_ajustado else team2
+            goleador, asistente = seleccionar_goleador_y_asistente(equipo_atacante)
+            
+            if goleador:
+                # Registrar la oportunidad (para estadísticas)
+                if equipo_atacante == team1:
+                    oportunidades_equipo1 += 1
+                else:
+                    oportunidades_equipo2 += 1
+                
+                # PROBABILIDAD DE CONVERSIÓN REALISTA
+                # Mejores delanteros: 25-35% de efectividad
+                efectividad_base = 0.25
+                bonus_nivel = (goleador.nivel - 80) / 100  # +0.15 para jugadores de nivel 95
+                probabilidad_gol = min(0.40, max(0.15, efectividad_base + bonus_nivel))
+                
+                if rm.random() < probabilidad_gol:
                     goleador.goles += 1
-                    gol1 += 1
-                    evento = {
-                        'minuto': minuto,
-                        'tipo': 'gol',
-                        'equipo': equipo1,
-                        'goleador': goleador.nombre,
-                        'asistente': asistente.nombre if asistente else None
-                    }
-                    eventos.append(evento)
+                    if equipo_atacante == team1:
+                        gol1 += 1
+                    else:
+                        gol2 += 1
                     
-                    if asistente:
-                        asistente.asistencias += 1
-            else:  # Gol del equipo 2
-                goleador, asistente = seleccionar_goleador_y_asistente(team2)
-                if goleador:
-                    goleador.goles += 1
-                    gol2 += 1
                     evento = {
                         'minuto': minuto,
                         'tipo': 'gol',
-                        'equipo': equipo2,
+                        'equipo': equipo1 if equipo_atacante == team1 else equipo2,
                         'goleador': goleador.nombre,
                         'asistente': asistente.nombre if asistente else None
                     }
@@ -70,10 +87,10 @@ def simular_partido_con_jugadores(equipo1: str, equipo2: str) -> Tuple[int, int,
                     if asistente:
                         asistente.asistencias += 1
         
-        # Simular tarjetas (muy ocasionalmente)
-        if prob == 1:  # Tarjeta amarilla
-            equipo_tarjeta = team1 if rm.randint(0, sumalevel) <= nivel1 else team2
-            jugador_tarjeta = rm.choice(equipo_tarjeta.jugadores)
+        # Tarjetas (proporcionales)
+        if prob < 8:  # 4% para amarilla
+            equipo_tarjeta = team1 if rm.randint(0, int(sumalevel)) <= nivel1_ajustado else team2
+            jugador_tarjeta = rm.choice([j for j in equipo_tarjeta.jugadores if j.posicion in ["DEF", "MED"]])
             jugador_tarjeta.tarjetas_amarillas += 1
             eventos.append({
                 'minuto': minuto,
@@ -81,8 +98,8 @@ def simular_partido_con_jugadores(equipo1: str, equipo2: str) -> Tuple[int, int,
                 'equipo': equipo1 if equipo_tarjeta == team1 else equipo2,
                 'jugador': jugador_tarjeta.nombre
             })
-        elif prob == 2:  # Tarjeta roja (muy rara)
-            equipo_tarjeta = team1 if rm.randint(0, sumalevel) <= nivel1 else team2
+        elif prob == 1:  # 0.5% para roja
+            equipo_tarjeta = team1 if rm.randint(0, int(sumalevel)) <= nivel1_ajustado else team2
             jugador_tarjeta = rm.choice(equipo_tarjeta.jugadores)
             jugador_tarjeta.tarjetas_rojas += 1
             eventos.append({
@@ -96,46 +113,55 @@ def simular_partido_con_jugadores(equipo1: str, equipo2: str) -> Tuple[int, int,
 
 def seleccionar_goleador_y_asistente(equipo: Equipo) -> Tuple[Jugador, Jugador]:
     """
-    Selecciona quién marca el gol y quién da la asistencia basado en posiciones y niveles
+    Selecciona quién marca el gol y quién da la asistencia - versión más realista
     """
-    # Probabilidades por posición para marcar gol
-    prob_gol = {"DEL": 0.6, "MED": 0.3, "DEF": 0.08, "POR": 0.02}
-    # Probabilidades por posición para dar asistencia
-    prob_asist = {"MED": 0.5, "DEL": 0.35, "DEF": 0.13, "POR": 0.02}
+    # Probabilidades por posición y nivel
+    prob_gol = {
+        "DEL": 0.7,  # Delanteros más probables
+        "MED": 0.25, # Mediocampistas
+        "DEF": 0.04, # Defensores
+        "POR": 0.01  # Porteros (muy raro)
+    }
     
-    # Seleccionar goleador
+    prob_asist = {
+        "MED": 0.6,  # Mediocampistas más asistentes
+        "DEL": 0.3,  # Delanteros
+        "DEF": 0.08, # Defensores
+        "POR": 0.02  # Porteros
+    }
+    
+    # Ordenar jugadores por nivel (mejores jugadores más probables)
+    jugadores_ordenados = sorted(equipo.jugadores, key=lambda x: x.nivel, reverse=True)
+    
+    # Seleccionar goleador - los mejores jugadores tienen más probabilidad
     goleador = None
-    intentos_goleador = 0
-    while not goleador and intentos_goleador < 20:
-        jugador_candidato = rm.choice(equipo.jugadores)
-        prob_posicion = prob_gol.get(jugador_candidato.posicion, 0.1)
-        prob_nivel = jugador_candidato.nivel / 100.0
-        prob_final = prob_posicion * prob_nivel * 2
+    for jugador in jugadores_ordenados:
+        prob_posicion = prob_gol.get(jugador.posicion, 0.1)
+        prob_nivel = jugador.nivel / 100.0
+        prob_final = prob_posicion * prob_nivel * 1.8  # Más realista
         
         if rm.random() < prob_final:
-            goleador = jugador_candidato
-        intentos_goleador += 1
+            goleador = jugador
+            break
     
-    if not goleador:  # Fallback: cualquier jugador puede marcar
-        goleador = rm.choice(equipo.jugadores)
+    if not goleador:  # Fallback: mejor jugador del equipo
+        goleador = jugadores_ordenados[0]
     
     # Seleccionar asistente (diferente al goleador)
     asistente = None
-    intentos_asistente = 0
-    jugadores_disponibles = [j for j in equipo.jugadores if j != goleador]
+    jugadores_sin_goleador = [j for j in jugadores_ordenados if j != goleador]
     
-    while not asistente and intentos_asistente < 15 and jugadores_disponibles:
-        jugador_candidato = rm.choice(jugadores_disponibles)
-        prob_posicion = prob_asist.get(jugador_candidato.posicion, 0.1)
-        prob_nivel = jugador_candidato.nivel / 100.0
+    for jugador in jugadores_sin_goleador:
+        prob_posicion = prob_asist.get(jugador.posicion, 0.1)
+        prob_nivel = jugador.nivel / 100.0
         prob_final = prob_posicion * prob_nivel * 1.5
         
         if rm.random() < prob_final:
-            asistente = jugador_candidato
-        intentos_asistente += 1
+            asistente = jugador
+            break
     
-    # 40% de posibilidad de que no haya asistencia registrada
-    if rm.random() < 0.4:
+    # 30% de posibilidad de que no haya asistencia registrada (más realista)
+    if rm.random() < 0.3:
         asistente = None
     
     return goleador, asistente
@@ -187,6 +213,11 @@ def simular_liga_con_jugadores(nombre_liga: str, equipos_dict: Dict[str, int]) -
     tabla_ordenada = sorted(tabla.items(), 
                            key=lambda x: (x[1]['puntos'], x[1]['gd'], x[1]['gf']), 
                            reverse=True)
+    
+    # Registrar campeón de liga
+    if tabla_ordenada:
+        campeon_liga = tabla_ordenada[0][0]
+        base_datos.registrar_campeon(nombre_liga, campeon_liga)
     
     return tabla_ordenada
 
@@ -417,6 +448,7 @@ def simular_champions_league(equipos: List[str], archivo) -> str:
     archivo.write(f"{resultado_final}\n")
     archivo.write(f"🏆 CAMPEÓN CHAMPIONS LEAGUE: {campeon.upper()}\n")
     
+    base_datos.registrar_campeon('champions', campeon)
     return campeon
 
 def simular_europa_league(equipos: List[str], archivo) -> str:
@@ -534,7 +566,9 @@ def simular_europa_league(equipos: List[str], archivo) -> str:
         archivo.write("❌ No hay suficientes finalistas\n")
         campeon = ""
     
+    base_datos.registrar_campeon('europa', campeon)
     return campeon
+
 
 def simular_conference_league(equipos: List[str], archivo) -> str:
     """Simula la Conference League completa con exactamente 32 equipos"""
@@ -647,6 +681,7 @@ def simular_conference_league(equipos: List[str], archivo) -> str:
         archivo.write("❌ No hay suficientes finalistas\n")
         campeon = ""
     
+    base_datos.registrar_campeon('conference', campeon)
     return campeon
 
 def escribir_estadisticas_individuales(archivo):
