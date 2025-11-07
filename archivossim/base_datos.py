@@ -118,6 +118,291 @@ class BaseDatos:
     def _crear_base_datos(self):
         """Crea toda la base de datos de equipos y jugadores"""
         
+        # === LIGA PROFESIONAL ARGENTINA ===
+        # === LIGA PROFESIONAL ARGENTINA ===
+        # === BRASILEIRÃO (Série A) ===
+        self._crear_equipo("flamengo", "Flamengo", "Liga Brasileña", [
+            ("Rossi","POR",75), ("Filipe_Luis","DEF",74), ("Fabrício_Bruno","DEF",73),
+            ("David_Luiz","DEF",72), ("Ayrton_Lucas","DEF",73), ("Gerson","MED",75),
+            ("Arrascaeta","MED",77), ("Éverton_Ribeiro","MED",75), ("Pulgar","MED",73),
+            ("Bruno_Henrique","DEL",76), ("Pedro","DEL",77)
+        ])
+
+        self._crear_equipo("palmeiras", "Palmeiras", "Liga Brasileña", [
+            ("Weverton","POR",76), ("Murilo","DEF",73), ("Gómez","DEF",75),
+            ("Mayke","DEF",72), ("Piquerez","DEF",73), ("Zé_Rafael","MED",74),
+            ("Veiga","MED",76), ("Menino","MED",72), ("Endrick","DEL",75),
+            ("Rony","DEL",74), ("Dudu","DEL",76)
+        ])
+
+        self._crear_equipo("fluminense", "Fluminense", "Liga Brasileña", [
+            ("Fábio","POR",74), ("Samuel_Xavier","DEF",72), ("Felipe_Melo","DEF",70),
+            ("Nino","DEF",73), ("Marcelo","DEF",74), ("André","MED",75),
+            ("Ganso","MED",73), ("Keno","DEL",74), ("Arias","DEL",75),
+            ("Cano","DEL",77), ("John_Kennedy","DEL",72)
+        ])
+
+        self._crear_equipo("gremio", "Grêmio", "Liga Brasileña", [
+            ("Marchesín","POR",73), ("Kannemann","DEF",72), ("Reinaldo","DEF",71),
+            ("Rodrigo_Ely","DEF",70), ("João_Pedro","DEF",69), ("Carballo","MED",73),
+            ("Pepê","MED",72), ("Cristaldo","MED",74), ("Franco_Cristaldo","MED",73),
+            ("Suárez","DEL",76), ("Ferreira","DEL",72)
+        ])
+
+        self._crear_equipo("internacional", "Internacional", "Liga Brasileña", [
+            ("Rochet","POR",75), ("Vitão","DEF",72), ("Mercado","DEF",70),
+            ("René","DEF",71), ("Bustos","DEF",71), ("Aránguiz","MED",74),
+            ("Mauricio","MED",73), ("Alan_Patrick","MED",74), ("Bruno_Henrique","MED",72),
+            ("Enner_Valencia","DEL",75), ("Pedro_Henrique","DEL",73)
+        ])
+
+        self._crear_equipo("atletico_mg", "Atlético Mineiro", "Liga Brasileña", [
+            ("Everson","POR",74), ("Guilherme_Arana","DEF",73), ("Gemerson","DEF",72),
+            ("Rever","DEF",70), ("Mariano","DEF",70), ("Otávio","MED",72),
+            ("Hulk","DEL",77), ("Paulinho","DEL",74), ("Edenílson","MED",74),
+            ("Pedrinho","MED",72), ("Zaracho","MED",74)
+        ])
+
+        self._crear_equipo("botafogo", "Botafogo", "Liga Brasileña", [
+            ("Perri","POR",73), ("Adryelson","DEF",72), ("Bastos","DEF",70),
+            ("Marçal","DEF",71), ("Di_Plácido","DEF",70), ("Tchê_Tchê","MED",72),
+            ("Marlon_Freitas","MED",72), ("Eduardo","MED",74), ("Júnior_Santos","DEL",73),
+            ("Tiquinho_Soares","DEL",76), ("Luís_Henrique","DEL",72)
+        ])
+
+        self._crear_equipo("santos", "Santos", "Liga Brasileña", [
+            ("João_Paulo","POR",73), ("Joaquim","DEF",69), ("Messias","DEF",70),
+            ("Dodô","DEF",70), ("Lucas_Pires","DEF",68), ("Jean_Lucas","MED",71),
+            ("Lucas_Lima","MED",70), ("Soteldo","DEL",74), ("Marcos_Leonardo","DEL",75),
+            ("Mendonça","DEL",71), ("Rincon","MED",70)
+        ])
+
+        self._crear_equipo("saopaulo", "São Paulo", "Liga Brasileña", [
+            ("Rafael","POR",73), ("Rafinha","DEF",70), ("Arboleda","DEF",73),
+            ("Beraldo","DEF",71), ("Caio_Paulista","DEF",70), ("Luciano","DEL",75),
+            ("Calleri","DEL",76), ("Wellington_Rato","MED",71), ("Alisson","MED",70),
+            ("Galoppo","MED",72), ("Michel_Araujo","MED",70)
+        ])
+
+        self._crear_equipo("corinthians", "Corinthians", "Liga Brasileña", [
+            ("Cássio","POR",74), ("Fagner","DEF",72), ("Murillo","DEF",71),
+            ("Gil","DEF",70), ("Bidon","MED",70), ("Maycon","MED",72),
+            ("Giuliano","MED",72), ("Renato_Augusto","MED",73), ("Mosquito","DEL",71),
+            ("Yuri_Alberto","DEL",75), ("Romero","DEL",72)
+        ])
+
+        self._crear_equipo("bahia", "Bahia", "Liga Brasileña", [
+            ("Marcos_Felipe","POR",70), ("Kanu","DEF",69), ("Vitor_Hugo","DEF",70),
+            ("Rezende","MED",69), ("Cauly","MED",71), ("Biel","DEL",71),
+            ("Everton_Ribeiro","MED",70), ("Acevedo","MED",70), ("Thaciano","MED",69),
+            ("Ademir","DEL",70), ("Everaldo","DEL",71)
+        ])
+
+        self._crear_equipo("athletico", "Athletico Paranaense", "Liga Brasileña", [
+            ("Bento","POR",74), ("Khellven","DEF",71), ("Thiago_Andrade","DEF",70),
+            ("Cacá","DEF",70), ("Cuello","MED",71), ("Erick","MED",72),
+            ("Fernandinho","MED",74), ("Christian","MED",71), ("Canobbio","DEL",73),
+            ("Vitor_Roque","DEL",75), ("Pablo","DEL",72)
+        ])
+
+        self._crear_equipo("bragantino", "Red Bull Bragantino", "Liga Brasileña", [
+            ("Cleiton","POR",72), ("Aderlan","DEF",70), ("Luan_Cândido","DEF",70),
+            ("Léo_Ortiz","DEF",71), ("Lucas_Evangelista","MED",72), ("Eric_Ramires","MED",70),
+            ("Sasha","DEL",72), ("Helinho","DEL",71), ("Thiago_Borbas","DEL",72),
+            ("Vitinho","MED",70), ("Lincoln","MED",69)
+        ])
+
+        self._crear_equipo("fortaleza", "Fortaleza", "Liga Brasileña", [
+            ("Boeck","POR",70), ("Benevenuto","DEF",70), ("Titi","DEF",70),
+            ("Pacheco","DEF",69), ("Tinga","DEF",69), ("Lucas_Sasha","MED",71),
+            ("Pochettino","MED",72), ("Calebe","MED",70), ("Marinho","DEL",73),
+            ("Lucero","DEL",73), ("Yago_Pikachu","DEL",71)
+        ])
+
+        self._crear_equipo("cuiaba", "Cuiabá", "Liga Brasileña", [
+            ("Walter","POR",69), ("Alan_Empereur","DEF",69), ("Uendel","DEF",68),
+            ("F.Santos","DEF",68), ("Clayson","DEL",70), ("Denilson","MED",69),
+            ("Ramiro","MED",70), ("Ceppelini","MED",69), ("Deyverson","DEL",72),
+            ("Jonathan_Cafu","DEL",70), ("Rikelme","DEF",67)
+        ])
+
+        self._crear_equipo("goias", "Goiás", "Liga Brasileña", [
+            ("Tadeu","POR",71), ("Yan_Souto","DEF",68), ("Sidimar","DEF",68),
+            ("Sander","DEF",69), ("Hugo","DEF",68), ("Matheus_Bidu","MED",68),
+            ("Guilherme","MED",69), ("Vinicius","DEL",71), ("Morelli","MED",69),
+            ("Palacios","DEL",70), ("Allano","DEL",70)
+        ])
+
+        self._crear_equipo("coritiba", "Coritiba", "Liga Brasileña", [
+            ("Gabriel","POR",69), ("Natanael","DEF",68), ("Henrique","DEF",68),
+            ("Jamerson","DEF",67), ("Boschilia","MED",69), ("Robson","DEL",71),
+            ("Bruno_Gomes","MED",69), ("Slimani","DEL",70), ("Andrey","MED",69),
+            ("Pablo_Thomaz","DEL",69), ("Zé_Roberto","DEL",68)
+        ])
+
+        self._crear_equipo("america_mg", "América Mineiro", "Liga Brasileña", [
+            ("Matheus_Cavichioli","POR",69), ("Maidana","DEF",69), ("Marlon","DEF",68),
+            ("Juninho","MED",70), ("Aloisio","DEL",70), ("Mastriani","DEL",71),
+            ("Adyson","DEL",69), ("Felipe_Azevedo","DEL",69), ("Emerson","DEF",68),
+            ("Lucas_Kal","DEF",68), ("Paulinho_Boas","MED",68)
+        ])
+
+        self._crear_equipo("vasco", "Vasco da Gama", "Liga Brasileña", [
+            ("Léo_Jardim","POR",71), ("Medel","DEF",70), ("Léo_Pereira","DEF",70),
+            ("Pitón","DEF",70), ("Pumita_Rodríguez","DEF",69), ("Praxedes","MED",70),
+            ("Payet","MED",74), ("Zé_Gabriel","MED",70), ("Gabriel_Peck","MED",69),
+            ("Pumita_Rodríguez","DEF",70), ("Vegetti","DEL",74)
+        ])
+
+        self._crear_equipo("cruzeiro", "Cruzeiro", "Liga Brasileña", [
+            ("Rafael_Cabral","POR",71), ("Neris","DEF",69), ("Castán","DEF",69),
+            ("William","DEF",69), ("Marlon","DEF",68), ("Wallisson","MED",70),
+            ("Ramiro","MED",70), ("Bruno_Rodrigues","DEL",72), ("Matheus_Pereira","MED",71),
+            ("Arthur_Gomes","DEL",71), ("Gilberto","DEL",72)
+        ])
+
+        self._crear_equipo("river", "River Plate", "Liga Argentina", [
+            ("Armani","POR",75), ("P.Díaz","DEF",73), ("E.Díaz","DEF",70),
+            ("Casco","DEF",71), ("L.G.Pirez","DEF",69), ("E.Pérez","MED",74),
+            ("Aliendro","MED",72), ("I.Fernández","MED",73), ("Echeverri","MED",70),
+            ("Barco","DEL",74), ("Borja","DEL",75)
+        ])
+
+        self._crear_equipo("boca", "Boca Juniors", "Liga Argentina", [
+            ("Romero","POR",73), ("Advíncula","DEF",72), ("M.Rojo","DEF",73),
+            ("Figal","DEF",70), ("F.Fabra","DEF",69), ("G.Fernández","MED",72),
+            ("E.Fernández","MED",70), ("K.Zenón","MED",71), ("C.Medina","MED",70),
+            ("Cavani","DEL",74), ("Langoni","DEL",70)
+        ])
+
+        self._crear_equipo("racing", "Racing Club", "Liga Argentina", [
+            ("Arias","POR",73), ("Martirena","DEF",69), ("Piovi","DEF",70),
+            ("Insúa","DEF",68), ("Sigali","DEF",71), ("Nardoni","MED",70),
+            ("A.Moreno","MED",72), ("J.Gómez","MED",69), ("Almendra","MED",70),
+            ("R.Martínez","DEL",72), ("Hauche","DEL",70)
+        ])
+
+        self._crear_equipo("sanlor", "San Lorenzo", "Liga Argentina", [
+            ("Gómez","POR",70), ("Hernández","DEF",69), ("Giay","DEF",69),
+            ("Gattoni","DEF",70), ("Luján","DEF",68), ("Maroni","MED",68),
+            ("Barrios","MED",70), ("Leguizamón","MED",69), ("Martegani","MED",70),
+            ("Bareiro","DEL",73), ("Vombergar","DEL",71)
+        ])
+
+        self._crear_equipo("indep", "Independiente", "Liga Argentina", [
+            ("Rey","POR",70), ("Pérez","DEF",68), ("Báez","DEF",69),
+            ("Costa","DEF",68), ("Quiroga","DEF",67), ("Marcone","MED",71),
+            ("F.López","MED",70), ("Giménez","MED",69), ("S.López","MED",69),
+            ("Canelo","DEL",70), ("Isla","DEL",68)
+        ])
+
+        self._crear_equipo("estud", "Estudiantes", "Liga Argentina", [
+            ("Andújar","POR",71), ("Sosa","DEF",70), ("Godoy","DEF",68),
+            ("Muñoz","DEF",68), ("Ascacíbar","MED",72), ("Zuqui","MED",70),
+            ("J.Rodríguez","MED",71), ("Rollheiser","DEL",74), ("Benedetti","DEL",70),
+            ("Carrillo","DEL",72), ("Mancuso","DEF",68)
+        ])
+
+        self._crear_equipo("talleres", "Talleres", "Liga Argentina", [
+            ("Herrera","POR",70), ("L.Díaz","DEF",69), ("Portillo","DEF",68),
+            ("Benavídez","DEF",69), ("R.Pérez","DEF",67), ("Villagra","MED",70),
+            ("Garro","MED",71), ("Sosa","MED",69), ("Ortegoza","MED",68),
+            ("Santos","DEL",73), ("Bustos","DEL",72)
+        ])
+
+        self._crear_equipo("velez", "Vélez Sarsfield", "Liga Argentina", [
+            ("Burián","POR",70), ("Gómez","DEF",70), ("Giannetti","DEF",69),
+            ("Ortega","DEF",68), ("Guidara","DEF",69), ("Cáseres","MED",70),
+            ("Florentín","MED",69), ("G.Florentín","MED",69), ("Castro","MED",68),
+            ("G.Fernández","DEL",72), ("Pratto","DEL",71)
+        ])
+
+        self._crear_equipo("defyjus", "Defensa y Justicia", "Liga Argentina", [
+            ("Unsain","POR",71), ("Tripichio","DEF",69), ("Cardona","DEF",68),
+            ("Soto","DEF",68), ("Frías","DEF",67), ("J.López","MED",70),
+            ("K.Gutiérrez","MED",69), ("Alanís","MED",69), ("U.Fernández","MED",68),
+            ("N.Fernández","DEL",71), ("Solari","DEL",70)
+        ])
+
+        self._crear_equipo("argentinos", "Argentinos Juniors", "Liga Argentina", [
+            ("Lanzillota","POR",70), ("Torrén","DEF",70), ("Villalba","DEF",68),
+            ("Costa","DEF",68), ("A.Rodríguez","DEF",67), ("Redondo","MED",72),
+            ("A.Rodríguez","MED",69), ("Metilli","MED",69), ("Moyano","MED",68),
+            ("Ávalos","DEL",72), ("Verón","DEL",70)
+        ])
+
+        self._crear_equipo("rosario", "Rosario Central", "Liga Argentina", [
+            ("Broun","POR",70), ("Quintana","DEF",69), ("Mallo","DEF",68),
+            ("D.Martínez","DEF",68), ("Giaccone","DEF",67), ("Ortiz","MED",70),
+            ("Toledo","MED",68), ("Infantino","MED",70), ("O'Connor","MED",67),
+            ("Véliz","DEL",73), ("Campaz","DEL",72)
+        ])
+
+        self._crear_equipo("colon", "Colón", "Liga Argentina", [
+            ("Chicco","POR",70), ("Delgado","DEF",68), ("Garcés","DEF",69),
+            ("Nardelli","DEF",68), ("Ábila","DEL",72), ("Pierotti","MED",70),
+            ("Vega","MED",69), ("Álvarez","MED",69), ("Teuten","DEF",67),
+            ("Benítez","DEL",70), ("Meza","MED",70)
+        ])
+
+        self._crear_equipo("union", "Unión", "Liga Argentina", [
+            ("Moyano","POR",69), ("Calderón","DEF",69), ("Corvalán","DEF",68),
+            ("Gerometta","DEF",67), ("Esquivel","DEL",70), ("Machuca","MED",70),
+            ("Portillo","MED",68), ("T.González","MED",68), ("Luna Diale","MED",69),
+            ("Zenón","MED",68), ("Juárez","DEL",70)
+        ])
+
+        self._crear_equipo("tigre", "Tigre", "Liga Argentina", [
+            ("Marinelli","POR",69), ("Blondel","DEF",70), ("Demartini","DEF",68),
+            ("Prieto","DEF",68), ("Luciatti","DEF",69), ("Castro","MED",71),
+            ("Menossi","MED",70), ("Armoa","MED",69), ("Colidio","DEL",71),
+            ("Retegui","DEL",74), ("Zabala","DEL",70)
+        ])
+
+        self._crear_equipo("banfield", "Banfield", "Liga Argentina", [
+            ("Cambeses","POR",69), ("Coronel","DEF",69), ("Maciel","DEF",68),
+            ("Insúa","DEF",68), ("Sosa","MED",69), ("J.Sosa","MED",68),
+            ("M.González","MED",69), ("Dátolo","MED",68), ("Chávez","DEL",70),
+            ("Cuadra","DEL",70), ("Urzi","DEL",70)
+        ])
+
+        self._crear_equipo("lanus", "Lanús", "Liga Argentina", [
+            ("Acuña","POR",69), ("Aude","DEF",68), ("C.Pérez","DEF",68),
+            ("López","DEF",69), ("Braghieri","DEF",68), ("Belmonte","MED",70),
+            ("M.González","MED",69), ("Boggio","MED",68), ("De La Vega","DEL",74),
+            ("L.Díaz","DEL",69), ("Sand","DEL",70)
+        ])
+
+        self._crear_equipo("huracan", "Huracán", "Liga Argentina", [
+            ("Meza","POR",69), ("Gudiño","DEF",68), ("Tobio","DEF",69),
+            ("Ibañez","DEF",68), ("Moya","DEF",67), ("Hezze","MED",70),
+            ("Cristaldo","MED",72), ("Gauto","MED",69), ("Garre","DEL",71),
+            ("Cóccaro","DEL",73), ("J.Gauto","DEL",70)
+        ])
+
+        self._crear_equipo("gimnasia", "Gimnasia LP", "Liga Argentina", [
+            ("Durso","POR",69), ("Morales","DEF",68), ("Enrique","DEF",68),
+            ("Ramírez","DEF",67), ("Colazo","DEF",68), ("Alemán","MED",70),
+            ("Castro","MED",69), ("Soldano","DEL",70), ("Domínguez","MED",69),
+            ("Mammini","DEL",69), ("Tarragona","DEL",70)
+        ])
+
+        self._crear_equipo("newells", "Newell’s", "Liga Argentina", [
+            ("Hoyos","POR",69), ("C.Ditta","DEF",70), ("I.Glavinovich","DEF",68),
+            ("Cacciabue","MED",69), ("Sforza","MED",70), ("Balzi","MED",69),
+            ("Reasco","DEL",70), ("Portillo","MED",69), ("F.González","DEL",69),
+            ("Aguirre","DEL",70), ("M.Pérez","DEF",67)
+        ])
+
+        self._crear_equipo("godoy", "Godoy Cruz", "Liga Argentina", [
+            ("D.Rodríguez","POR",69), ("Barrios","DEF",68), ("Galdames","MED",70),
+            ("Bullaude","MED",69), ("Chávez","MED",69), ("Badaloni","DEL",70),
+            ("Salomón","DEF",68), ("Vega","MED",69), ("N.Fernández","DEL",71),
+            ("Larrosa","DEL",70), ("Ojeda","DEL",69)
+        ])
+
+
+
         # PREMIER LEAGUE - Completar todos a 11 jugadores
         self._crear_equipo("mc", "Manchester City", "Premier League", [
             ("Ederson", "POR", 88), ("Walker", "DEF", 85), ("Stones", "DEF", 86), 
