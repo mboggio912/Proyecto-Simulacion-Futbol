@@ -118,9 +118,820 @@ class BaseDatos:
     def _crear_base_datos(self):
         """Crea toda la base de datos de equipos y jugadores"""
         
+        
         # === LIGA PROFESIONAL ARGENTINA ===
         # === LIGA PROFESIONAL ARGENTINA ===
         # === BRASILEIRÃO (Série A) ===
+        
+        # === LIGA CHILENA - 20 equipos ===
+        self._crear_equipo("colo_colo", "Colo-Colo", "Liga Chilena", [
+            ("Cortés", "POR", 78), ("Subero", "DEF", 74), ("Salas", "DEF", 73),
+            ("Pizarro", "DEL", 76), ("Gil", "MED", 75), ("Fuentes", "MED", 74),
+            ("Rojas", "DEF", 72), ("Solari", "DEL", 75), ("Bolanos", "MED", 73),
+            ("Amor", "DEF", 72), ("Costa", "DEL", 74)
+        ])
+
+        self._crear_equipo("ucatolica", "Universidad Católica", "Liga Chilena", [
+            ("Toselli", "POR", 77), ("Díaz", "DEF", 73), ("Lanaro", "DEF", 72),
+            ("Zampedri", "DEL", 75), ("Astudillo", "MED", 74), ("Cepeda", "MED", 73),
+            ("Fuenzalida", "DEF", 71), ("Donoso", "DEL", 74), ("Mendez", "MED", 72),
+            ("Parot", "DEF", 71), ("Tapia", "DEL", 73)
+        ])
+
+        self._crear_equipo("uchile", "Universidad de Chile", "Liga Chilena", [
+            ("Castillo", "POR", 75), ("Maidana", "DEF", 72), ("Cornejo", "DEF", 71),
+            ("Palacios", "DEL", 74), ("Larrivey", "MED", 73), ("Echeverria", "MED", 72),
+            ("Osorio", "DEF", 70), ("Rubio", "DEL", 73), ("Lopez", "MED", 71),
+            ("Reyes", "DEF", 70), ("Fernandez", "DEL", 72)
+        ])
+
+        self._crear_equipo("cobresal", "Cobresal", "Liga Chilena", [
+            ("Santelices", "POR", 74), ("Becer", "DEF", 71), ("Torres", "DEF", 70),
+            ("Jorquera", "DEL", 73), ("Mesa", "MED", 72), ("Gonzalez", "MED", 71),
+            ("Pizarro", "DEF", 69), ("Valencia", "DEL", 72), ("Rojas", "MED", 70),
+            ("Contreras", "DEF", 69), ("Carrasco", "DEL", 71)
+        ])
+
+        self._crear_equipo("nublense", "Ñublense", "Liga Chilena", [
+            ("López", "POR", 73), ("Carvajal", "DEF", 70), ("Soto", "DEF", 69),
+            ("Moya", "DEL", 72), ("Rivera", "MED", 71), ("Valenzuela", "MED", 70),
+            ("Rojas", "DEF", 68), ("Gutiérrez", "DEL", 71), ("Martínez", "MED", 69),
+            ("Fernández", "DEF", 68), ("Salazar", "DEL", 70)
+        ])
+
+        self._crear_equipo("ohiggins", "O'Higgins", "Liga Chilena", [
+            ("Carranza", "POR", 72), ("Navarrete", "DEF", 69), ("Fuentes", "DEF", 68),
+            ("Cepeda", "DEL", 71), ("Torres", "MED", 70), ("Gutiérrez", "MED", 69),
+            ("Silva", "DEF", 67), ("Rojas", "DEL", 70), ("Vargas", "MED", 68),
+            ("Muñoz", "DEF", 67), ("Contreras", "DEL", 69)
+        ])
+
+        self._crear_equipo("audax", "Audax Italiano", "Liga Chilena", [
+            ("Gómez", "POR", 71), ("Torres", "DEF", 68), ("Reyes", "DEF", 67),
+            ("Palma", "DEL", 70), ("Henríquez", "MED", 69), ("Castro", "MED", 68),
+            ("Mendoza", "DEF", 66), ("Sáez", "DEL", 69), ("Gutiérrez", "MED", 67),
+            ("Vargas", "DEF", 66), ("Fuentes", "DEL", 68)
+        ])
+
+        self._crear_equipo("union_esp", "Unión Española", "Liga Chilena", [
+            ("Sánchez", "POR", 72), ("Pereira", "DEF", 69), ("González", "DEF", 68),
+            ("Córdova", "DEL", 71), ("Farías", "MED", 70), ("Rojas", "MED", 69),
+            ("Silva", "DEF", 67), ("Rubio", "DEL", 70), ("Martínez", "MED", 68),
+            ("Torres", "DEF", 67), ("García", "DEL", 69)
+        ])
+
+        self._crear_equipo("everton", "Everton", "Liga Chilena", [
+            ("Vargas", "POR", 71), ("Ceratto", "DEF", 68), ("Oyarzún", "DEF", 67),
+            ("Medina", "DEL", 70), ("Luna", "MED", 69), ("Carvajal", "MED", 68),
+            ("Riquelme", "DEF", 66), ("Sáez", "DEL", 69), ("Orellana", "MED", 67),
+            ("Pizarro", "DEF", 66), ("Ramírez", "DEL", 68)
+        ])
+
+        self._crear_equipo("coquimbo", "Coquimbo Unido", "Liga Chilena", [
+            ("Velásquez", "POR", 70), ("Cabión", "DEF", 67), ("Torres", "DEF", 66),
+            ("Aban", "DEL", 69), ("Gutiérrez", "MED", 68), ("Rojas", "MED", 67),
+            ("Pizarro", "DEF", 65), ("Villanueva", "DEL", 68), ("Carvajal", "MED", 66),
+            ("Muñoz", "DEF", 65), ("Salinas", "DEL", 67)
+        ])
+
+        self._crear_equipo("huachipato", "Huachipato", "Liga Chilena", [
+            ("Leyton", "POR", 71), ("Altamirano", "DEF", 68), ("Gutiérrez", "DEF", 67),
+            ("Mazzantti", "DEL", 70), ("Martínez", "MED", 69), ("Cárdenas", "MED", 68),
+            ("Díaz", "DEF", 66), ("Cruz", "DEL", 69), ("Villanueva", "MED", 67),
+            ("Rojas", "DEF", 66), ("Álvarez", "DEL", 68)
+        ])
+
+        self._crear_equipo("palestino", "Palestino", "Liga Chilena", [
+            ("Rojas", "POR", 70), ("Carrasco", "DEF", 67), ("Corral", "DEF", 66),
+            ("Carrasco", "DEL", 69), ("Fuentes", "MED", 68), ("Ahumada", "MED", 67),
+            ("Torres", "DEF", 65), ("Dávila", "DEL", 68), ("Rojas", "MED", 66),
+            ("González", "DEF", 65), ("Soto", "DEL", 67)
+        ])
+
+        self._crear_equipo("curico", "Curicó Unido", "Liga Chilena", [
+            ("Mucci", "POR", 69), ("Torres", "DEF", 66), ("Pino", "DEF", 65),
+            ("Figueroa", "DEL", 68), ("Ormeño", "MED", 67), ("Cepeda", "MED", 66),
+            ("Rojas", "DEF", 64), ("Vilches", "DEL", 67), ("Gutiérrez", "MED", 65),
+            ("Muñoz", "DEF", 64), ("Salazar", "DEL", 66)
+        ])
+
+        self._crear_equipo("copiapó", "Deportes Copiapó", "Liga Chilena", [
+            ("González", "POR", 68), ("Rojas", "DEF", 65), ("Torres", "DEF", 64),
+            ("Carvajal", "DEL", 67), ("Martínez", "MED", 66), ("López", "MED", 65),
+            ("Silva", "DEF", 63), ("Gutiérrez", "DEL", 66), ("Rojas", "MED", 64),
+            ("Muñoz", "DEF", 63), ("Castro", "DEL", 65)
+        ])
+
+        self._crear_equipo("magallanes", "Magallanes", "Liga Chilena", [
+            ("Castillo", "POR", 67), ("González", "DEF", 64), ("Rojas", "DEF", 63),
+            ("Pizarro", "DEL", 66), ("Martínez", "MED", 65), ("López", "MED", 64),
+            ("Silva", "DEF", 62), ("Gutiérrez", "DEL", 65), ("Rojas", "MED", 63),
+            ("Muñoz", "DEF", 62), ("Castro", "DEL", 64)
+        ])
+
+        self._crear_equipo("unionlc", "Unión La Calera", "Liga Chilena", [
+            ("Villanueva", "POR", 68), ("Torres", "DEF", 65), ("Rojas", "DEF", 64),
+            ("Carvajal", "DEL", 67), ("Martínez", "MED", 66), ("López", "MED", 65),
+            ("Silva", "DEF", 63), ("Gutiérrez", "DEL", 66), ("Rojas", "MED", 64),
+            ("Muñoz", "DEF", 63), ("Castro", "DEL", 65)
+        ])
+
+        self._crear_equipo("antofa", "Deportes Antofagasta", "Liga Chilena", [
+            ("Rojas", "POR", 67), ("González", "DEF", 64), ("Torres", "DEF", 63),
+            ("Pizarro", "DEL", 66), ("Martínez", "MED", 65), ("López", "MED", 64),
+            ("Silva", "DEF", 62), ("Gutiérrez", "DEL", 65), ("Rojas", "MED", 63),
+            ("Muñoz", "DEF", 62), ("Castro", "DEL", 64)
+        ])
+
+        self._crear_equipo("iquique", "Deportes Iquique", "Liga Chilena", [
+            ("González", "POR", 66), ("Rojas", "DEF", 63), ("Torres", "DEF", 62),
+            ("Carvajal", "DEL", 65), ("Martínez", "MED", 64), ("López", "MED", 63),
+            ("Silva", "DEF", 61), ("Gutiérrez", "DEL", 64), ("Rojas", "MED", 62),
+            ("Muñoz", "DEF", 61), ("Castro", "DEL", 63)
+        ])
+
+        self._crear_equipo("temuco", "Deportes Temuco", "Liga Chilena", [
+            ("Torres", "POR", 65), ("González", "DEF", 62), ("Rojas", "DEF", 61),
+            ("Pizarro", "DEL", 64), ("Martínez", "MED", 63), ("López", "MED", 62),
+            ("Silva", "DEF", 60), ("Gutiérrez", "DEL", 63), ("Rojas", "MED", 61),
+            ("Muñoz", "DEF", 60), ("Castro", "DEL", 62)
+        ])
+
+        self._crear_equipo("laserena", "Deportes La Serena", "Liga Chilena", [
+            ("Rojas", "POR", 64), ("González", "DEF", 61), ("Torres", "DEF", 60),
+            ("Carvajal", "DEL", 63), ("Martínez", "MED", 62), ("López", "MED", 61),
+            ("Silva", "DEF", 59), ("Gutiérrez", "DEL", 62), ("Rojas", "MED", 60),
+            ("Muñoz", "DEF", 59), ("Castro", "DEL", 61)
+        ])
+
+        # === LIGA URUGUAYA - 20 equipos ===
+        self._crear_equipo("penarol", "Peñarol", "Liga Uruguaya", [
+            ("Dawson", "POR", 77), ("Rodríguez", "DEF", 74), ("González", "DEF", 73),
+            ("Aguirre", "DEL", 76), ("Cristóforo", "MED", 75), ("Zeballos", "MED", 74),
+            ("Olivera", "DEF", 72), ("Rodríguez", "DEL", 75), ("Sosa", "MED", 73),
+            ("Coelho", "DEF", 72), ("López", "DEL", 74)
+        ])
+
+        self._crear_equipo("nacional", "Nacional", "Liga Uruguaya", [
+            ("Rochet", "POR", 78), ("Polenta", "DEF", 75), ("Marchesín", "DEF", 74),
+            ("Bergessio", "DEL", 77), ("Trezza", "MED", 76), ("Ramírez", "MED", 75),
+            ("Felipe", "DEF", 73), ("Candido", "DEL", 76), ("Varela", "MED", 74),
+            ("Laborda", "DEF", 73), ("Gigantini", "DEL", 75)
+        ])
+
+        self._crear_equipo("liverpool_ur", "Liverpool", "Liga Uruguaya", [
+            ("López", "POR", 75), ("Pereira", "DEF", 72), ("Silva", "DEF", 71),
+            ("Ocampo", "DEL", 74), ("Barboza", "MED", 73), ("Rodríguez", "MED", 72),
+            ("Machado", "DEF", 70), ("Medina", "DEL", 73), ("González", "MED", 71),
+            ("Fagúndez", "DEF", 70), ("López", "DEL", 72)
+        ])
+
+        self._crear_equipo("defensor", "Defensor Sporting", "Liga Uruguaya", [
+            ("Irusta", "POR", 74), ("Goyen", "DEF", 71), ("Sant'Anna", "DEF", 70),
+            ("Alvarez", "DEL", 73), ("Castro", "MED", 72), ("Gutiérrez", "MED", 71),
+            ("Píriz", "DEF", 69), ("Rodríguez", "DEL", 72), ("Machado", "MED", 70),
+            ("Coelho", "DEF", 69), ("López", "DEL", 71)
+        ])
+
+        self._crear_equipo("wanderers", "Montevideo Wanderers", "Liga Uruguaya", [
+            ("De Amores", "POR", 73), ("López", "DEF", 70), ("Gómez", "DEF", 69),
+            ("Santos", "DEL", 72), ("Ferreira", "MED", 71), ("Castro", "MED", 70),
+            ("Rodríguez", "DEF", 68), ("González", "DEL", 71), ("Silva", "MED", 69),
+            ("Pereira", "DEF", 68), ("Martínez", "DEL", 70)
+        ])
+
+        self._crear_equipo("fenix", "Fénix", "Liga Uruguaya", [
+            ("Gómez", "POR", 72), ("Rodríguez", "DEF", 69), ("Silva", "DEF", 68),
+            ("López", "DEL", 71), ("Martínez", "MED", 70), ("González", "MED", 69),
+            ("Pereira", "DEF", 67), ("Fernández", "DEL", 70), ("Rodríguez", "MED", 68),
+            ("Gómez", "DEF", 67), ("Silva", "DEL", 69)
+        ])
+
+        self._crear_equipo("riverplate_ur", "River Plate", "Liga Uruguaya", [
+            ("Suárez", "POR", 73), ("Machado", "DEF", 70), ("Rodríguez", "DEF", 69),
+            ("Castro", "DEL", 72), ("González", "MED", 71), ("Silva", "MED", 70),
+            ("Pereira", "DEF", 68), ("López", "DEL", 71), ("Martínez", "MED", 69),
+            ("Gómez", "DEF", 68), ("Rodríguez", "DEL", 70)
+        ])
+
+        self._crear_equipo("cerrito", "Cerrito", "Liga Uruguaya", [
+            ("Rodríguez", "POR", 71), ("González", "DEF", 68), ("Silva", "DEF", 67),
+            ("Martínez", "DEL", 70), ("López", "MED", 69), ("Gómez", "MED", 68),
+            ("Pereira", "DEF", 66), ("Rodríguez", "DEL", 69), ("Silva", "MED", 67),
+            ("González", "DEF", 66), ("Martínez", "DEL", 68)
+        ])
+
+        self._crear_equipo("cerro", "Cerro", "Liga Uruguaya", [
+            ("Silva", "POR", 70), ("Rodríguez", "DEF", 67), ("González", "DEF", 66),
+            ("López", "DEL", 69), ("Martínez", "MED", 68), ("Gómez", "MED", 67),
+            ("Pereira", "DEF", 65), ("Silva", "DEL", 68), ("Rodríguez", "MED", 66),
+            ("González", "DEF", 65), ("López", "DEL", 67)
+        ])
+
+        self._crear_equipo("bostonriver", "Boston River", "Liga Uruguaya", [
+            ("Gómez", "POR", 71), ("Rodríguez", "DEF", 68), ("Silva", "DEF", 67),
+            ("López", "DEL", 70), ("Martínez", "MED", 69), ("González", "MED", 68),
+            ("Pereira", "DEF", 66), ("Rodríguez", "DEL", 69), ("Silva", "MED", 67),
+            ("Gómez", "DEF", 66), ("López", "DEL", 68)
+        ])
+
+        self._crear_equipo("danubio", "Danubio", "Liga Uruguaya", [
+            ("Rodríguez", "POR", 72), ("González", "DEF", 69), ("Silva", "DEF", 68),
+            ("López", "DEL", 71), ("Martínez", "MED", 70), ("Gómez", "MED", 69),
+            ("Pereira", "DEF", 67), ("Rodríguez", "DEL", 70), ("Silva", "MED", 68),
+            ("González", "DEF", 67), ("López", "DEL", 69)
+        ])
+
+        self._crear_equipo("liverpool_ur", "Liverpool", "Liga Uruguaya", [
+            ("López", "POR", 73), ("Rodríguez", "DEF", 70), ("González", "DEF", 69),
+            ("Silva", "DEL", 72), ("Martínez", "MED", 71), ("Gómez", "MED", 70),
+            ("Pereira", "DEF", 68), ("López", "DEL", 71), ("Rodríguez", "MED", 69),
+            ("González", "DEF", 68), ("Silva", "DEL", 70)
+        ])
+
+        self._crear_equipo("mvdwanderers", "Montevideo Wanderers", "Liga Uruguaya", [
+            ("Gómez", "POR", 72), ("Rodríguez", "DEF", 69), ("Silva", "DEF", 68),
+            ("López", "DEL", 71), ("Martínez", "MED", 70), ("González", "MED", 69),
+            ("Pereira", "DEF", 67), ("Rodríguez", "DEL", 70), ("Silva", "MED", 68),
+            ("Gómez", "DEF", 67), ("López", "DEL", 69)
+        ])
+
+        self._crear_equipo("plaza", "Plaza Colonia", "Liga Uruguaya", [
+            ("Rodríguez", "POR", 71), ("González", "DEF", 68), ("Silva", "DEF", 67),
+            ("López", "DEL", 70), ("Martínez", "MED", 69), ("Gómez", "MED", 68),
+            ("Pereira", "DEF", 66), ("Rodríguez", "DEL", 69), ("Silva", "MED", 67),
+            ("González", "DEF", 66), ("López", "DEL", 68)
+        ])
+
+        self._crear_equipo("progreso", "Progreso", "Liga Uruguaya", [
+            ("Silva", "POR", 70), ("Rodríguez", "DEF", 67), ("González", "DEF", 66),
+            ("López", "DEL", 69), ("Martínez", "MED", 68), ("Gómez", "MED", 67),
+            ("Pereira", "DEF", 65), ("Silva", "DEL", 68), ("Rodríguez", "MED", 66),
+            ("González", "DEF", 65), ("López", "DEL", 67)
+        ])
+
+        self._crear_equipo("racing_ur", "Racing", "Liga Uruguaya", [
+            ("Gómez", "POR", 69), ("Rodríguez", "DEF", 66), ("Silva", "DEF", 65),
+            ("López", "DEL", 68), ("Martínez", "MED", 67), ("González", "MED", 66),
+            ("Pereira", "DEF", 64), ("Rodríguez", "DEL", 67), ("Silva", "MED", 65),
+            ("Gómez", "DEF", 64), ("López", "DEL", 66)
+        ])
+
+        self._crear_equipo("rentistas", "Rentistas", "Liga Uruguaya", [
+            ("Rodríguez", "POR", 68), ("González", "DEF", 65), ("Silva", "DEF", 64),
+            ("López", "DEL", 67), ("Martínez", "MED", 66), ("Gómez", "MED", 65),
+            ("Pereira", "DEF", 63), ("Rodríguez", "DEL", 66), ("Silva", "MED", 64),
+            ("González", "DEF", 63), ("López", "DEL", 65)
+        ])
+
+        self._crear_equipo("sudamerica", "Sud América", "Liga Uruguaya", [
+            ("Silva", "POR", 67), ("Rodríguez", "DEF", 64), ("González", "DEF", 63),
+            ("López", "DEL", 66), ("Martínez", "MED", 65), ("Gómez", "MED", 64),
+            ("Pereira", "DEF", 62), ("Silva", "DEL", 65), ("Rodríguez", "MED", 63),
+            ("González", "DEF", 62), ("López", "DEL", 64)
+        ])
+
+        self._crear_equipo("torque", "Torque", "Liga Uruguaya", [
+            ("Gómez", "POR", 66), ("Rodríguez", "DEF", 63), ("Silva", "DEF", 62),
+            ("López", "DEL", 65), ("Martínez", "MED", 64), ("González", "MED", 63),
+            ("Pereira", "DEF", 61), ("Rodríguez", "DEL", 64), ("Silva", "MED", 62),
+            ("Gómez", "DEF", 61), ("López", "DEL", 63)
+        ])
+
+        # === LIGA PARAGUAYA - 20 equipos ===
+        self._crear_equipo("olimpia", "Olimpia", "Liga Paraguaya", [
+            ("Olveira", "POR", 77), ("Salcedo", "DEF", 74), ("Zalazar", "DEF", 73),
+            ("Cardozo", "DEL", 76), ("Quintana", "MED", 75), ("Orzusa", "MED", 74),
+            ("Pinto", "DEF", 72), ("Toral", "DEL", 75), ("Hugo", "MED", 73),
+            ("Báez", "DEF", 72), ("W. González", "DEL", 74)
+        ])
+
+        self._crear_equipo("libertad", "Libertad", "Liga Paraguaya", [
+            ("M. Silva", "POR", 76), ("P. Velázquez", "DEF", 73), ("M. Espinoza", "DEF", 72),
+            ("L. Villalba", "DEL", 75), ("I. Franco", "MED", 74), ("R. Martínez", "MED", 73),
+            ("A. Rojas", "DEF", 71), ("H. Paredes", "DEL", 74), ("J. Ferreira", "MED", 72),
+            ("C. Campuzano", "DEF", 71), ("D. Mendieta", "DEL", 73)
+        ])
+
+        self._crear_equipo("cerro_porteno", "Cerro Porteño", "Liga Paraguaya", [
+            ("J. Aguilar", "POR", 75), ("R. Rojas", "DEF", 72), ("A. Benítez", "DEF", 71),
+            ("F. Fernández", "DEL", 74), ("L. Riveros", "MED", 73), ("D. Churín", "MED", 72),
+            ("C. Arrua", "DEF", 70), ("R. Morales", "DEL", 73), ("J. Núñez", "MED", 71),
+            ("M. Corujo", "DEF", 70), ("A. Romero", "DEL", 72)
+        ])
+
+        self._crear_equipo("guarani", "Guaraní", "Liga Paraguaya", [
+            ("G. Giménez", "POR", 74), ("R. Cáceres", "DEF", 71), ("M. Benítez", "DEF", 70),
+            ("F. Báez", "DEL", 73), ("J. Colmán", "MED", 72), ("A. Contrera", "MED", 71),
+            ("L. de la Cruz", "DEF", 69), ("R. Bogarín", "DEL", 72), ("M. Villasanti", "MED", 70),
+            ("A. Duarte", "DEF", 69), ("J. Mendoza", "DEL", 71)
+        ])
+
+        self._crear_equipo("nacional_par", "Nacional", "Liga Paraguaya", [
+            ("A. Silva", "POR", 73), ("J. Báez", "DEF", 70), ("C. Ruiz", "DEF", 69),
+            ("B. Arce", "DEL", 72), ("R. Rojas", "MED", 71), ("J. González", "MED", 70),
+            ("M. Alcaraz", "DEF", 68), ("L. Haedo", "DEL", 71), ("A. Núñez", "MED", 69),
+            ("R. Cardozo", "DEF", 68), ("J. Santacruz", "DEL", 70)
+        ])
+
+        self._crear_equipo("solamerica", "Sol de América", "Liga Paraguaya", [
+            ("R. Muñoz", "POR", 72), ("M. Benítez", "DEF", 69), ("C. Villagra", "DEF", 68),
+            ("J. Salinas", "DEL", 71), ("L. Cáceres", "MED", 70), ("R. Martínez", "MED", 69),
+            ("A. Rojas", "DEF", 67), ("F. García", "DEL", 70), ("J. Ferreira", "MED", 68),
+            ("M. Giménez", "DEF", 67), ("D. Mendieta", "DEL", 69)
+        ])
+
+        self._crear_equipo("spquereno", "Sportivo Luqueño", "Liga Paraguaya", [
+            ("J. Aguilar", "POR", 71), ("R. Rojas", "DEF", 68), ("A. Benítez", "DEF", 67),
+            ("F. Fernández", "DEL", 70), ("L. Riveros", "MED", 69), ("D. Churín", "MED", 68),
+            ("C. Arrua", "DEF", 66), ("R. Morales", "DEL", 69), ("J. Núñez", "MED", 67),
+            ("M. Corujo", "DEF", 66), ("A. Romero", "DEL", 68)
+        ])
+
+        self._crear_equipo("general", "General Caballero", "Liga Paraguaya", [
+            ("G. Giménez", "POR", 70), ("R. Cáceres", "DEF", 67), ("M. Benítez", "DEF", 66),
+            ("F. Báez", "DEL", 69), ("J. Colmán", "MED", 68), ("A. Contrera", "MED", 67),
+            ("L. de la Cruz", "DEF", 65), ("R. Bogarín", "DEL", 68), ("M. Villasanti", "MED", 66),
+            ("A. Duarte", "DEF", 65), ("J. Mendoza", "DEL", 67)
+        ])
+
+        self._crear_equipo("resistencia", "Resistencia", "Liga Paraguaya", [
+            ("A. Silva", "POR", 69), ("J. Báez", "DEF", 66), ("C. Ruiz", "DEF", 65),
+            ("B. Arce", "DEL", 68), ("R. Rojas", "MED", 67), ("J. González", "MED", 66),
+            ("M. Alcaraz", "DEF", 64), ("L. Haedo", "DEL", 67), ("A. Núñez", "MED", 65),
+            ("R. Cardozo", "DEF", 64), ("J. Santacruz", "DEL", 66)
+        ])
+
+        self._crear_equipo("tacuary", "Tacuary", "Liga Paraguaya", [
+            ("R. Muñoz", "POR", 68), ("M. Benítez", "DEF", 65), ("C. Villagra", "DEF", 64),
+            ("J. Salinas", "DEL", 67), ("L. Cáceres", "MED", 66), ("R. Martínez", "MED", 65),
+            ("A. Rojas", "DEF", 63), ("F. García", "DEL", 66), ("J. Ferreira", "MED", 64),
+            ("M. Giménez", "DEF", 63), ("D. Mendieta", "DEL", 65)
+        ])
+
+        self._crear_equipo("trinidense", "Trinidense", "Liga Paraguaya", [
+            ("J. Aguilar", "POR", 67), ("R. Rojas", "DEF", 64), ("A. Benítez", "DEF", 63),
+            ("F. Fernández", "DEL", 66), ("L. Riveros", "MED", 65), ("D. Churín", "MED", 64),
+            ("C. Arrua", "DEF", 62), ("R. Morales", "DEL", 65), ("J. Núñez", "MED", 63),
+            ("M. Corujo", "DEF", 62), ("A. Romero", "DEL", 64)
+        ])
+
+        self._crear_equipo("guairena", "Guaireña", "Liga Paraguaya", [
+            ("G. Giménez", "POR", 66), ("R. Cáceres", "DEF", 63), ("M. Benítez", "DEF", 62),
+            ("F. Báez", "DEL", 65), ("J. Colmán", "MED", 64), ("A. Contrera", "MED", 63),
+            ("L. de la Cruz", "DEF", 61), ("R. Bogarín", "DEL", 64), ("M. Villasanti", "MED", 62),
+            ("A. Duarte", "DEF", 61), ("J. Mendoza", "DEL", 63)
+        ])
+
+        self._crear_equipo("12octubre", "12 de Octubre", "Liga Paraguaya", [
+            ("A. Silva", "POR", 65), ("J. Báez", "DEF", 62), ("C. Ruiz", "DEF", 61),
+            ("B. Arce", "DEL", 64), ("R. Rojas", "MED", 63), ("J. González", "MED", 62),
+            ("M. Alcaraz", "DEF", 60), ("L. Haedo", "DEL", 63), ("A. Núñez", "MED", 61),
+            ("R. Cardozo", "DEF", 60), ("J. Santacruz", "DEL", 62)
+        ])
+
+        self._crear_equipo("independiente", "Independiente", "Liga Paraguaya", [
+            ("R. Muñoz", "POR", 64), ("M. Benítez", "DEF", 61), ("C. Villagra", "DEF", 60),
+            ("J. Salinas", "DEL", 63), ("L. Cáceres", "MED", 62), ("R. Martínez", "MED", 61),
+            ("A. Rojas", "DEF", 59), ("F. García", "DEL", 62), ("J. Ferreira", "MED", 60),
+            ("M. Giménez", "DEF", 59), ("D. Mendieta", "DEL", 61)
+        ])
+
+        self._crear_equipo("riverplate_par", "River Plate", "Liga Paraguaya", [
+            ("J. Aguilar", "POR", 63), ("R. Rojas", "DEF", 60), ("A. Benítez", "DEF", 59),
+            ("F. Fernández", "DEL", 62), ("L. Riveros", "MED", 61), ("D. Churín", "MED", 60),
+            ("C. Arrua", "DEF", 58), ("R. Morales", "DEL", 61), ("J. Núñez", "MED", 59),
+            ("M. Corujo", "DEF", 58), ("A. Romero", "DEL", 60)
+        ])
+
+        self._crear_equipo("sanlorenzo_par", "San Lorenzo", "Liga Paraguaya", [
+            ("G. Giménez", "POR", 62), ("R. Cáceres", "DEF", 59), ("M. Benítez", "DEF", 58),
+            ("F. Báez", "DEL", 61), ("J. Colmán", "MED", 60), ("A. Contrera", "MED", 59),
+            ("L. de la Cruz", "DEF", 57), ("R. Bogarín", "DEL", 60), ("M. Villasanti", "MED", 58),
+            ("A. Duarte", "DEF", 57), ("J. Mendoza", "DEL", 59)
+        ])
+
+        self._crear_equipo("presidente", "Presidente Hayes", "Liga Paraguaya", [
+            ("A. Silva", "POR", 61), ("J. Báez", "DEF", 58), ("C. Ruiz", "DEF", 57),
+            ("B. Arce", "DEL", 60), ("R. Rojas", "MED", 59), ("J. González", "MED", 58),
+            ("M. Alcaraz", "DEF", 56), ("L. Haedo", "DEL", 59), ("A. Núñez", "MED", 57),
+            ("R. Cardozo", "DEF", 56), ("J. Santacruz", "DEL", 58)
+        ])
+
+        self._crear_equipo("deportivo", "Deportivo Santaní", "Liga Paraguaya", [
+            ("R. Muñoz", "POR", 60), ("M. Benítez", "DEF", 57), ("C. Villagra", "DEF", 56),
+            ("J. Salinas", "DEL", 59), ("L. Cáceres", "MED", 58), ("R. Martínez", "MED", 57),
+            ("A. Rojas", "DEF", 55), ("F. García", "DEL", 58), ("J. Ferreira", "MED", 56),
+            ("M. Giménez", "DEF", 55), ("D. Mendieta", "DEL", 57)
+        ])
+
+        self._crear_equipo("fernandodela", "Fernando de la Mora", "Liga Paraguaya", [
+            ("J. Aguilar", "POR", 59), ("R. Rojas", "DEF", 56), ("A. Benítez", "DEF", 55),
+            ("F. Fernández", "DEL", 58), ("L. Riveros", "MED", 57), ("D. Churín", "MED", 56),
+            ("C. Arrua", "DEF", 54), ("R. Morales", "DEL", 57), ("J. Núñez", "MED", 55),
+            ("M. Corujo", "DEF", 54), ("A. Romero", "DEL", 56)
+        ])
+        # === LIGA MX (MÉXICO) - 20 equipos ===
+        self._crear_equipo("america", "Club América", "Liga MX", [
+            ("Ochoa", "POR", 82), ("Reyes", "DEF", 76), ("Valdez", "DEF", 75),
+            ("Cáceres", "DEF", 74), ("Fuentes", "DEF", 73), ("Fidalgo", "MED", 77),
+            ("Zendejas", "MED", 76), ("Valencia", "DEL", 78), ("Henry", "DEL", 77),
+            ("Quiñones", "DEL", 76), ("Sánchez", "MED", 75)
+        ])
+
+        self._crear_equipo("chivas", "Guadalajara", "Liga MX", [
+            ("Jiménez", "POR", 78), ("Briseño", "DEF", 74), ("Sepúlveda", "DEF", 73),
+            ("Mozo", "DEF", 72), ("Oliveira", "DEF", 71), ("Beltran", "MED", 76),
+            ("Núñez", "MED", 74), ("Vega", "DEL", 77), ("Ronaldo", "DEL", 75),
+            ("Alvarado", "DEL", 74), ("Guzmán", "MED", 73)
+        ])
+
+        self._crear_equipo("tigres", "Tigres UANL", "Liga MX", [
+            ("Nahuel", "POR", 81), ("Samir", "DEF", 76), ("Reyes", "DEF", 75),
+            ("Angulo", "DEF", 74), ("Pizarro", "MED", 77), ("Córdova", "MED", 76),
+            ("Gignac", "DEL", 80), ("Ibañez", "DEL", 76), ("Bruno", "MED", 75),
+            ("Aquino", "DEL", 75), ("Gorriarán", "MED", 74)
+        ])
+
+        self._crear_equipo("monterrey", "Monterrey", "Liga MX", [
+            ("Andrada", "POR", 80), ("Medina", "DEF", 76), ("Guzmán", "DEF", 75),
+            ("Vásquez", "DEF", 74), ("Gallardo", "DEF", 73), ("Romero", "MED", 77),
+            ("Cannobio", "MED", 75), ("Berterame", "DEL", 77), ("Janssen", "DEL", 76),
+            ("Meza", "MED", 76), ("Alonso", "MED", 74)
+        ])
+
+        self._crear_equipo("cruzazul", "Cruz Azul", "Liga MX", [
+            ("Corona", "POR", 79), ("Escobar", "DEF", 74), ("Piovi", "DEF", 73),
+            ("Rivero", "DEF", 72), ("Rotondi", "MED", 75), ("Lira", "MED", 74),
+            ("Antuna", "DEL", 76), ("Cambindo", "DEL", 74), ("Rodríguez", "DEL", 73),
+            ("Huescas", "MED", 73), ("Gutiérrez", "DEF", 72)
+        ])
+
+        self._crear_equipo("pumas", "Pumas UNAM", "Liga MX", [
+            ("González", "POR", 77), ("Freire", "DEF", 73), ("Ortiz", "DEF", 72),
+            ("Bennevendo", "DEF", 71), ("Mozo", "DEF", 72), ("Salvio", "MED", 75),
+            ("López", "MED", 74), ("Dinenno", "DEL", 77), ("Rogério", "DEL", 74),
+            ("Ruiz", "MED", 73), ("Berkowitz", "MED", 72)
+        ])
+
+        self._crear_equipo("toluca", "Toluca", "Liga MX", [
+            ("Volpi", "POR", 76), ("Huerta", "DEF", 72), ("Mosquera", "DEF", 71),
+            ("Orrantia", "MED", 73), ("Meneses", "DEL", 74), ("Ruíz", "MED", 72),
+            ("Gonzalez", "DEF", 70), ("Domínguez", "DEL", 73), ("García", "MED", 71),
+            ("Angulo", "DEF", 70), ("López", "DEL", 71)
+        ])
+
+        self._crear_equipo("pachuca", "Pachuca", "Liga MX", [
+            ("Ustari", "POR", 75), ("Cabral", "DEF", 72), ("Barreiro", "DEF", 71),
+            ("De la Rosa", "DEL", 73), ("Idrissi", "MED", 73), ("Hernández", "MED", 72),
+            ("Lozano", "DEF", 70), ("Sánchez", "DEL", 72), ("Guzmán", "MED", 71),
+            ("Martínez", "DEF", 70), ("Pérez", "DEL", 71)
+        ])
+
+        self._crear_equipo("leon", "León", "Liga MX", [
+            ("Cota", "POR", 76), ("Tesillo", "DEF", 73), ("Barreiro", "DEF", 72),
+            ("Víctor", "MED", 74), ("Rubio", "DEL", 73), ("Rodríguez", "MED", 72),
+            ("Moreno", "DEF", 71), ("Davila", "DEL", 73), ("Fernández", "MED", 71),
+            ("Ramírez", "DEF", 70), ("Mena", "DEL", 71)
+        ])
+
+        self._crear_equipo("tijuana", "Tijuana", "Liga MX", [
+            ("Lozano", "POR", 74), ("Rivero", "DEF", 71), ("Díaz", "DEF", 70),
+            ("Bou", "DEL", 72), ("Rivera", "MED", 71), ("Guzmán", "MED", 70),
+            ("Castillo", "DEF", 69), ("López", "DEL", 71), ("Martínez", "MED", 70),
+            ("Rodríguez", "DEF", 69), ("Corona", "DEL", 70)
+        ])
+
+        self._crear_equipo("sanluis", "Atl. San Luis", "Liga MX", [
+            ("Barovero", "POR", 73), ("Guzmán", "DEF", 70), ("Torres", "DEF", 69),
+            ("Sabbag", "DEL", 71), ("Bilbao", "MED", 70), ("Sanabria", "MED", 69),
+            ("Hernández", "DEF", 68), ("Murillo", "DEL", 70), ("García", "MED", 69),
+            ("Álvarez", "DEF", 68), ("Zaldivar", "DEL", 69)
+        ])
+
+        self._crear_equipo("juarez", "Juárez", "Liga MX", [
+            ("Vázquez", "POR", 72), ("Olivera", "DEF", 69), ("Molina", "DEF", 68),
+            ("García", "DEL", 70), ("Rodríguez", "MED", 69), ("Fernández", "MED", 68),
+            ("Gómez", "DEF", 67), ("Martínez", "DEL", 69), ("López", "MED", 68),
+            ("Hernández", "DEF", 67), ("Castro", "DEL", 68)
+        ])
+
+        self._crear_equipo("queretaro", "Querétaro", "Liga MX", [
+            ("Alcalá", "POR", 71), ("Gularte", "DEF", 68), ("Novoa", "DEF", 67),
+            ("Cortizo", "MED", 69), ("Sepúlveda", "DEL", 69), ("Martínez", "MED", 68),
+            ("Pool", "DEF", 66), ("Gómez", "DEL", 68), ("Zamudio", "MED", 67),
+            ("Pérez", "DEF", 66), ("López", "DEL", 67)
+        ])
+
+        self._crear_equipo("mazatlan", "Mazatlán", "Liga MX", [
+            ("Gutiérrez", "POR", 70), ("Villegas", "DEF", 67), ("Célis", "DEF", 66),
+            ("Correa", "DEL", 68), ("Medina", "MED", 67), ("Rivas", "MED", 66),
+            ("Ortiz", "DEF", 65), ("Colmán", "DEL", 67), ("Meraz", "MED", 66),
+            ("Moreno", "DEF", 65), ("Fernández", "DEL", 66)
+        ])
+
+        self._crear_equipo("necaxa", "Necaxa", "Liga MX", [
+            ("Aragon", "POR", 71), ("Formiliano", "DEF", 68), ("Peña", "DEF", 67),
+            ("Furch", "DEL", 69), ("Battocchio", "MED", 68), ("Gómez", "MED", 67),
+            ("Mayorga", "DEF", 66), ("Silvera", "DEL", 68), ("Esquivel", "MED", 67),
+            ("Ortiz", "DEF", 66), ("García", "DEL", 67)
+        ])
+
+        self._crear_equipo("puebla", "Puebla", "Liga MX", [
+            ("Silva", "POR", 72), ("Gonzalez", "DEF", 69), ("Reyes", "DEF", 68),
+            ("Parra", "DEL", 70), ("Martínez", "MED", 69), ("Guzmán", "MED", 68),
+            ("Velázquez", "DEF", 67), ("Tabó", "DEL", 69), ("Ormeño", "MED", 68),
+            ("García", "DEF", 67), ("Álvarez", "DEL", 68)
+        ])
+
+        self._crear_equipo("santos", "Santos Laguna", "Liga MX", [
+            ("Acevedo", "POR", 75), ("Dória", "DEF", 72), ("Rodríguez", "DEF", 71),
+            ("Corona", "MED", 73), ("Precido", "DEL", 72), ("Gómez", "MED", 71),
+            ("Cervantes", "DEF", 70), ("Brunetta", "DEL", 72), ("Gonzalez", "MED", 71),
+            ("Torres", "DEF", 70), ("Jabá", "DEL", 71)
+        ])
+
+        self._crear_equipo("atlas", "Atlas", "Liga MX", [
+            ("Hernández", "POR", 74), ("Nervo", "DEF", 71), ("Rocha", "DEF", 70),
+            ("Quiñones", "DEL", 72), ("Reyes", "MED", 71), ("Marchesín", "MED", 70),
+            ("Abella", "DEF", 69), ("Zaldivar", "DEL", 71), ("Lozano", "MED", 70),
+            ("Trejo", "DEF", 69), ("Aguirre", "DEL", 70)
+        ])
+
+        self._crear_equipo("mty", "Atlético MTY", "Liga MX", [
+            ("García", "POR", 73), ("Madueña", "DEF", 70), ("Guzmán", "DEF", 69),
+            ("Mejía", "DEL", 71), ("Kranevitter", "MED", 70), ("Gómez", "MED", 69),
+            ("Angulo", "DEF", 68), ("Hurtado", "DEL", 70), ("Pineda", "MED", 69),
+            ("Reyes", "DEF", 68), ("Fernández", "DEL", 69)
+        ])
+
+        # === LIGA DIMAYOR (COLOMBIA) - 20 equipos ===
+        self._crear_equipo("nacional", "Atlético Nacional", "Liga Dimayor", [
+            ("Quintana", "POR", 76), ("Devenish", "DEF", 73), ("Banguero", "DEF", 72),
+            ("Pabón", "DEL", 75), ("Duque", "DEL", 74), ("Andrade", "MED", 73),
+            ("Palacio", "MED", 72), ("Perez", "DEF", 71), ("Candelo", "MED", 72),
+            ("Blandón", "DEL", 71), ("Gómez", "DEF", 71)
+        ])
+
+        self._crear_equipo("millonarios", "Millonarios", "Liga Dimayor", [
+            ("Novoa", "POR", 75), ("Bertel", "DEF", 72), ("Vanegas", "DEF", 73),
+            ("Cataño", "MED", 74), ("Silva", "DEL", 74), ("Vargas", "MED", 72),
+            ("Pereira", "DEF", 71), ("Ruiz", "DEL", 72), ("Gómez", "MED", 71),
+            ("Mackalister", "MED", 72), ("Luna", "DEF", 70)
+        ])
+
+        self._crear_equipo("america_cal", "América de Cali", "Liga Dimayor", [
+            ("Mosquera", "POR", 74), ("Quiñones", "DEF", 72), ("Ramos", "DEF", 71),
+            ("Sierra", "MED", 73), ("Ramos", "DEL", 73), ("Barrera", "MED", 72),
+            ("Suárez", "DEF", 70), ("Waterman", "DEL", 71), ("Carbonero", "MED", 71),
+            ("García", "DEF", 70), ("Mosquera", "MED", 70)
+        ])
+
+        self._crear_equipo("santafe", "Santa Fe", "Liga Dimayor", [
+            ("Castillo", "POR", 73), ("Rivas", "DEF", 71), ("Torralvo", "DEF", 70),
+            ("Rodallega", "DEL", 74), ("Moreno", "MED", 72), ("Batalla", "MED", 71),
+            ("Mina", "DEF", 70), ("Marulanda", "DEL", 71), ("Vega", "MED", 70),
+            ("Rangel", "DEF", 69), ("Gutiérrez", "MED", 69)
+        ])
+
+        self._crear_equipo("junior", "Junior", "Liga Dimayor", [
+            ("Cuesta", "POR", 74), ("Hernández", "DEF", 71), ("Gutiérrez", "DEF", 70),
+            ("Borre", "DEL", 73), ("Cantillo", "MED", 72), ("Vaccari", "MED", 71),
+            ("Pérez", "DEF", 69), ("Pico", "DEL", 71), ("Moreno", "MED", 70),
+            ("Rosero", "DEF", 69), ("Hinestroza", "DEL", 70)
+        ])
+
+        self._crear_equipo("cali", "Deportivo Cali", "Liga Dimayor", [
+            ("Herrera", "POR", 73), ("Angulo", "DEF", 70), ("Castillo", "DEF", 69),
+            ("Gutiérrez", "DEL", 72), ("Vásquez", "MED", 71), ("Palavecino", "MED", 70),
+            ("Roa", "DEF", 68), ("Rodríguez", "DEL", 70), ("Cabrera", "MED", 69),
+            ("Mera", "DEF", 68), ("Arango", "DEL", 69)
+        ])
+
+        self._crear_equipo("medellin", "Independiente Medellín", "Liga Dimayor", [
+            ("Mosquera", "POR", 72), ("Torres", "DEF", 70), ("Cadavid", "DEF", 69),
+            ("Pons", "DEL", 71), ("Palacios", "MED", 70), ("Castro", "MED", 69),
+            ("Hernández", "DEF", 68), ("Moreno", "DEL", 70), ("Pérez", "MED", 69),
+            ("Moya", "DEF", 68), ("Bustos", "DEL", 69)
+        ])
+
+        self._crear_equipo("pasto", "Deportivo Pasto", "Liga Dimayor", [
+            ("Martínez", "POR", 71), ("Ramos", "DEF", 69), ("Mina", "DEF", 68),
+            ("Palacios", "DEL", 70), ("Rivas", "MED", 69), ("Ayala", "MED", 68),
+            ("Gómez", "DEF", 67), ("Hurtado", "DEL", 69), ("Rodríguez", "MED", 68),
+            ("Pérez", "DEF", 67), ("Mosquera", "DEL", 68)
+        ])
+
+        self._crear_equipo("bucaramanga", "Atl. Bucaramanga", "Liga Dimayor", [
+            ("Chaverra", "POR", 70), ("Cárdenas", "DEF", 68), ("Márquez", "DEF", 67),
+            ("Rangel", "DEL", 69), ("Balanta", "MED", 68), ("Rojas", "MED", 67),
+            ("Hernández", "DEF", 66), ("Pérez", "DEL", 68), ("Gómez", "MED", 67),
+            ("Torres", "DEF", 66), ("Rodríguez", "DEL", 67)
+        ])
+
+        self._crear_equipo("envigado", "Envigado", "Liga Dimayor", [
+            ("García", "POR", 69), ("Mosquera", "DEF", 67), ("Hincapié", "DEF", 66),
+            ("Arango", "DEL", 68), ("Moreno", "MED", 67), ("Restrepo", "MED", 66),
+            ("Córdoba", "DEF", 65), ("Palacios", "DEL", 67), ("Gómez", "MED", 66),
+            ("Álvarez", "DEF", 65), ("Hoyos", "DEL", 66)
+        ])
+
+        self._crear_equipo("aguilas", "Águilas Doradas", "Liga Dimayor", [
+            ("Castillo", "POR", 70), ("Rentería", "DEF", 68), ("Cano", "DEF", 67),
+            ("Rivas", "DEL", 69), ("Mosquera", "MED", 68), ("Gómez", "MED", 67),
+            ("Torres", "DEF", 66), ("Pérez", "DEL", 68), ("Hernández", "MED", 67),
+            ("Gutiérrez", "DEF", 66), ("Rodríguez", "DEL", 67)
+        ])
+
+        self._crear_equipo("oncecaldas", "Once Caldas", "Liga Dimayor", [
+            ("Hernández", "POR", 71), ("Correa", "DEF", 69), ("Mosquera", "DEF", 68),
+            ("García", "DEL", 70), ("Londoño", "MED", 69), ("Pérez", "MED", 68),
+            ("Ramírez", "DEF", 67), ("Rodríguez", "DEL", 69), ("Gómez", "MED", 68),
+            ("Álvarez", "DEF", 67), ("Henao", "DEL", 68)
+        ])
+
+        self._crear_equipo("patriotas", "Patriotas", "Liga Dimayor", [
+            ("López", "POR", 68), ("Rojas", "DEF", 66), ("Gómez", "DEF", 65),
+            ("Pérez", "DEL", 67), ("Hernández", "MED", 66), ("Martínez", "MED", 65),
+            ("Díaz", "DEF", 64), ("Gutiérrez", "DEL", 66), ("Rodríguez", "MED", 65),
+            ("Moreno", "DEF", 64), ("López", "DEL", 65)
+        ])
+
+        self._crear_equipo("aliansa", "Aliansa Petrolera", "Liga Dimayor", [
+            ("Gómez", "POR", 69), ("Pérez", "DEF", 67), ("Rodríguez", "DEF", 66),
+            ("Gutiérrez", "DEL", 68), ("Hernández", "MED", 67), ("Martínez", "MED", 66),
+            ("Díaz", "DEF", 65), ("López", "DEL", 67), ("Gómez", "MED", 66),
+            ("Moreno", "DEF", 65), ("Pérez", "DEL", 66)
+        ])
+
+        self._crear_equipo("boyaca", "Boyacá Chicó", "Liga Dimayor", [
+            ("Rodríguez", "POR", 68), ("Gómez", "DEF", 66), ("Hernández", "DEF", 65),
+            ("Pérez", "DEL", 67), ("Martínez", "MED", 66), ("López", "MED", 65),
+            ("Díaz", "DEF", 64), ("Gutiérrez", "DEL", 66), ("Rodríguez", "MED", 65),
+            ("Moreno", "DEF", 64), ("Pérez", "DEL", 65)
+        ])
+
+        self._crear_equipo("cucuta", "Cúcuta Deportivo", "Liga Dimayor", [
+            ("Hernández", "POR", 69), ("Pérez", "DEF", 67), ("Gómez", "DEF", 66),
+            ("Rodríguez", "DEL", 68), ("Martínez", "MED", 67), ("López", "MED", 66),
+            ("Díaz", "DEF", 65), ("Gutiérrez", "DEL", 67), ("Hernández", "MED", 66),
+            ("Moreno", "DEF", 65), ("Pérez", "DEL", 66)
+        ])
+
+        self._crear_equipo("tigres_fc", "Tigres FC", "Liga Dimayor", [
+            ("Gómez", "POR", 67), ("Rodríguez", "DEF", 65), ("Hernández", "DEF", 64),
+            ("Pérez", "DEL", 66), ("Martínez", "MED", 65), ("López", "MED", 64),
+            ("Díaz", "DEF", 63), ("Gutiérrez", "DEL", 65), ("Rodríguez", "MED", 64),
+            ("Moreno", "DEF", 63), ("Pérez", "DEL", 64)
+        ])
+
+        self._crear_equipo("union_mag", "Unión Magdalena", "Liga Dimayor", [
+            ("Pérez", "POR", 68), ("Gómez", "DEF", 66), ("Rodríguez", "DEF", 65),
+            ("Hernández", "DEL", 67), ("Martínez", "MED", 66), ("López", "MED", 65),
+            ("Díaz", "DEF", 64), ("Gutiérrez", "DEL", 66), ("Pérez", "MED", 65),
+            ("Moreno", "DEF", 64), ("Rodríguez", "DEL", 65)
+        ])
+
+        self._crear_equipo("cortulua", "Cortuluá", "Liga Dimayor", [
+            ("Rodríguez", "POR", 67), ("Hernández", "DEF", 65), ("Pérez", "DEF", 64),
+            ("Gómez", "DEL", 66), ("Martínez", "MED", 65), ("López", "MED", 64),
+            ("Díaz", "DEF", 63), ("Gutiérrez", "DEL", 65), ("Rodríguez", "MED", 64),
+            ("Moreno", "DEF", 63), ("Pérez", "DEL", 64)
+        ])
+
+        # === LIGA ECUATORIANA - 20 equipos ===
+        self._crear_equipo("ldu", "LDU Quito", "Liga Ecuatoriana", [
+            ("Galíndez", "POR", 75), ("Rodríguez", "DEF", 72), ("Quiñónez", "DEF", 71),
+            ("Alzugaray", "DEL", 74), ("Martínez", "MED", 73), ("Piovi", "MED", 72),
+            ("Hurtado", "DEF", 70), ("Zambrano", "DEL", 72), ("Gómez", "MED", 71),
+            ("Cangá", "DEF", 70), ("Rojas", "DEL", 71)
+        ])
+
+        self._crear_equipo("barcelona", "Barcelona SC", "Liga Ecuatoriana", [
+            ("Burrai", "POR", 76), ("Esterilla", "DEF", 73), ("Ayr", "DEF", 72),
+            ("Fydriszewski", "DEL", 75), ("Cifuente", "MED", 74), ("Gaibor", "MED", 73),
+            ("Arboleda", "DEF", 71), ("Díaz", "DEL", 73), ("Méndez", "MED", 72),
+            ("Velasco", "DEF", 71), ("Rodríguez", "DEL", 72)
+        ])
+
+        self._crear_equipo("emelec", "Emelec", "Liga Ecuatoriana", [
+            ("Ortiz", "POR", 74), ("Caicedo", "DEF", 71), ("Cangá", "DEF", 70),
+            ("Cabeza", "DEL", 73), ("Cortez", "MED", 72), ("Quiñónez", "MED", 71),
+            ("López", "DEF", 69), ("Barcos", "DEL", 72), ("Gómez", "MED", 71),
+            ("Mina", "DEF", 69), ("Rojas", "DEL", 71)
+        ])
+
+        self._crear_equipo("indvalle", "Independiente Valle", "Liga Ecuatoriana", [
+            ("Ramírez", "POR", 73), ("Pineida", "DEF", 70), ("García", "DEF", 69),
+            ("Schunke", "DEL", 72), ("Faravelli", "MED", 71), ("Rojas", "MED", 70),
+            ("Quiñónez", "DEF", 68), ("Rodríguez", "DEL", 71), ("Cifuente", "MED", 70),
+            ("Mina", "DEF", 68), ("Hoyos", "DEL", 70)
+        ])
+
+        self._crear_equipo("aucas", "Aucas", "Liga Ecuatoriana", [
+            ("Aycart", "POR", 72), ("Cantera", "DEF", 69), ("Nazareno", "DEF", 68),
+            ("Rivas", "DEL", 71), ("Luna", "MED", 70), ("Quiñónez", "MED", 69),
+            ("Gómez", "DEF", 67), ("Borja", "DEL", 70), ("Martínez", "MED", 69),
+            ("Rodríguez", "DEF", 67), ("Cabeza", "DEL", 69)
+        ])
+
+        self._crear_equipo("univcatolica", "Universidad Católica", "Liga Ecuatoriana", [
+            ("Zambrano", "POR", 71), ("Gómez", "DEF", 68), ("Rodríguez", "DEF", 67),
+            ("Cazares", "DEL", 70), ("Martínez", "MED", 69), ("López", "MED", 68),
+            ("Hernández", "DEF", 66), ("Pérez", "DEL", 69), ("Gómez", "MED", 68),
+            ("Díaz", "DEF", 66), ("Rodríguez", "DEL", 68)
+        ])
+
+        self._crear_equipo("delfin", "Delfín", "Liga Ecuatoriana", [
+            ("Erbez", "POR", 70), ("Kanner", "DEF", 67), ("Corozo", "DEF", 66),
+            ("Garces", "DEL", 69), ("Montes", "MED", 68), ("Rojas", "MED", 67),
+            ("Gómez", "DEF", 65), ("Mera", "DEL", 68), ("Martínez", "MED", 67),
+            ("Rodríguez", "DEF", 65), ("Pérez", "DEL", 67)
+        ])
+
+        self._crear_equipo("tecuniv", "Técnico Universitario", "Liga Ecuatoriana", [
+            ("Cuesta", "POR", 69), ("Gómez", "DEF", 66), ("Rodríguez", "DEF", 65),
+            ("Pérez", "DEL", 68), ("Martínez", "MED", 67), ("López", "MED", 66),
+            ("Hernández", "DEF", 64), ("Gutiérrez", "DEL", 67), ("Rodríguez", "MED", 66),
+            ("Díaz", "DEF", 64), ("Pérez", "DEL", 66)
+        ])
+
+        self._crear_equipo("cuenca", "Deportivo Cuenca", "Liga Ecuatoriana", [
+            ("Mora", "POR", 68), ("Pérez", "DEF", 65), ("Gómez", "DEF", 64),
+            ("Rodríguez", "DEL", 67), ("Martínez", "MED", 66), ("López", "MED", 65),
+            ("Hernández", "DEF", 63), ("Gutiérrez", "DEL", 66), ("Rodríguez", "MED", 65),
+            ("Díaz", "DEF", 63), ("Pérez", "DEL", 65)
+        ])
+
+        self._crear_equipo("guayaquilcity", "Guayaquil City", "Liga Ecuatoriana", [
+            ("Cevallos", "POR", 67), ("Gómez", "DEF", 64), ("Rodríguez", "DEF", 63),
+            ("Pérez", "DEL", 66), ("Martínez", "MED", 65), ("López", "MED", 64),
+            ("Hernández", "DEF", 62), ("Gutiérrez", "DEL", 65), ("Rodríguez", "MED", 64),
+            ("Díaz", "DEF", 62), ("Pérez", "DEL", 64)
+        ])
+
+        self._crear_equipo("olmedo", "Olmedo", "Liga Ecuatoriana", [
+            ("Rodríguez", "POR", 66), ("Hernández", "DEF", 63), ("Pérez", "DEF", 62),
+            ("Gómez", "DEL", 65), ("Martínez", "MED", 64), ("López", "MED", 63),
+            ("Díaz", "DEF", 61), ("Gutiérrez", "DEL", 64), ("Rodríguez", "MED", 63),
+            ("Moreno", "DEF", 61), ("Pérez", "DEL", 63)
+        ])
+
+        self._crear_equipo("mushucruna", "Mushuc Runa", "Liga Ecuatoriana", [
+            ("Pérez", "POR", 67), ("Gómez", "DEF", 64), ("Rodríguez", "DEF", 63),
+            ("Hernández", "DEL", 66), ("Martínez", "MED", 65), ("López", "MED", 64),
+            ("Díaz", "DEF", 62), ("Gutiérrez", "DEL", 65), ("Pérez", "MED", 64),
+            ("Moreno", "DEF", 62), ("Rodríguez", "DEL", 64)
+        ])
+
+        self._crear_equipo("gualaceo", "Gualaceo", "Liga Ecuatoriana", [
+            ("Rodríguez", "POR", 65), ("Hernández", "DEF", 62), ("Pérez", "DEF", 61),
+            ("Gómez", "DEL", 64), ("Martínez", "MED", 63), ("López", "MED", 62),
+            ("Díaz", "DEF", 60), ("Gutiérrez", "DEL", 63), ("Rodríguez", "MED", 62),
+            ("Moreno", "DEF", 60), ("Pérez", "DEL", 62)
+        ])
+
+        self._crear_equipo("libertad", "Libertad", "Liga Ecuatoriana", [
+            ("Gómez", "POR", 66), ("Rodríguez", "DEF", 63), ("Hernández", "DEF", 62),
+            ("Pérez", "DEL", 65), ("Martínez", "MED", 64), ("López", "MED", 63),
+            ("Díaz", "DEF", 61), ("Gutiérrez", "DEL", 64), ("Rodríguez", "MED", 63),
+            ("Moreno", "DEF", 61), ("Pérez", "DEL", 63)
+        ])
+
+        self._crear_equipo("cumbaya", "Cumbayá", "Liga Ecuatoriana", [
+            ("Hernández", "POR", 64), ("Pérez", "DEF", 61), ("Gómez", "DEF", 60),
+            ("Rodríguez", "DEL", 63), ("Martínez", "MED", 62), ("López", "MED", 61),
+            ("Díaz", "DEF", 59), ("Gutiérrez", "DEL", 62), ("Rodríguez", "MED", 61),
+            ("Moreno", "DEF", 59), ("Pérez", "DEL", 61)
+        ])
+
+        self._crear_equipo("macara", "Macará", "Liga Ecuatoriana", [
+            ("Pérez", "POR", 65), ("Gómez", "DEF", 62), ("Rodríguez", "DEF", 61),
+            ("Hernández", "DEL", 64), ("Martínez", "MED", 63), ("López", "MED", 62),
+            ("Díaz", "DEF", 60), ("Gutiérrez", "DEL", 63), ("Pérez", "MED", 62),
+            ("Moreno", "DEF", 60), ("Rodríguez", "DEL", 62)
+        ])
+
+        self._crear_equipo("el_nacional", "El Nacional", "Liga Ecuatoriana", [
+            ("Rodríguez", "POR", 63), ("Hernández", "DEF", 60), ("Pérez", "DEF", 59),
+            ("Gómez", "DEL", 62), ("Martínez", "MED", 61), ("López", "MED", 60),
+            ("Díaz", "DEF", 58), ("Gutiérrez", "DEL", 61), ("Rodríguez", "MED", 60),
+            ("Moreno", "DEF", 58), ("Pérez", "DEL", 60)
+        ])
+
+        self._crear_equipo("indjunior", "Independiente Juniors", "Liga Ecuatoriana", [
+            ("Gómez", "POR", 64), ("Rodríguez", "DEF", 61), ("Hernández", "DEF", 60),
+            ("Pérez", "DEL", 63), ("Martínez", "MED", 62), ("López", "MED", 61),
+            ("Díaz", "DEF", 59), ("Gutiérrez", "DEL", 62), ("Rodríguez", "MED", 61),
+            ("Moreno", "DEF", 59), ("Pérez", "DEL", 61)
+        ])
+
+        self._crear_equipo("9octubre", "9 de Octubre", "Liga Ecuatoriana", [
+            ("Hernández", "POR", 62), ("Pérez", "DEF", 59), ("Gómez", "DEF", 58),
+            ("Rodríguez", "DEL", 61), ("Martínez", "MED", 60), ("López", "MED", 59),
+            ("Díaz", "DEF", 57), ("Gutiérrez", "DEL", 60), ("Rodríguez", "MED", 59),
+            ("Moreno", "DEF", 57), ("Pérez", "DEL", 59)
+        ])
         self._crear_equipo("flamengo", "Flamengo", "Liga Brasileña", [
             ("Rossi","POR",75), ("Filipe_Luis","DEF",74), ("Fabrício_Bruno","DEF",73),
             ("David_Luiz","DEF",72), ("Ayrton_Lucas","DEF",73), ("Gerson","MED",75),
