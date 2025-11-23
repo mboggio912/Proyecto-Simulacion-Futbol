@@ -1,0 +1,1054 @@
+🏆 SIMULACIÓN TEMPORADA COMPLETA 🏆
+Fecha: 22/11/2025 22:39:09
+Jugadores: 3032
+Equipos: 283
+================================================================================
+
+======================================================================
+TABLA FINAL - LIGA CHILENA
+======================================================================
+Pos Equipo       Pts  PJ  GF  GC  DG  
+----------------------------------------------------------------------
+1   COBRESAL     50   38  8   5     +3
+2   UCHILE       49   38  8   4     +4
+3   UCATOLICA    49   38  9   6     +3
+4   COLO_COLO    48   38  9   6     +3
+5   UNION_ESP    47   38  9   6     +3
+6   AUDAX        46   38  9   6     +3
+7   NUBLENSE     46   38  7   5     +2
+8   ANTOFA       44   38  9   9     +0
+9   PALESTINO    43   38  8   6     +2
+10  OHIGGINS     42   38  5   4     +1
+11  TEMUCO       42   38  6   7     -1
+12  UNIONLC      42   38  3   4     -1
+13  HUACHIPATO   41   38  5   5     +0
+14  CURICO       41   38  5   5     +0
+15  IQUIQUE      40   38  3   4     -1
+16  EVERTON      40   38  4   7     -3
+17  COQUIMBO     38   38  4   7     -3
+18  MAGALLANES   37   38  1   3     -2
+19  COPIAPÓ      34   38  4   11    -7
+20  LASERENA     33   38  2   8     -6
+
+CLASIFICACIONES:
+
+======================================================================
+TABLA FINAL - LIGA URUGUAYA
+======================================================================
+Pos Equipo       Pts  PJ  GF  GC  DG  
+----------------------------------------------------------------------
+1   PENAROL      45   32  10  3     +7
+2   WANDERERS    42   32  11  5     +6
+3   FENIX        40   32  7   4     +3
+4   BOSTONRIVER  40   32  6   4     +2
+5   DEFENSOR     39   32  8   6     +2
+6   SUDAMERICA   38   32  7   6     +1
+7   CERRITO      37   32  6   5     +1
+8   RENTISTAS    36   32  5   5     +0
+9   RACING_UR    36   32  6   9     -3
+10  TORQUE       35   32  7   9     -2
+11  DANUBIO      34   32  3   3     +0
+12  RIVERPLATE_UR 34   32  5   7     -2
+13  PROGRESO     34   32  5   8     -3
+14  LIVERPOOL_UR 33   32  4   6     -2
+15  MVDWANDERERS 33   32  3   5     -2
+16  CERRO        31   32  2   5     -3
+17  PLAZA        31   32  6   11    -5
+
+CLASIFICACIONES:
+
+======================================================================
+TABLA FINAL - LIGA DIMAYOR
+======================================================================
+Pos Equipo       Pts  PJ  GF  GC  DG  
+----------------------------------------------------------------------
+1   MILLONARIOS  51   36  14  6     +8
+2   ONCECALDAS   50   36  12  4     +8
+3   SANTAFE      46   36  9   6     +3
+4   AMERICA_CAL  44   36  6   2     +4
+5   UNION_MAG    44   36  5   2     +3
+6   ENVIGADO     43   36  9   6     +3
+7   TIGRES_FC    43   36  7   5     +2
+8   PASTO        43   36  5   4     +1
+9   NACIONAL     43   36  6   6     +0
+10  AGUILAS      41   36  6   6     +0
+11  CALI         39   36  5   8     -3
+12  MEDELLIN     38   36  3   4     -1
+13  BOYACA       38   36  3   6     -3
+14  CORTULUA     36   36  3   6     -3
+15  BUCARAMANGA  36   36  3   7     -4
+16  PATRIOTAS    36   36  3   10    -7
+17  ALIANSA      35   36  3   5     -2
+18  CUCUTA       35   36  3   7     -4
+19  JUNIOR       33   36  3   8     -5
+
+CLASIFICACIONES:
+
+======================================================================
+TABLA FINAL - LIGA PARAGUAYA
+======================================================================
+Pos Equipo       Pts  PJ  GF  GC  DG  
+----------------------------------------------------------------------
+1   CERRO_PORTENO 49   34  12  5     +7
+2   FERNANDODELA 46   34  9   3     +6
+3   GUARANI      44   34  12  9     +3
+4   NACIONAL_PAR 44   34  7   4     +3
+5   GENERAL      44   34  7   4     +3
+6   SPQUERENO    43   34  10  8     +2
+7   OLIMPIA      41   34  6   5     +1
+8   TRINIDENSE   40   34  8   6     +2
+9   RIVERPLATE_PAR 40   34  5   5     +0
+10  RESISTENCIA  38   34  4   2     +2
+11  INDEPENDIENTE 38   34  5   6     -1
+12  TACUARY      36   34  4   4     +0
+13  12OCTUBRE    36   34  4   6     -2
+14  PRESIDENTE   34   34  9   12    -3
+15  SOLAMERICA   34   34  3   6     -3
+16  SANLORENZO_PAR 33   34  2   5     -3
+17  GUAIRENA     29   34  4   11    -7
+18  DEPORTIVO    29   34  2   12   -10
+
+CLASIFICACIONES:
+
+======================================================================
+TABLA FINAL - LIGA ECUATORIANA
+======================================================================
+Pos Equipo       Pts  PJ  GF  GC  DG  
+----------------------------------------------------------------------
+1   BARCELONA    64   36  18  1    +17
+2   INDVALLE     50   36  10  6     +4
+3   9OCTUBRE     45   36  7   3     +4
+4   UNIVCATOLICA 45   36  6   3     +3
+5   AUCAS        43   36  9   7     +2
+6   DELFIN       43   36  8   6     +2
+7   LDU          42   36  7   6     +1
+8   MUSHUCRUNA   39   36  5   5     +0
+9   CUMBAYA      39   36  7   10    -3
+10  MACARA       39   36  4   7     -3
+11  TECUNIV      38   36  5   5     +0
+12  GUAYAQUILCITY 38   36  3   4     -1
+13  INDJUNIOR    37   36  3   5     -2
+14  LIBERTAD     36   36  5   7     -2
+15  OLMEDO       36   36  2   4     -2
+16  EMELEC       36   36  4   7     -3
+17  CUENCA       35   36  4   7     -3
+18  GUALACEO     33   36  2   7     -5
+19  EL_NACIONAL  31   36  3   12    -9
+
+CLASIFICACIONES:
+
+======================================================================
+TABLA FINAL - LIGA MX
+======================================================================
+Pos Equipo       Pts  PJ  GF  GC  DG  
+----------------------------------------------------------------------
+1   AMERICA      50   34  14  7     +7
+2   TIGRES       48   34  12  6     +6
+3   PUEBLA       47   34  12  5     +7
+4   LEON         44   34  8   5     +3
+5   MONTERREY    44   34  7   4     +3
+6   PUMAS        42   34  11  13    -2
+7   CHIVAS       41   34  10  8     +2
+8   CRUZAZUL     40   34  7   7     +0
+9   SANLUIS      40   34  6   6     +0
+10  PACHUCA      39   34  4   3     +1
+11  QUERETARO    39   34  5   6     -1
+12  NECAXA       38   34  5   6     -1
+13  TIJUANA      36   34  5   8     -3
+14  JUAREZ       36   34  7   12    -5
+15  MAZATLAN     34   34  2   4     -2
+16  TOLUCA       34   34  3   6     -3
+17  ATLAS        33   34  4   9     -5
+18  MTY          30   34  3   10    -7
+
+CLASIFICACIONES:
+
+======================================================================
+TABLA FINAL - LIGA BRASILEÑA
+======================================================================
+Pos Equipo       Pts  PJ  GF  GC  DG  
+----------------------------------------------------------------------
+1   FLAMENGO     57   38  14  5     +9
+2   ATLETICO_MG  54   38  13  6     +7
+3   ATHLETICO    51   38  12  9     +3
+4   CORINTHIANS  50   38  12  9     +3
+5   GREMIO       50   38  10  8     +2
+6   PALMEIRAS    49   38  18  10    +8
+7   INTERNACIONAL 49   38  10  8     +2
+8   SAOPAULO     47   38  10  9     +1
+9   BOTAFOGO     46   38  8   7     +1
+10  FLUMINENSE   45   38  9   9     +0
+11  BAHIA        44   38  7   7     +0
+12  FORTALEZA    44   38  8   10    -2
+13  CUIABA       44   38  7   9     -2
+14  BRAGANTINO   44   38  6   8     -2
+15  GOIAS        41   38  9   12    -3
+16  VASCO        39   38  7   8     -1
+17  SANTOS       39   38  5   9     -4
+18  CRUZEIRO     38   38  4   9     -5
+19  AMERICA_MG   34   38  4   10    -6
+20  CORITIBA     30   38  4   15   -11
+
+CLASIFICACIONES:
+
+======================================================================
+TABLA FINAL - LIGA ARGENTINA
+======================================================================
+Pos Equipo       Pts  PJ  GF  GC  DG  
+----------------------------------------------------------------------
+1   ARGENTINOS   54   38  15  8     +7
+2   BOCA         53   38  16  8     +8
+3   RIVER        50   38  11  6     +5
+4   LANUS        49   38  10  6     +4
+5   RACING       48   38  10  7     +3
+6   ROSARIO      47   38  11  7     +4
+7   GIMNASIA     47   38  7   5     +2
+8   COLON        47   38  6   4     +2
+9   INDEP        47   38  11  10    +1
+10  VELEZ        46   38  8   4     +4
+11  DEFYJUS      45   38  6   3     +3
+12  GODOY        44   38  6   6     +0
+13  HURACAN      41   38  9   11    -2
+14  TIGRE        41   38  7   9     -2
+15  ESTUD        40   38  6   11    -5
+16  TALLERES     38   38  5   7     -2
+17  UNION        38   38  7   14    -7
+18  BANFIELD     38   38  6   15    -9
+19  NEWELLS      37   38  7   12    -5
+20  SANLOR       29   38  1   12   -11
+
+CLASIFICACIONES:
+
+======================================================================
+TABLA FINAL - PREMIER LEAGUE
+======================================================================
+Pos Equipo       Pts  PJ  GF  GC  DG  
+----------------------------------------------------------------------
+1   ARS          69   38  25  3    +22
+2   MU           66   38  20  8    +12
+3   MC           58   38  17  6    +11
+4   BHA          52   38  12  6     +6
+5   CRY          50   38  11  6     +5
+6   LIV          47   38  14  10    +4
+7   WES          46   38  9   8     +1
+8   TOT          46   38  12  16    -4
+9   AVL          45   38  8   10    -2
+10  EVE          45   38  12  16    -4
+11  CHE          44   38  10  11    -1
+12  NEW          41   38  11  12    -1
+13  WOL          41   38  7   9     -2
+14  SHF          41   38  6   10    -4
+15  LEI          40   38  5   10    -5
+16  BOU          37   38  6   10    -4
+17  FUL          36   38  5   8     -3
+18  BUR          36   38  5   14    -9
+19  LUT          32   38  4   14   -10
+20  NOT          32   38  5   17   -12
+
+CLASIFICACIONES:
+🏆 Champions League: ARS, MU, MC, BHA
+🥈 Europa League: CRY, LIV
+🎯 Conference League: WES
+
+======================================================================
+TABLA FINAL - LA LIGA
+======================================================================
+Pos Equipo       Pts  PJ  GF  GC  DG  
+----------------------------------------------------------------------
+1   BAR          66   38  21  5    +16
+2   ATL          65   38  25  11   +14
+3   RMD          64   38  20  5    +15
+4   VIL          63   38  24  11   +13
+5   MAL          57   38  14  7     +7
+6   ATH          55   38  15  11    +4
+7   RSOC         49   38  14  10    +4
+8   BET          45   38  9   7     +2
+9   RAY          43   38  10  14    -4
+10  SEV          42   38  10  12    -2
+11  VAL          42   38  10  12    -2
+12  GET          42   38  9   13    -4
+13  CEL          41   38  5   7     -2
+14  LAS          39   38  4   9     -5
+15  GIR          39   38  8   14    -6
+16  GRA          37   38  7   17   -10
+17  ALV          34   38  8   16    -8
+18  CAD          34   38  4   13    -9
+19  OSA          34   38  6   16   -10
+20  ALM          33   38  5   18   -13
+
+CLASIFICACIONES:
+🏆 Champions League: BAR, ATL, RMD, VIL
+🥈 Europa League: MAL, ATH
+🎯 Conference League: RSOC
+
+======================================================================
+TABLA FINAL - SERIE A
+======================================================================
+Pos Equipo       Pts  PJ  GF  GC  DG  
+----------------------------------------------------------------------
+1   ATA          62   38  18  9     +9
+2   JUV          59   38  14  7     +7
+3   FIO          58   38  14  3    +11
+4   MIL          58   38  13  5     +8
+5   NAP          49   38  15  9     +6
+6   SAS          48   38  10  9     +1
+7   ROM          47   38  11  9     +2
+8   INT          47   38  10  10    +0
+9   LAZ          46   38  9   7     +2
+10  TOR          46   38  8   9     -1
+11  BOL          45   38  9   5     +4
+12  UDI          41   38  7   10    -3
+13  LEC          40   38  6   11    -5
+14  EMP          39   38  6   8     -2
+15  VER          39   38  10  15    -5
+16  GEN          39   38  7   13    -6
+17  CAL          37   38  8   14    -6
+18  FRO          36   38  5   11    -6
+19  MON          35   38  6   14    -8
+20  SAM          32   38  5   13    -8
+
+CLASIFICACIONES:
+🏆 Champions League: ATA, JUV, FIO, MIL
+🥈 Europa League: NAP, SAS
+🎯 Conference League: ROM
+
+======================================================================
+TABLA FINAL - BUNDESLIGA
+======================================================================
+Pos Equipo       Pts  PJ  GF  GC  DG  
+----------------------------------------------------------------------
+1   FRA          58   34  17  4    +13
+2   BVB          50   34  13  9     +4
+3   RBZ          48   34  13  8     +5
+4   BAY          46   34  9   4     +5
+5   FRE          45   34  11  10    +1
+6   BRE          43   34  9   10    -1
+7   BMG          42   34  10  9     +1
+8   STU          42   34  10  9     +1
+9   UNI          42   34  9   10    -1
+10  LEV          41   34  11  7     +4
+11  WOL_DE       41   34  7   7     +0
+12  HER          39   34  9   10    -1
+13  AUG          38   34  11  12    -1
+14  HOF          38   34  9   13    -4
+15  MAY          37   34  8   11    -3
+16  COL          36   34  5   7     -2
+17  DAR          29   34  2   10    -8
+18  BOC          24   34  2   15   -13
+
+CLASIFICACIONES:
+🏆 Champions League: FRA, BVB, RBZ, BAY
+🥈 Europa League: FRE, BRE
+🎯 Conference League: BMG
+
+======================================================================
+TABLA FINAL - LIGUE 1
+======================================================================
+Pos Equipo       Pts  PJ  GF  GC  DG  
+----------------------------------------------------------------------
+1   PSG          60   34  19  5    +14
+2   OLY          54   34  15  6     +9
+3   REN          50   34  14  7     +7
+4   LEN          46   34  9   5     +4
+5   MAR          44   34  8   4     +4
+6   LOR          42   34  11  11    +0
+7   ASM          41   34  10  9     +1
+8   LIL          40   34  10  11    -1
+9   MTP          39   34  8   9     -1
+10  METZ         38   34  7   10    -3
+11  NIC          37   34  7   7     +0
+12  BREST        36   34  9   13    -4
+13  HAV          35   34  4   9     -5
+14  CLE          34   34  5   8     -3
+15  NAN          33   34  6   10    -4
+16  TOU          33   34  4   11    -7
+17  REI          32   34  3   9     -6
+18  STR          29   34  2   7     -5
+
+CLASIFICACIONES:
+
+======================================================================
+TABLA FINAL - PRIMEIRA LIGA
+======================================================================
+Pos Equipo       Pts  PJ  GF  GC  DG  
+----------------------------------------------------------------------
+1   POR          51   34  17  9     +8
+2   SPO          48   34  13  6     +7
+3   BEN          45   34  11  5     +6
+4   VIZ          44   34  8   2     +6
+5   PORT         43   34  10  8     +2
+6   MOR          41   34  11  8     +3
+7   BRA          41   34  7   5     +2
+8   CSMF         40   34  5   4     +1
+9   GUI          39   34  7   7     +0
+10  BEL          39   34  5   5     +0
+11  ARO          38   34  8   8     +0
+12  SAN          38   34  9   10    -1
+13  EST          38   34  6   8     -2
+14  AVO          37   34  7   10    -3
+15  RIO          35   34  6   9     -3
+16  FAR          32   34  4   11    -7
+17  VIT          31   34  5   12    -7
+18  TON          29   34  3   15   -12
+
+CLASIFICACIONES:
+
+======================================================================
+TABLA FINAL - EREDIVISIE
+======================================================================
+Pos Equipo       Pts  PJ  GF  GC  DG  
+----------------------------------------------------------------------
+1   AJA          55   34  15  5    +10
+2   PSV          50   34  13  4     +9
+3   TWN          45   34  9   5     +4
+4   HER_NL       43   34  7   4     +3
+5   VIT_NL       43   34  11  9     +2
+6   AZ           43   34  9   8     +1
+7   GRO          42   34  8   6     +2
+8   FEY          42   34  12  12    +0
+9   WIL          41   34  9   10    -1
+10  UTI          40   34  7   5     +2
+11  PEC          38   34  8   9     -1
+12  CAM          36   34  4   4     +0
+13  NEC          35   34  6   10    -4
+14  SPA_NL       34   34  4   6     -2
+15  FOR          33   34  5   9     -4
+16  ALMC         32   34  6   12    -6
+17  HEE          31   34  2   6     -4
+18  GOE          28   34  3   14   -11
+
+CLASIFICACIONES:
+
+================================================================================
+🏆 CHAMPIONS LEAGUE 2024/25
+================================================================================
+
+🎯 FASE DE GRUPOS:
+----------------------------------------
+
+Grupo A:
+Pos Equipo       Pts  GF   GC   GD  
+1   BAY          10   4    1      +3
+2   OLY          7    2    2      +0
+3   REN          6    0    0      +0
+4   TOT          4    2    5      -3
+
+Grupo B:
+Pos Equipo       Pts  GF   GC   GD  
+1   MIL          11   6    1      +5
+2   ATL          10   2    0      +2
+3   AJA          5    1    6      -5
+4   RBZ          4    0    2      -2
+
+Grupo C:
+Pos Equipo       Pts  GF   GC   GD  
+1   MC           10   4    2      +2
+2   FIO          9    3    2      +1
+3   LAZ          5    1    2      -1
+4   PSG          4    4    6      -2
+
+Grupo D:
+Pos Equipo       Pts  GF   GC   GD  
+1   BAR          10   2    0      +2
+2   ARS          9    3    2      +1
+3   ASM          5    1    2      -1
+4   BHA          4    0    2      -2
+
+Grupo E:
+Pos Equipo       Pts  GF   GC   GD  
+1   MU           16   6    0      +6
+2   POR          6    1    3      -2
+3   AVL          4    0    2      -2
+4   STU          4    0    2      -2
+
+Grupo F:
+Pos Equipo       Pts  GF   GC   GD  
+1   BVB          10   2    0      +2
+2   FRA          8    3    3      +0
+3   BET          7    2    2      +0
+4   RAY          4    0    2      -2
+
+Grupo G:
+Pos Equipo       Pts  GF   GC   GD  
+1   INT          10   3    1      +2
+2   VIL          6    2    2      +0
+3   LOR          6    2    2      +0
+4   SPO          4    1    3      -2
+
+Grupo H:
+Pos Equipo       Pts  GF   GC   GD  
+1   JUV          13   6    3      +3
+2   RMD          11   6    1      +5
+3   UNI          5    2    5      -3
+4   ATA          3    2    7      -5
+
+🎯 OCTAVOS DE FINAL
+----------------------------------------
+BAY 0-0 OLY | OLY 0-0 BAY | AGG: 0-0 - OLY por penales
+✅ Pasa: OLY
+
+MIL 0-0 ATL | ATL 0-0 MIL | AGG: 0-0 - ATL por penales
+✅ Pasa: ATL
+
+MC 0-0 FIO | FIO 1-1 MC | AGG: 1-1 - MC por goles visitante
+✅ Pasa: MC
+
+BAR 1-1 ARS | ARS 0-0 BAR | AGG: 1-1 - ARS por goles visitante
+✅ Pasa: ARS
+
+MU 0-0 POR | POR 0-1 MU | AGG: 1-0
+✅ Pasa: MU
+
+BVB 0-0 FRA | FRA 0-0 BVB | AGG: 0-0 - BVB por penales
+✅ Pasa: BVB
+
+INT 0-0 VIL | VIL 0-1 INT | AGG: 1-0
+✅ Pasa: INT
+
+JUV 0-0 RMD | RMD 0-0 JUV | AGG: 0-0 - RMD por penales
+✅ Pasa: RMD
+
+🔥 CUARTOS DE FINAL
+----------------------------------------
+OLY 1-0 ATL | ATL 1-1 OLY | AGG: 2-1
+✅ Pasa: OLY
+
+MC 1-0 ARS | ARS 0-1 MC | AGG: 2-0
+✅ Pasa: MC
+
+MU 0-0 BVB | BVB 0-0 MU | AGG: 0-0 - MU por penales
+✅ Pasa: MU
+
+INT 0-0 RMD | RMD 0-0 INT | AGG: 0-0 - RMD por penales
+✅ Pasa: RMD
+
+⚡ SEMIFINALES
+----------------------------------------
+OLY 0-2 MC | MC 1-0 OLY | AGG: 0-3
+✅ FINALISTA: MC
+
+MU 0-1 RMD | RMD 1-1 MU | AGG: 1-2
+✅ FINALISTA: RMD
+
+👑 FINAL CHAMPIONS LEAGUE
+========================================
+MC 0-1 RMD
+🏆 CAMPEÓN CHAMPIONS LEAGUE: RMD
+
+================================================================================
+🥈 EUROPA LEAGUE 2024/25 (32 equipos)
+================================================================================
+
+📊 EQUIPOS PARTICIPANTES (32):
+----------------------------------------
+ 1. UDI (Nivel: 75)
+ 2. BRE (Nivel: 72)
+ 3. LEN (Nivel: 75)
+ 4. EVE (Nivel: 74)
+ 5. LIL (Nivel: 75)
+ 6. MTP (Nivel: 72)
+ 7. LIV (Nivel: 85)
+ 8. SEV (Nivel: 77)
+ 9. LEV (Nivel: 79)
+10. TOR (Nivel: 74)
+11. GRO (Nivel: 70)
+12. METZ (Nivel: 70)
+13. AZ (Nivel: 74)
+14. VAL (Nivel: 76)
+15. BRA (Nivel: 76)
+16. CHE (Nivel: 82)
+17. TWN (Nivel: 73)
+18. BEN (Nivel: 79)
+19. FRE (Nivel: 76)
+20. NAP (Nivel: 82)
+21. SAS (Nivel: 74)
+22. ATH (Nivel: 77)
+23. WOL_DE (Nivel: 76)
+24. PSV (Nivel: 77)
+25. GET (Nivel: 72)
+26. VIZ (Nivel: 64)
+27. MAL (Nivel: 72)
+28. NEW (Nivel: 78)
+29. BOL (Nivel: 74)
+30. MOR (Nivel: 68)
+31. CRY (Nivel: 75)
+32. VIT_NL (Nivel: 72)
+
+================================================================================
+🎯 FASE DE GRUPOS
+================================================================================
+
+────────────────────────────────────────
+GRUPO A
+────────────────────────────────────────
+Pos Equipo       Pts  GF   GC   GD  
+1   UDI          10   3    2      +1
+2   LEN          8    1    0      +1
+3   BRE          6    1    2      -1
+4   EVE          6    1    2      -1
+✅ CLASIFICAN: UDI y LEN
+
+────────────────────────────────────────
+GRUPO B
+────────────────────────────────────────
+Pos Equipo       Pts  GF   GC   GD  
+1   LIV          10   2    0      +2
+2   MTP          7    1    1      +0
+3   SEV          7    1    1      +0
+4   LIL          5    1    3      -2
+✅ CLASIFICAN: LIV y MTP
+
+────────────────────────────────────────
+GRUPO C
+────────────────────────────────────────
+Pos Equipo       Pts  GF   GC   GD  
+1   LEV          10   4    0      +4
+2   GRO          7    1    3      -2
+3   TOR          5    0    1      -1
+4   METZ         5    0    1      -1
+✅ CLASIFICAN: LEV y GRO
+
+────────────────────────────────────────
+GRUPO D
+────────────────────────────────────────
+Pos Equipo       Pts  GF   GC   GD  
+1   CHE          9    2    1      +1
+2   VAL          7    1    1      +0
+3   BRA          7    1    1      +0
+4   AZ           5    0    1      -1
+✅ CLASIFICAN: CHE y VAL
+
+────────────────────────────────────────
+GRUPO E
+────────────────────────────────────────
+Pos Equipo       Pts  GF   GC   GD  
+1   TWN          10   2    0      +2
+2   BEN          7    1    1      +0
+3   NAP          7    1    1      +0
+4   FRE          4    0    2      -2
+✅ CLASIFICAN: TWN y BEN
+
+────────────────────────────────────────
+GRUPO F
+────────────────────────────────────────
+Pos Equipo       Pts  GF   GC   GD  
+1   ATH          10   3    2      +1
+2   PSV          9    2    1      +1
+3   SAS          7    1    1      +0
+4   WOL_DE       4    0    2      -2
+✅ CLASIFICAN: ATH y PSV
+
+────────────────────────────────────────
+GRUPO G
+────────────────────────────────────────
+Pos Equipo       Pts  GF   GC   GD  
+1   VIZ          10   3    2      +1
+2   NEW          9    2    1      +1
+3   MAL          7    1    1      +0
+4   GET          5    1    3      -2
+✅ CLASIFICAN: VIZ y NEW
+
+────────────────────────────────────────
+GRUPO H
+────────────────────────────────────────
+Pos Equipo       Pts  GF   GC   GD  
+1   CRY          9    3    1      +2
+2   VIT_NL       9    2    1      +1
+3   MOR          7    1    1      +0
+4   BOL          5    1    4      -3
+✅ CLASIFICAN: CRY y VIT_NL
+
+================================================================================
+⚔️  DIECISEISAVOS DE FINAL
+================================================================================
+
+UDI 0-0 LEN | LEN 0-0 UDI | AGG: 0-0 - UDI por penales
+✅ Clasifica: UDI
+
+LIV 0-0 MTP | MTP 0-0 LIV | AGG: 0-0 - LIV por penales
+✅ Clasifica: LIV
+
+LEV 1-0 GRO | GRO 0-1 LEV | AGG: 2-0
+✅ Clasifica: LEV
+
+CHE 0-0 VAL | VAL 0-0 CHE | AGG: 0-0 - CHE por penales
+✅ Clasifica: CHE
+
+TWN 0-0 BEN | BEN 0-0 TWN | AGG: 0-0 - BEN por penales
+✅ Clasifica: BEN
+
+ATH 0-0 PSV | PSV 0-0 ATH | AGG: 0-0 - ATH por penales
+✅ Clasifica: ATH
+
+VIZ 0-0 NEW | NEW 0-0 VIZ | AGG: 0-0 - NEW por penales
+✅ Clasifica: NEW
+
+CRY 0-0 VIT_NL | VIT_NL 0-1 CRY | AGG: 1-0
+✅ Clasifica: CRY
+
+================================================================================
+🔥 OCTAVOS DE FINAL
+================================================================================
+
+UDI 0-1 LIV | LIV 0-0 UDI | AGG: 0-1
+✅ Clasifica: LIV
+
+LEV 0-0 CHE | CHE 0-0 LEV | AGG: 0-0 - CHE por penales
+✅ Clasifica: CHE
+
+BEN 2-0 ATH | ATH 0-1 BEN | AGG: 3-0
+✅ Clasifica: BEN
+
+NEW 0-1 CRY | CRY 0-0 NEW | AGG: 0-1
+✅ Clasifica: CRY
+
+================================================================================
+⚡ CUARTOS DE FINAL
+================================================================================
+
+LIV 1-0 CHE | CHE 1-2 LIV | AGG: 3-1
+✅ Clasifica: LIV
+
+BEN 0-0 CRY | CRY 0-0 BEN | AGG: 0-0 - CRY por penales
+✅ Clasifica: CRY
+
+================================================================================
+💫 SEMIFINALES
+================================================================================
+
+LIV 1-0 CRY | CRY 0-1 LIV | AGG: 2-0
+✅ FINALISTA: LIV
+
+================================================================================
+🥈 CAMPEÓN EUROPA LEAGUE: LIV (por defecto)
+
+================================================================================
+🎯 CONFERENCE LEAGUE 2024/25 (32 equipos)
+================================================================================
+
+📊 EQUIPOS PARTICIPANTES (32):
+----------------------------------------
+ 1. WIL (Nivel: 68)
+ 2. ARO (Nivel: 65)
+ 3. WES (Nivel: 78)
+ 4. EMP (Nivel: 71)
+ 5. RSOC (Nivel: 80)
+ 6. SHF (Nivel: 69)
+ 7. SAN (Nivel: 67)
+ 8. PORT (Nivel: 68)
+ 9. GIR (Nivel: 72)
+10. PEC (Nivel: 68)
+11. BEL (Nivel: 66)
+12. CSMF (Nivel: 67)
+13. LAS (Nivel: 70)
+14. AUG (Nivel: 71)
+15. CEL (Nivel: 75)
+16. NIC (Nivel: 76)
+17. UTI (Nivel: 72)
+18. MAR (Nivel: 78)
+19. HAV (Nivel: 68)
+20. BREST (Nivel: 71)
+21. BMG (Nivel: 77)
+22. LEI (Nivel: 73)
+23. HER (Nivel: 72)
+24. FEY (Nivel: 76)
+25. GUI (Nivel: 70)
+26. VER (Nivel: 70)
+27. HOF (Nivel: 74)
+28. MAY (Nivel: 73)
+29. WOL (Nivel: 76)
+30. HER_NL (Nivel: 69)
+31. LEC (Nivel: 69)
+32. ROM (Nivel: 81)
+
+================================================================================
+🎯 FASE DE GRUPOS
+================================================================================
+
+────────────────────────────────────────
+GRUPO A
+────────────────────────────────────────
+Pos Equipo       Pts  GF   GC   GD  
+1   WES          10   3    0      +3
+2   ARO          7    2    2      +0
+3   WIL          6    2    3      -1
+4   EMP          5    1    3      -2
+✅ CLASIFICAN: WES y ARO
+
+────────────────────────────────────────
+GRUPO B
+────────────────────────────────────────
+Pos Equipo       Pts  GF   GC   GD  
+1   RSOC         11   3    1      +2
+2   SAN          11   3    1      +2
+3   PORT         5    1    3      -2
+4   SHF          4    0    2      -2
+✅ CLASIFICAN: RSOC y SAN
+
+────────────────────────────────────────
+GRUPO C
+────────────────────────────────────────
+Pos Equipo       Pts  GF   GC   GD  
+1   GIR          14   5    1      +4
+2   CSMF         5    1    2      -1
+3   BEL          5    0    1      -1
+4   PEC          4    0    2      -2
+✅ CLASIFICAN: GIR y CSMF
+
+────────────────────────────────────────
+GRUPO D
+────────────────────────────────────────
+Pos Equipo       Pts  GF   GC   GD  
+1   AUG          10   2    0      +2
+2   CEL          8    4    3      +1
+3   LAS          8    2    2      +0
+4   NIC          5    2    5      -3
+✅ CLASIFICAN: AUG y CEL
+
+────────────────────────────────────────
+GRUPO E
+────────────────────────────────────────
+Pos Equipo       Pts  GF   GC   GD  
+1   MAR          10   2    0      +2
+2   HAV          8    3    0      +3
+3   UTI          5    0    1      -1
+4   BREST        4    0    4      -4
+✅ CLASIFICAN: MAR y HAV
+
+────────────────────────────────────────
+GRUPO F
+────────────────────────────────────────
+Pos Equipo       Pts  GF   GC   GD  
+1   LEI          14   4    0      +4
+2   HER          7    1    1      +0
+3   BMG          5    0    1      -1
+4   FEY          3    0    3      -3
+✅ CLASIFICAN: LEI y HER
+
+────────────────────────────────────────
+GRUPO G
+────────────────────────────────────────
+Pos Equipo       Pts  GF   GC   GD  
+1   HOF          8    1    0      +1
+2   VER          6    1    1      +0
+3   GUI          6    0    0      +0
+4   MAY          5    1    2      -1
+✅ CLASIFICAN: HOF y VER
+
+────────────────────────────────────────
+GRUPO H
+────────────────────────────────────────
+Pos Equipo       Pts  GF   GC   GD  
+1   ROM          10   2    0      +2
+2   WOL          9    2    1      +1
+3   LEC          5    0    1      -1
+4   HER_NL       4    0    2      -2
+✅ CLASIFICAN: ROM y WOL
+
+================================================================================
+⚔️  DIECISEISAVOS DE FINAL
+================================================================================
+
+WES 1-0 ARO | ARO 0-0 WES | AGG: 1-0
+✅ Clasifica: WES
+
+RSOC 0-0 SAN | SAN 1-2 RSOC | AGG: 2-1
+✅ Clasifica: RSOC
+
+GIR 0-0 CSMF | CSMF 0-0 GIR | AGG: 0-0 - CSMF por penales
+✅ Clasifica: CSMF
+
+AUG 0-0 CEL | CEL 0-1 AUG | AGG: 1-0
+✅ Clasifica: AUG
+
+MAR 0-0 HAV | HAV 0-1 MAR | AGG: 1-0
+✅ Clasifica: MAR
+
+LEI 0-0 HER | HER 0-0 LEI | AGG: 0-0 - LEI por penales
+✅ Clasifica: LEI
+
+HOF 0-0 VER | VER 0-0 HOF | AGG: 0-0 - HOF por penales
+✅ Clasifica: HOF
+
+ROM 0-1 WOL | WOL 0-0 ROM | AGG: 0-1
+✅ Clasifica: WOL
+
+================================================================================
+🔥 OCTAVOS DE FINAL
+================================================================================
+
+WES 0-0 RSOC | RSOC 0-1 WES | AGG: 1-0
+✅ Clasifica: WES
+
+CSMF 0-2 AUG | AUG 0-0 CSMF | AGG: 0-2
+✅ Clasifica: AUG
+
+MAR 0-0 LEI | LEI 0-0 MAR | AGG: 0-0 - MAR por penales
+✅ Clasifica: MAR
+
+HOF 0-1 WOL | WOL 0-0 HOF | AGG: 0-1
+✅ Clasifica: WOL
+
+================================================================================
+⚡ CUARTOS DE FINAL
+================================================================================
+
+WES 0-0 AUG | AUG 0-0 WES | AGG: 0-0 - AUG por penales
+✅ Clasifica: AUG
+
+MAR 0-1 WOL | WOL 0-1 MAR | AGG: 1-1 - MAR por penales
+✅ Clasifica: MAR
+
+================================================================================
+💫 SEMIFINALES
+================================================================================
+
+AUG 0-0 MAR | MAR 0-0 AUG | AGG: 0-0 - MAR por penales
+✅ FINALISTA: MAR
+
+================================================================================
+🎯 CAMPEÓN CONFERENCE LEAGUE: MAR
+🏆 CAMPEÓN COPA LIBERTADORES: BOCA
+
+BOSTONRIVER 68 vs PLAZA 68 -> GANADOR: PLAZA
+UNIONLC 65 vs LDU 71 -> GANADOR: LDU
+INDEPENDIENTE 61 vs TACUARY 65 -> GANADOR: TACUARY
+MAGALLANES 64 vs RIVERPLATE_PAR 60 -> GANADOR: MAGALLANES
+UNION_ESP 69 vs RESISTENCIA 66 -> GANADOR: UNION_ESP
+COPIAPÓ 65 vs SPQUERENO 68 -> GANADOR: SPQUERENO
+OHIGGINS 69 vs BOCA 71 -> GANADOR: BOCA
+RENTISTAS 65 vs PALESTINO 67 -> GANADOR: PALESTINO
+PLAZA 68 vs LDU 71 -> GANADOR: LDU
+TACUARY 65 vs MAGALLANES 64 -> GANADOR: TACUARY
+UNION_ESP 69 vs SPQUERENO 68 -> GANADOR: UNION_ESP
+BOCA 71 vs PALESTINO 67 -> GANADOR: BOCA
+LDU 71 vs TACUARY 65 -> GANADOR: LDU
+UNION_ESP 69 vs BOCA 71 -> GANADOR: BOCA
+LDU 71 vs BOCA 71 -> GANADOR: BOCA
+🏆 CAMPEÓN COPA SUDAMERICANA: GUARANI
+
+HUACHIPATO 68 vs DEFENSOR 71 -> GANADOR: DEFENSOR
+EMELEC 71 vs CUMBAYA 61 -> GANADOR: EMELEC
+GUAIRENA 63 vs CERRO 67 -> GANADOR: CERRO
+SANLOR 69 vs BOCA 71 -> GANADOR: BOCA
+NACIONAL_PAR 70 vs GUARANI 71 -> GANADOR: GUARANI
+DEFYJUS 69 vs SUDAMERICA 64 -> GANADOR: DEFYJUS
+ANTOFA 64 vs OHIGGINS 69 -> GANADOR: OHIGGINS
+OLMEDO 63 vs ARGENTINOS 69 -> GANADOR: ARGENTINOS
+DEFENSOR 71 vs EMELEC 71 -> GANADOR: EMELEC
+CERRO 67 vs BOCA 71 -> GANADOR: BOCA
+GUARANI 71 vs DEFYJUS 69 -> GANADOR: GUARANI
+OHIGGINS 69 vs ARGENTINOS 69 -> GANADOR: ARGENTINOS
+EMELEC 71 vs BOCA 71 -> GANADOR: BOCA
+GUARANI 71 vs ARGENTINOS 69 -> GANADOR: GUARANI
+BOCA 71 vs GUARANI 71 -> GANADOR: GUARANI
+
+🌍 TORNEO INTERCONTINENTAL
+========================================
+RMD 0-0 BOCA - BOCA por penales
+🏆 CAMPEÓN INTERCONTINENTAL: BOCA
+
+================================================================================
+ESTADÍSTICAS INDIVIDUALES DE LA TEMPORADA
+================================================================================
+
+🥇 TOP 10 GOLEADORES
+------------------------------------------------------------
+Pos Jugador         Equipo     Goles 
+------------------------------------------------------------
+1   Saka            ARS        29    
+2   Vinicius        RMD        29    
+3   Griezmann       ATL        28    
+4   Haaland         MC         27    
+5   Lewandowski     BAR        24    
+6   Mbappé          PSG        23    
+7   Salah           LIV        20    
+8   Chiesa          JUV        20    
+9   Lookman         ATA        20    
+10  Kolo Muani      FRA        20    
+
+🎯 TOP 10 ASISTENTES
+------------------------------------------------------------
+Pos Jugador         Equipo     Asist 
+------------------------------------------------------------
+1   De_Bruyne       MC         16    
+2   Pedri           BAR        13    
+3   Odegaard        ARS        12    
+4   Locatelli       JUV        12    
+5   Thiago          LIV        11    
+6   Parejo          VIL        11    
+7   Koopmeiners     ATA        11    
+8   Álvarez         AJA        11    
+9   Eze             CRY        10    
+10  Modric          RMD        10    
+
+🏆 TOP 20 CANDIDATOS BALÓN DE ORO
+--------------------------------------------------------------------------------
+Pos Jugador         Equipo     Goles  Asist  Puntos  
+--------------------------------------------------------------------------------
+🥇 Vinicius        RMD        29     0      121.08  
+🥈 Saka            ARS        29     0      90.07   
+🥉 Salah           LIV        20     0      76.24   
+4   Lewandowski     BAR        24     0      75.39   
+5   Mbappé          PSG        23     0      73.87   
+6   Haaland         MC         27     0      59.72   
+7   Kolo Muani      FRA        20     0      57.88   
+8   Griezmann       ATL        28     0      57.32   
+9   Lookman         ATA        20     0      57.18   
+10  Taremi          POR        17     0      49.20   
+11  Tadic           AJA        16     0      46.31   
+12  Fydriszewski    BARCELONA  16     0      42.35   
+13  Chiesa          JUV        20     0      40.00   
+14  Cavani          BOCA       15     0      39.18   
+15  Valencia        AMERICA    14     0      38.54   
+16  Leão            MIL        19     0      38.45   
+17  Alexis          MAR        12     0      37.27   
+18  Lacazette       OLY        19     0      36.66   
+19  Bruno           MU         13     6      36.24   
+20  Chukwueze       VIL        16     3      34.78   
+
+================================================================================
+🏆 RESUMEN FINAL DE LA TEMPORADA 🏆
+================================================================================
+
+📊 CAMPEONES DE LIGA:
+--------------------------------------------------
+🏆 Liga Chilena        : COBRESAL
+🏆 Liga Uruguaya       : PENAROL
+🏆 Liga Dimayor        : MILLONARIOS
+🏆 Liga Paraguaya      : CERRO_PORTENO
+🏆 Liga Ecuatoriana    : BARCELONA
+🏆 Liga MX             : AMERICA
+🏆 Liga Brasileña      : FLAMENGO
+🏆 Liga Argentina      : ARGENTINOS
+🏆 Premier League      : ARS
+🏆 La Liga             : BAR
+🏆 Serie A             : ATA
+🏆 Bundesliga          : FRA
+🏆 Ligue 1             : PSG
+🏆 Primeira Liga       : POR
+🏆 Eredivisie          : AJA
+
+🌍 CAMPEONES EUROPEOS:
+--------------------------------------------------
+🏆 Champions League: RMD
+🥈 Europa League: LIV
+🎯 Conference League: MAR
+
+🌎 CAMPEONES SUDAMERICANOS:
+--------------------------------------------------
+🏆 Libertadores: BOCA
+🥈 Sudamericana: GUARANI
+
+🌍 CAMPEÓN INTERCONTINENTAL: BOCA
+
+⚽ TOP 5 GOLEADORES:
+--------------------------------------------------
+🥇 Saka (ARS) - 29 goles
+🥈 Vinicius (RMD) - 29 goles
+🥉 Griezmann (ATL) - 28 goles
+🥉 Haaland (MC) - 27 goles
+🥉 Lewandowski (BAR) - 24 goles
+
+🥇 BALÓN DE ORO: VINICIUS (RMD)
+   29 goles, 0 asistencias - 121.08 pts
