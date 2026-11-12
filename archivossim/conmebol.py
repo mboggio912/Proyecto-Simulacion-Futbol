@@ -10,13 +10,12 @@ from datetime import datetime
 # Lista de ligas latinoamericanas (ajusta según tu base de datos)
 LIGAS_LATINAS = [
     "Liga Argentina",
-    "Liga Brasileira",
+    "Liga Brasileña",
     "Liga Chilena",
     "Liga Uruguaya",
-    "Liga Mexicana",
+    "Liga MX",
     "Liga Paraguaya",
-    "Liga Colombiana",
-    "Liga Peruana",
+    "Liga Dimayor",
     "Liga Ecuatoriana"
 ]
 
@@ -24,8 +23,12 @@ def obtener_equipos_latinos():
     equipos_por_liga = base_datos.obtener_ligas()
     equipos_latinos = []
     for liga in LIGAS_LATINAS:
-        if liga in equipos_por_liga:
-            equipos_latinos += list(equipos_por_liga[liga].keys())
+        equipos_liga = equipos_por_liga.get(liga, {})
+        if not equipos_liga:
+            raise ValueError(
+                f"La liga configurada '{liga}' no existe en BaseDatos o no tiene equipos."
+            )
+        equipos_latinos += list(equipos_liga.keys())
     return equipos_latinos
 
 def simular_copa_latina(nombre_copa, archivo=None):
