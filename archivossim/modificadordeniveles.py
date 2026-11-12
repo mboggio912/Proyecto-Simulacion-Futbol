@@ -1,8 +1,12 @@
 import re
 import os
+import random
 from datetime import datetime
 from collections import defaultdict
 from base_datos import base_datos
+
+NIVEL_MINIMO = 45
+NIVEL_MAXIMO = 99
 
 def buscar_archivos_temporada():
     """Busca archivos de temporada en el directorio actual"""
@@ -154,7 +158,7 @@ def calcular_cambios_jugadores(datos):
                         'jugador': jugador_obj,
                         'nivel_actual': jugador_obj.nivel,
                         'cambio': min(cambio, 5),  # Máximo +5
-                        'nuevo_nivel': min(99, jugador_obj.nivel + min(cambio, 5)),
+                        'nuevo_nivel': min(NIVEL_MAXIMO, jugador_obj.nivel + min(cambio, 5)),
                         'razones': razones
                     }
     
@@ -249,26 +253,59 @@ def calcular_cambios_equipos(datos):
     
     return cambios_equipos
 
-def aplicar_cambios_jugadores(cambios_jugadores):
-    """Aplica los cambios calculados a los jugadores"""
-    for jugador_key, datos_cambio in cambios_jugadores.items():
-        jugador = datos_cambio['jugador']
-        jugador.nivel = datos_cambio['nuevo_nivel']
+def aplicar_cambios_niveles(cambios_jugadores, cambios_equipos):
+    """Consolida los ajustes individual y colectivo y muta cada nivel una vez."""
+    cambios_individuales = {
+        datos_cambio['jugador'].id: datos_cambio
+        for datos_cambio in cambios_jugadores.values()
+    }
 
-def aplicar_cambios_equipos_a_jugadores(cambios_equipos):
-    """Aplica cambios generales a todos los jugadores de equipos que cambiaron"""
-    for codigo_equipo, datos_cambio in cambios_equipos.items():
-        if datos_cambio['cambio'] != 0:
-            equipo = datos_cambio['equipo']
-            cambio_general = max(-2, min(2, datos_cambio['cambio'] // 2))  # Cambio más moderado para jugadores
-            
-            for jugador in equipo.jugadores:
-                # Aplicar cambio general pero con variación aleatoria
-                import random
-                variacion = random.randint(-1, 1)
-                cambio_individual = cambio_general + variacion
-                nuevo_nivel = max(45, min(95, jugador.nivel + cambio_individual))
-                jugador.nivel = nuevo_nivel
+    for codigo_equipo, equipo in base_datos.equipos.items():
+        datos_equipo = cambios_equipos.get(codigo_equipo)
+        ajuste_colectivo_base = 0
+        if datos_equipo and datos_equipo['cambio'] != 0:
+            ajuste_colectivo_base = max(-2, min(2, datos_equipo['cambio'] // 2))
+
+        for jugador in equipo.jugadores:
+            datos_individuales = cambios_individuales.get(jugador.id)
+            ajuste_individual = datos_individuales['cambio'] if datos_individuales else 0
+            variacion_colectiva = (
+                random.randint(-1, 1) if datos_equipo and datos_equipo['cambio'] != 0 else 0
+            )
+            ajuste_colectivo = ajuste_colectivo_base + variacion_colectiva
+
+            if not ajuste_individual and not ajuste_colectivo:
+                continue
+
+            nivel_anterior = jugador.nivel
+            nivel_nuevo = max(
+                NIVEL_MINIMO,
+                min(NIVEL_MAXIMO, nivel_anterior + ajuste_individual + ajuste_colectivo),
+            )
+            cambio_aplicado = nivel_nuevo - nivel_anterior
+            jugador.nivel = nivel_nuevo
+
+            if datos_individuales is None:
+                datos_individuales = {
+                    'jugador': jugador,
+                    'nivel_actual': nivel_anterior,
+                    'cambio': cambio_aplicado,
+                    'nuevo_nivel': nivel_nuevo,
+                    'razones': [],
+                }
+                cambios_jugadores[jugador.id] = datos_individuales
+            else:
+                datos_individuales['nivel_actual'] = nivel_anterior
+                datos_individuales['nuevo_nivel'] = nivel_nuevo
+                datos_individuales['cambio_individual'] = ajuste_individual
+                datos_individuales['cambio'] = cambio_aplicado
+
+            datos_individuales['cambio_colectivo'] = ajuste_colectivo
+            if ajuste_colectivo:
+                datos_individuales['razones'].append(
+                    f"Ajuste colectivo del equipo: {ajuste_colectivo:+d} "
+                    f"(base {ajuste_colectivo_base:+d}, variación {variacion_colectiva:+d})"
+                )
 
 def generar_reporte_cambios(cambios_jugadores, cambios_equipos, archivo_original):
     """Genera un reporte completo de los cambios realizados"""
@@ -491,15 +528,10 @@ def main():
         print("❌ Cambios cancelados")
         return
     
-    # Aplicar cambios
-    print("⚡ Aplicando cambios...")
-    if cambios_jugadores:
-        aplicar_cambios_jugadores(cambios_jugadores)
-        print(f"✅ Actualizados {len(cambios_jugadores)} jugadores")
-    
-    if cambios_equipos:
-        aplicar_cambios_equipos_a_jugadores(cambios_equipos)
-        print(f"✅ Actualizados jugadores de {len(cambios_equipos)} equipos")
+    # Aplicar una sola mutación consolidada por jugador.
+    print("⚡ Aplicando cambios consolidados...")
+    aplicar_cambios_niveles(cambios_jugadores, cambios_equipos)
+    print(f"✅ Actualizados {len(cambios_jugadores)} jugadores")
     
     # Generar reportes
     print("📝 Generando reportes...")
