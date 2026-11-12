@@ -23,12 +23,15 @@ except ImportError as e:
     print("Asegúrate de que base_datos.py y conmebol.py están en el mismo directorio")
     sys.exit(1)
 
-def simular_partido_con_jugadores(equipo1: str, equipo2: str) -> Tuple[int, int, List[Dict]]:
+def simular_partido_con_jugadores(
+    equipo1: str, equipo2: str, base_datos_instancia=None
+) -> Tuple[int, int, List[Dict]]:
     """
     Simula un partido entre dos equipos con estadísticas REALISTAS
     """
-    team1 = base_datos.obtener_equipo(equipo1)
-    team2 = base_datos.obtener_equipo(equipo2)
+    datos = base_datos if base_datos_instancia is None else base_datos_instancia
+    team1 = datos.obtener_equipo(equipo1)
+    team2 = datos.obtener_equipo(equipo2)
     
     if not team1 or not team2:
         return 0, 0, []
