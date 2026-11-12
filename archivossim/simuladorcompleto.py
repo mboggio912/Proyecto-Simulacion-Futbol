@@ -8,7 +8,7 @@ Simula ligas europeas, sudamericanas y competiciones internacionales
 import random as rm
 from collections import defaultdict
 from datetime import datetime
-from typing import List, Tuple, Dict
+from typing import List, Tuple, Dict, Optional
 import sys
 import os
 
@@ -123,7 +123,9 @@ def simular_partido_con_jugadores(
     
     return gol1, gol2, eventos
 
-def seleccionar_goleador_y_asistente(equipo: Equipo) -> Tuple[Jugador, Jugador]:
+def seleccionar_goleador_y_asistente(
+    equipo: Equipo,
+) -> Tuple[Jugador, Optional[Jugador]]:
     """
     Selecciona quién marca el gol y quién da la asistencia
     """
@@ -142,10 +144,12 @@ def seleccionar_goleador_y_asistente(equipo: Equipo) -> Tuple[Jugador, Jugador]:
     }
     
     jugadores_ordenados = sorted(equipo.jugadores, key=lambda x: x.nivel, reverse=True)
+    candidatos_gol = list(equipo.jugadores)
+    rm.shuffle(candidatos_gol)
     
     # Seleccionar goleador
     goleador = None
-    for jugador in jugadores_ordenados:
+    for jugador in candidatos_gol:
         prob_posicion = prob_gol.get(jugador.posicion, 0.1)
         prob_nivel = jugador.nivel / 100.0
         prob_final = prob_posicion * prob_nivel * 1.8
@@ -155,7 +159,13 @@ def seleccionar_goleador_y_asistente(equipo: Equipo) -> Tuple[Jugador, Jugador]:
             break
     
     if not goleador:
-        goleador = jugadores_ordenados[0]
+        pesos_goleador = [
+            prob_gol.get(jugador.posicion, 0.1) * max(jugador.nivel, 0)
+            for jugador in equipo.jugadores
+        ]
+        if not any(pesos_goleador):
+            pesos_goleador = [1] * len(equipo.jugadores)
+        goleador = rm.choices(equipo.jugadores, weights=pesos_goleador, k=1)[0]
     
     # Seleccionar asistente
     asistente = None
@@ -174,6 +184,16 @@ def seleccionar_goleador_y_asistente(equipo: Equipo) -> Tuple[Jugador, Jugador]:
         asistente = None
     
     return goleador, asistente
+
+
+def _resolver_penales(equipo1: str, equipo2: str) -> str:
+    """Resuelve penales sin sesgo por incluir un extremo adicional en el sorteo."""
+    nivel1 = base_datos.obtener_nivel_equipo(equipo1)
+    nivel2 = base_datos.obtener_nivel_equipo(equipo2)
+    nivel_total = nivel1 + nivel2
+    if nivel_total <= 0:
+        raise ValueError("Los equipos deben tener nivel total positivo para los penales.")
+    return equipo1 if rm.random() < nivel1 / nivel_total else equipo2
 
 def simular_liga_con_jugadores(nombre_liga: str, equipos_dict: Dict[str, int]) -> List[Tuple[str, Dict]]:
     """Simula una liga completa registrando estadísticas de jugadores"""
@@ -254,17 +274,11 @@ def simular_eliminatoria_con_jugadores(equipo1: str, equipo2: str) -> Tuple[str,
             return equipo1, resultado + f" - {equipo1.upper()} por goles visitante"
         else:
             # Penales
-            nivel1 = base_datos.obtener_nivel_equipo(equipo1)
-            nivel2 = base_datos.obtener_nivel_equipo(equipo2)
-            prob_pen = rm.randint(0, nivel1 + nivel2)
-            ganador = equipo1 if prob_pen <= nivel1 else equipo2
+            ganador = _resolver_penales(equipo1, equipo2)
             return ganador, resultado + f" - {ganador.upper()} por penales"
 
 def simular_final_con_jugadores(equipo1: str, equipo2: str) -> Tuple[str, str]:
     """Simula una final"""
-    nivel1 = base_datos.obtener_nivel_equipo(equipo1)
-    nivel2 = base_datos.obtener_nivel_equipo(equipo2)
-    
     goles1, goles2, eventos = simular_partido_con_jugadores(equipo1, equipo2)
     resultado = f"{equipo1.upper()} {goles1}-{goles2} {equipo2.upper()}"
     
@@ -274,8 +288,7 @@ def simular_final_con_jugadores(equipo1: str, equipo2: str) -> Tuple[str, str]:
         return equipo2, resultado
     else:
         # Penales
-        prob_pen = rm.randint(0, nivel1 + nivel2)
-        ganador = equipo1 if prob_pen <= nivel1 else equipo2
+        ganador = _resolver_penales(equipo1, equipo2)
         return ganador, resultado + f" - {ganador.upper()} por penales"
 
 def es_equipo_europeo(codigo_equipo: str) -> bool:
