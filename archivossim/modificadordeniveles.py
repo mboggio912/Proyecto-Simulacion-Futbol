@@ -7,6 +7,35 @@ from base_datos import base_datos
 
 NIVEL_MINIMO = 45
 NIVEL_MAXIMO = 99
+LIGAS_PROCESADAS = [
+    "Premier League",
+    "La Liga",
+    "Serie A",
+    "Bundesliga",
+    "Ligue 1",
+    "Primeira Liga",
+    "Eredivisie",
+    "Liga Argentina",
+    "Liga Brasileña",
+    "Liga Chilena",
+    "Liga Uruguaya",
+    "Liga MX",
+    "Liga Paraguaya",
+    "Liga Dimayor",
+    "Liga Ecuatoriana",
+]
+
+
+def validar_ligas_configuradas(base_datos_instancia=None):
+    """Falla explícitamente si una liga configurada no existe o está vacía."""
+    datos_bd = base_datos if base_datos_instancia is None else base_datos_instancia
+    ligas_disponibles = datos_bd.obtener_ligas()
+    for liga in LIGAS_PROCESADAS:
+        if not ligas_disponibles.get(liga):
+            raise ValueError(
+                f"La liga configurada '{liga}' no existe en BaseDatos o no tiene equipos."
+            )
+    return True
 
 def buscar_archivos_temporada():
     """Busca archivos de temporada en el directorio actual"""
@@ -24,6 +53,7 @@ def buscar_archivos_temporada():
 
 def extraer_datos_temporada(archivo):
     """Extrae datos de rendimiento de equipos y jugadores del archivo"""
+    validar_ligas_configuradas()
     datos = {
         'ligas': {},
         'champions': {},
@@ -36,11 +66,8 @@ def extraer_datos_temporada(archivo):
     with open(archivo, 'r', encoding='utf-8') as f:
         contenido = f.read()
     
-    # Extraer tablas de liga
-    ligas_nombres = ["Premier League", "La Liga", "Serie A", "Bundesliga", 
-                     "Ligue 1", "Primeira Liga", "Eredivisie"]
-    
-    for liga in ligas_nombres:
+    # Extraer tablas de todas las ligas configuradas.
+    for liga in LIGAS_PROCESADAS:
         patron_tabla = rf"TABLA FINAL - {liga.upper()}\n=+\n.*?\n-+\n(.*?)(?=\n\nCLASIFICACIONES:|\n\n[A-Z]|\Z)"
         match = re.search(patron_tabla, contenido, re.DOTALL)
         
@@ -81,9 +108,9 @@ def extraer_datos_temporada(archivo):
         goleadores_texto = match_goleadores.group(1)
         for linea in goleadores_texto.strip().split('\n'):
             if linea.strip():
-                # Formato esperado: "1   Haaland        MC       23     38"
+                # Formato del reporte: "1   Haaland        MC       23"
                 partes = linea.split()
-                if len(partes) >= 5:
+                if len(partes) >= 4:
                     try:
                         nombre = partes[1]
                         equipo = partes[2].lower()
@@ -225,15 +252,17 @@ def calcular_cambios_equipos(datos):
                 
                 break
         
-        # 2. Campeonatos europeos
+        # 2. Copas continentales europeas y americanas
         for comp, campeon in datos['campeones'].items():
             if campeon == codigo:
-                if 'champions' in comp:
+                if 'champions' in comp or 'libertadores' in comp:
                     cambio_total += 5
-                    razones.append("CAMPEÓN CHAMPIONS LEAGUE (+5)")
-                elif 'europa' in comp:
+                    nombre_copa = "COPA LIBERTADORES" if 'libertadores' in comp else "CHAMPIONS LEAGUE"
+                    razones.append(f"CAMPEÓN {nombre_copa} (+5)")
+                elif 'europa' in comp or 'sudamericana' in comp:
                     cambio_total += 3
-                    razones.append("CAMPEÓN EUROPA LEAGUE (+3)")
+                    nombre_copa = "COPA SUDAMERICANA" if 'sudamericana' in comp else "EUROPA LEAGUE"
+                    razones.append(f"CAMPEÓN {nombre_copa} (+3)")
                 elif 'conference' in comp:
                     cambio_total += 2
                     razones.append("CAMPEÓN CONFERENCE LEAGUE (+2)")
