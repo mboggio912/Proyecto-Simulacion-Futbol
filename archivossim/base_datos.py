@@ -83,6 +83,9 @@ class BaseDatos:
     
     def _crear_equipo(self, codigo: str, nombre_completo: str, liga: str, plantilla: List[tuple]) -> Equipo:
         """Crea un equipo con su plantilla completa"""
+        if codigo in self.equipos:
+            raise ValueError(f"Código de equipo duplicado: '{codigo}'")
+
         jugadores = []
         for nombre, posicion, nivel in plantilla:
             jugador = self._crear_jugador(nombre, posicion, nivel, codigo)
@@ -279,7 +282,7 @@ class BaseDatos:
             ("Laborda", "DEF", 73), ("Gigantini", "DEL", 75)
         ])
 
-        self._crear_equipo("liverpool_ur", "Liverpool", "Liga Uruguaya", [
+        self._crear_equipo("liverpool_ur_2", "Liverpool", "Liga Uruguaya", [
             ("López", "POR", 75), ("Pereira", "DEF", 72), ("Silva", "DEF", 71),
             ("Ocampo", "DEL", 74), ("Barboza", "MED", 73), ("Rodríguez", "MED", 72),
             ("Machado", "DEF", 70), ("Medina", "DEL", 73), ("González", "MED", 71),
@@ -666,7 +669,7 @@ class BaseDatos:
         ])
 
         # === LIGA DIMAYOR (COLOMBIA) - 20 equipos ===
-        self._crear_equipo("nacional", "Atlético Nacional", "Liga Dimayor", [
+        self._crear_equipo("nacional_col", "Atlético Nacional", "Liga Dimayor", [
             ("Quintana", "POR", 76), ("Devenish", "DEF", 73), ("Banguero", "DEF", 72),
             ("Pabón", "DEL", 75), ("Duque", "DEL", 74), ("Andrade", "MED", 73),
             ("Palacio", "MED", 72), ("Perez", "DEF", 71), ("Candelo", "MED", 72),
@@ -891,7 +894,7 @@ class BaseDatos:
             ("Moreno", "DEF", 60), ("Pérez", "DEL", 62)
         ])
 
-        self._crear_equipo("libertad", "Libertad", "Liga Ecuatoriana", [
+        self._crear_equipo("libertad_ec", "Libertad", "Liga Ecuatoriana", [
             ("Gómez", "POR", 66), ("Rodríguez", "DEF", 63), ("Hernández", "DEF", 62),
             ("Pérez", "DEL", 65), ("Martínez", "MED", 64), ("López", "MED", 63),
             ("Díaz", "DEF", 61), ("Gutiérrez", "DEL", 64), ("Rodríguez", "MED", 63),
@@ -981,7 +984,7 @@ class BaseDatos:
             ("Tiquinho_Soares","DEL",76), ("Luís_Henrique","DEL",72)
         ])
 
-        self._crear_equipo("santos", "Santos", "Liga Brasileña", [
+        self._crear_equipo("santos_br", "Santos", "Liga Brasileña", [
             ("João_Paulo","POR",73), ("Joaquim","DEF",69), ("Messias","DEF",70),
             ("Dodô","DEF",70), ("Lucas_Pires","DEF",68), ("Jean_Lucas","MED",71),
             ("Lucas_Lima","MED",70), ("Soteldo","DEL",74), ("Marcos_Leonardo","DEL",75),
