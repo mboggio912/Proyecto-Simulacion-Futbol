@@ -16,6 +16,7 @@ class Jugador:
     tarjetas_amarillas: int = 0
     tarjetas_rojas: int = 0
     titulos_colectivos: int = 0  # Nuevo campo para títulos
+    id: str = ""
     
     def calcular_puntos_balon_oro(self, equipo_campeon: bool = False) -> float:
         """Calcula los puntos para el Balón de Oro considerando títulos colectivos"""
@@ -87,18 +88,24 @@ class BaseDatos:
             raise ValueError(f"Código de equipo duplicado: '{codigo}'")
 
         jugadores = []
-        for nombre, posicion, nivel in plantilla:
-            jugador = self._crear_jugador(nombre, posicion, nivel, codigo)
+        for indice, (nombre, posicion, nivel) in enumerate(plantilla, start=1):
+            jugador_id = f"{nombre}_{codigo}_{indice}"
+            jugador = self._crear_jugador(nombre, posicion, nivel, codigo, jugador_id)
             jugadores.append(jugador)
         
         equipo = Equipo(nombre_completo, liga, jugadores)
         self.equipos[codigo] = equipo
         return equipo
     
-    def _crear_jugador(self, nombre: str, posicion: str, nivel: int, equipo: str) -> Jugador:
+    def _crear_jugador(
+        self, nombre: str, posicion: str, nivel: int, equipo: str, jugador_id: str
+    ) -> Jugador:
         """
         Crea un jugador y lo agrega a la base de datos con ID único
         """
+        if jugador_id in self.jugadores:
+            raise ValueError(f"ID de jugador duplicado: '{jugador_id}'")
+
         jugador = Jugador(
             nombre=nombre,
             posicion=posicion,
@@ -110,11 +117,9 @@ class BaseDatos:
             minutos_jugados=0,
             tarjetas_amarillas=0,
             tarjetas_rojas=0,
-            titulos_colectivos=0
+            titulos_colectivos=0,
+            id=jugador_id
         )
-        
-        # Crear ID único (nombre + equipo)
-        jugador_id = f"{nombre}_{equipo}"
         self.jugadores[jugador_id] = jugador
         return jugador
     
