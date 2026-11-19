@@ -1,0 +1,23 @@
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.ruff_cache/
+
+# Generated simulator reports and exports
+temporada_*.txt
+reporte_cambios_*.txt
+archivossim/temporada_*.txt
+archivossim/reporte_cambios_*.txt
+archivossim/base_datos_actualizada_*.py
+base_datos_actualizada_*.py
+
+# Operating system files
+.DS_Store
+Thumbs.db
